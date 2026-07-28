@@ -22,14 +22,15 @@ An end-to-end cinematography analysis system with three modules, in priority ord
 
 ## 2. Architecture (Module 1 — the core)
 
+```
 Video → Frame sampler → CLIP ViT (FROZEN) → shared trunk → 7 static heads
-↓ (shot size, framing, angle,
-Frame embedding sequence lens, lighting type,
-↓ lighting condition, composition)
-Transformer/LSTM (small, trained)
-↓
-Camera movement head
-
+                              ↓                             (shot size, framing, angle,
+                    Frame embedding sequence                 lens, lighting type,
+                              ↓                               lighting condition, composition)
+                  Transformer/LSTM (small, trained)
+                              ↓
+                     Camera movement head
+```
 
 - CLIP backbone stays **frozen** — you only train lightweight heads on top. This is what makes local GPU (4GB) training feasible at all.
 - 7 dimensions are classified from a single representative frame.
@@ -71,22 +72,23 @@ Class vocabularies and multi-hot encoding logic live in `src/data/label_encoding
 
 ## 4. Repo structure
 
+```
 cinevision-ai/
 ├── data/{raw,processed,scripts}/
-├── notebooks/ # 01_data_exploration → 06_evaluation
+├── notebooks/          # 01_data_exploration → 06_evaluation
 ├── src/
-│ ├── data/ # dataset.py, download.py, preprocessing.py, label_encoding.py, split_films.py
-│ ├── models/ # static_classifier.py, movement_classifier.py, backbone.py
-│ ├── training/ # train.py, evaluate.py
-│ ├── inference/ # video_analyzer.py, shot_segmentation.py, script_generator.py
-│ └── script_planner/ # prompt_templates.py, retrieval.py
-├── app/ # streamlit_app.py
-├── checkpoints/ # gitignored
+│   ├── data/            # dataset.py, download.py, preprocessing.py, label_encoding.py, split_films.py
+│   ├── models/          # static_classifier.py, movement_classifier.py, backbone.py
+│   ├── training/        # train.py, evaluate.py
+│   ├── inference/        # video_analyzer.py, shot_segmentation.py, script_generator.py
+│   └── script_planner/   # prompt_templates.py, retrieval.py
+├── app/                 # streamlit_app.py
+├── checkpoints/          # gitignored
 ├── reports/
 ├── requirements.txt
-├── PROJECT_NOTES.md # this file
+├── PROJECT_NOTES.md      # this file
 └── .gitignore
-
+```
 
 ---
 
