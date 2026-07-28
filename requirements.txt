@@ -1,0 +1,15 @@
+torch
+torchvision
+transformers
+open-clip-torch
+opencv-python
+pillow
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+huggingface-hub
+python-dotenv
+streamlit
+scenedetect
