@@ -162,6 +162,38 @@ cinevision-ai/
 - src/training/train.py: full training loop (BCEWithLogitsLoss per head, 
   mixed precision, checkpointing, CSV logging), debug run confirmed working
 
+  ---
+
+## 11. Module 1 — training results & class-weighting experiment (Week 2)
+
+**First full training run:** 5 epochs, frozen CLIP + 7 linear heads, unweighted BCEWithLogitsLoss. Loss decreased steadily every epoch (train 2.14→1.83, val 1.97→1.90), train/val gap small and stable — no overfitting, could likely train longer. `checkpoints/best_model_unweighted.pt`.
+
+**Flat 0.5 threshold eval (`reports/eval_metrics.csv`)** revealed low recall on rare classes (e.g. HMI, LED, Tungsten all near-0 F1) despite reasonable precision — classic signature of a fixed threshold suppressing minority-class predictions.
+
+**Per-class threshold tuning (`src/training/find_best_thresholds.py`)** — swept thresholds 0.05–0.95 per class on val split, picked whichever maximized each class's individual F1. Substantial improvement across every dimension:
+
+| Dimension | Flat 0.5 | Tuned |
+|---|---|---|
+| Frame Size | 0.537 | 0.651 |
+| Lens Size | 0.381 | 0.505 |
+| Composition | 0.301 | 0.476 |
+| Shot Framing | 0.586 | 0.660 |
+| Camera Angle | 0.422 | 0.568 |
+| Lighting Type | 0.319 | 0.423 |
+| Lighting | 0.350 | 0.499 |
+
+Genuinely data-starved classes (support <200, e.g. HMI=56, LED=76, Tungsten=183) stayed near-zero F1 even after tuning — a data scarcity problem, not a threshold problem.
+
+**Class-weighted loss experiment:** computed per-class `pos_weight` (`src/data/compute_pos_weights.py`, capped at 20.0), retrained 5 epochs (`checkpoints/best_model_weighted.pt`). Result: **no meaningful improvement over unweighted+tuned** — macro-F1 identical within noise on every dimension, and the target starved classes (HMI, LED, Tungsten) didn't improve either. Conclusion: the bottleneck is feature separability for these classes given how little train data they have, not loss-function weighting — threshold tuning and pos_weight were correcting for the same underlying imbalance via different mechanisms, so combining them added nothing. **Decision: kept the simpler unweighted model + tuned thresholds as the final Module 1 artifact** (`checkpoints/best_model.pt`, `reports/best_thresholds.json`).
+
+This finding is consistent with GPT-4o/ShotVL also struggling on similar hard categories (section 9) — worth citing directly in the report as a deliberate, documented experiment rather than an oversight.
+
+**Files added this session:** `src/training/evaluate.py`, `src/training/find_best_thresholds.py`, `src/data/compute_pos_weights.py`.
+
+**Bug fixed:** `get_preprocess()` originally returned a local closure, unpicklable by Windows' `spawn`-based multiprocessing — blocked `num_workers>0`. Replaced with a module-level `ClipPreprocess` class in `static_classifier.py`.
+
+**Next:** Module 1 finalized — moving to shot segmentation (PySceneDetect) and Module 2 (Script Generator) per Week 3 plan. Also still pending: inspect `sft.json`/`sft_v1.1.json`/`grpo.json` schemas, check ShotBench eval schema for baseline comparison.
+
 **In progress:**
 - Full local training run -- currently CPU-bound (JPEG decoding bottleneck 
   with num_workers=0), testing num_workers>0 to parallelize data loading

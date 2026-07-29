@@ -45,11 +45,16 @@ def compute_multihead_loss(outputs: dict, labels: dict, criterion) -> tuple:
     so callers can log both the combined loss (for backward()) and the
     individual head losses (useful for spotting if one dimension is
     struggling much worse than the others).
+
+    `criterion` can be either a single shared BCEWithLogitsLoss (no class
+    weighting) or a dict of {dim: BCEWithLogitsLoss(pos_weight=...)} for
+    per-class weighted training -- see train.py's setup in main().
     """
     per_head = {}
     total = 0.0
     for dim in DIMENSIONS:
-        loss = criterion(outputs[dim], labels[dim])
+        dim_criterion = criterion[dim] if isinstance(criterion, dict) else criterion
+        loss = dim_criterion(outputs[dim], labels[dim])
         per_head[dim] = loss.item()
         total = total + loss  # keep as tensor, not .item(), for backward()
     return total, per_head
@@ -171,7 +176,24 @@ def main():
     # Only the heads have requires_grad=True, so this optimizer only ever
     # touches those params -- confirmed by the smoke test's gradient check.
     optimizer = torch.optim.Adam(model.trainable_parameters(), lr=args.lr)
-    criterion = nn.BCEWithLogitsLoss()
+    # --- Load per-class pos_weights (see src/data/compute_pos_weights.py) ---
+    import json
+    pos_weights_path = Path("reports/pos_weights.json")
+    if pos_weights_path.exists():
+        with open(pos_weights_path) as f:
+            pos_weights_raw = json.load(f)
+        criterion = {
+            dim: nn.BCEWithLogitsLoss(
+                pos_weight=torch.tensor(pos_weights_raw[dim], device=device)
+            )
+            for dim in DIMENSIONS
+        }
+        print(f"Loaded per-class pos_weights from {pos_weights_path}")
+    else:
+        print(f"WARNING: {pos_weights_path} not found -- using unweighted "
+              f"BCEWithLogitsLoss for all heads. Run "
+              f"src/data/compute_pos_weights.py first if you want class weighting.")
+        criterion = nn.BCEWithLogitsLoss()
     scaler = torch.amp.GradScaler('cuda') if device == "cuda" else None
 
     # --- CSV log setup ---

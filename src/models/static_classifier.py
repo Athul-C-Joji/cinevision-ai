@@ -39,6 +39,18 @@ from transformers import CLIPModel, CLIPImageProcessor
 # signal for the heads, at the cost of more VRAM + slower forward pass).
 DEFAULT_CLIP_CHECKPOINT = "openai/clip-vit-base-patch32"
 
+class ClipPreprocess:
+    """
+    Picklable replacement for a closure-based transform, so it can be
+    sent to DataLoader worker processes on Windows (spawn start method
+    can't pickle local/nested functions).
+    """
+    def __init__(self, clip_checkpoint):
+        self.processor = CLIPImageProcessor.from_pretrained(clip_checkpoint)
+
+    def __call__(self, pil_image):
+        result = self.processor(images=pil_image, return_tensors="pt")
+        return result["pixel_values"].squeeze(0)  # (3, H, W)
 
 class StaticShotClassifier(nn.Module):
     def __init__(self, class_vocab: dict, clip_checkpoint: str = DEFAULT_CLIP_CHECKPOINT):
@@ -81,13 +93,7 @@ class StaticShotClassifier(nn.Module):
         we wrap it to return just the pixel_values tensor (squeezed) so
         it drops straight into ShotDataset's expected transform signature.
         """
-        processor = CLIPImageProcessor.from_pretrained(self.clip_checkpoint)
-
-        def transform(pil_image):
-            result = processor(images=pil_image, return_tensors="pt")
-            return result["pixel_values"].squeeze(0)  # (3, H, W)
-
-        return transform
+        return ClipPreprocess(self.clip_checkpoint)
 
     def forward(self, pixel_values: torch.Tensor) -> dict:
         """

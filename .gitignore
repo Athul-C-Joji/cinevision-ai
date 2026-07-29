@@ -216,3 +216,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Project-specific
+data/raw/
+data/processed/
+checkpoints/
+*.mp4
+.env
+
+# --- CineVision AI project-specific ---
+data/raw/
+data/processed/*
+!data/processed/film_splits.csv
+checkpoints/
+*.mp4
+*.mkv
+*.webm
+*.mov
+*.avi
