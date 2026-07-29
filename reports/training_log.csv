@@ -1,0 +1,1 @@
+epoch,train_loss,val_loss,train_Frame Size,train_Lens Size,train_Composition,train_Shot Framing,train_Camera Angle,train_Lighting Type,train_Lighting,val_Frame Size,val_Lens Size,val_Composition,val_Shot Framing,val_Camera Angle,val_Lighting Type,val_Lighting,epoch_time_sec
