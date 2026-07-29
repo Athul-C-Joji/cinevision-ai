@@ -142,20 +142,40 @@ cinevision-ai/
 
 ## 10. Current status / next actions
 
-**Done (Week 1, Day 1):**
-- Environment fully set up: Python 3.11, Git, GitHub repo, VS Code, Claude Code extension, GitHub CLI authenticated, venv active, `requirements.txt` installed (fixed `pyscenedetect` → `scenedetect` typo)
-- Kaggle: Tesla T4 GPU confirmed working (`torch.cuda.is_available()` → `True`), phone verified
-- Hugging Face: authenticated, confirmed access to `Vchitect/ShotQA` (no separate request needed)
-- `meta.jsonl` inspected: 61,405 rows, 709 unique films, schema mapped to target dimensions (see section 3)
-- Multi-label decision made and implemented (section 2b) — `src/data/label_encoding.py` built and tested
-- Film-level 70/15/15 split done — `src/data/split_films.py`, seed=42, saved to `data/processed/film_splits.csv` (train 44,218 / val 8,430 / test 8,757 rows)
-- `data.tar.gz` (~40GB) download in progress via `download_data.py`
+**Done (Week 1-2):**
+- Environment fully set up: Python 3.11, Git, GitHub repo, VS Code, GitHub CLI, 
+  venv active
+- ShotQA fully downloaded + extracted: data/raw/images/ (flat structure), 
+  58,343 files, verified 100% coverage against meta.jsonl's 61,405 rows
+- 824 images (1.45%) found corrupted/unreadable via validate_images.py -- 
+  documented in reports/broken_images.csv, auto-filtered by Dataset class
+- Multi-label decision implemented and CORRECTED: 7 static dimensions 
+  (not 6) -- Frame Size, Lens Size, Composition, Shot Framing, Camera Angle, 
+  Lighting Type, Lighting -- src/data/label_encoding.py, tested
+- Film-level 70/15/15 split done, seed=42 -- data/processed/film_splits.csv
+- src/data/dataset.py: ShotDataset PyTorch class built and tested, 
+  auto-excludes broken images
+- src/models/static_classifier.py: frozen CLIP (openai/clip-vit-base-patch32, 
+  ~151M frozen params) + 7 trainable linear heads (~26.7k trainable params), 
+  built and tested
+- Local CUDA fixed and confirmed working: torch 2.11.0+cu128, GTX 1650 detected
+- src/training/train.py: full training loop (BCEWithLogitsLoss per head, 
+  mixed precision, checkpointing, CSV logging), debug run confirmed working
+
+**In progress:**
+- Full local training run -- currently CPU-bound (JPEG decoding bottleneck 
+  with num_workers=0), testing num_workers>0 to parallelize data loading
 
 **Next actions:**
-1. Extract the tar (`extract_data.py` ready, not yet run)
-2. Confirm extracted folder structure maps `img_id` → actual file path
-3. Decide: upload full extracted dataset as a Kaggle Dataset (avoid re-downloading 40GB every session) vs. re-download in-notebook
-4. Build the PyTorch `Dataset` class using `label_encoding.py` + `film_splits.csv` + extracted images
-5. Inspect `sft.json` / `sft_v1.1.json` / `grpo.json` schema (the QA-formatted files — not yet looked at)
-6. Check ShotBench's exact schema/eval format for fair baseline comparison
-7. Verify `torch.cuda.is_available()` returns `True` **locally** on the GTX 1650 (not yet confirmed — only confirmed on Kaggle so far); reinstall torch with correct CUDA index URL if not
+1. Confirm num_workers>0 works on Windows, complete a real local training run
+2. Upload extracted dataset to Kaggle as a Dataset (avoid re-downloading 40GB 
+   every session)
+3. Run real training on Kaggle T4 for the full result
+4. Inspect sft.json / sft_v1.1.json / grpo.json schemas
+5. Check ShotBench eval schema for baseline comparison (GPT-4o 59.3%, 
+   ShotVL-7B 70.1% avg -- note: ShotVL is a 3B-param VLM on Qwen2.5-VL, 
+   not a frozen-CLIP approach, so not a direct architecture reference)
+6. Known ShotBench data quality issue: documented Artificial/Practical light 
+   confusion in "lighting condition" per RefineShot paper -- worth flagging 
+   in report if model struggles there
+7. Move to Module 2 (Script Generator) once Module 1 is trained
