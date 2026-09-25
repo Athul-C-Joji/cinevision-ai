@@ -22,7 +22,6 @@ An end-to-end cinematography analysis system with three modules, in priority ord
 
 ## 2. Architecture (Module 1 — the core)
 
-```
 Video → Frame sampler → CLIP ViT (FROZEN) → shared trunk → 7 static heads
                               ↓                             (shot size, framing, angle,
                     Frame embedding sequence                 lens, lighting type,
@@ -30,7 +29,7 @@ Video → Frame sampler → CLIP ViT (FROZEN) → shared trunk → 7 static head
                   Transformer/LSTM (small, trained)
                               ↓
                      Camera movement head
-```
+
 
 - CLIP backbone stays **frozen** — you only train lightweight heads on top. This is what makes local GPU (4GB) training feasible at all.
 - 7 dimensions are classified from a single representative frame.
@@ -72,31 +71,30 @@ Class vocabularies and multi-hot encoding logic live in `src/data/label_encoding
 
 ## 4. Repo structure
 
-```
 cinevision-ai/
 ├── data/{raw,processed,scripts}/
-├── notebooks/          # 01_data_exploration → 06_evaluation
+├── notebooks/ # 01_data_exploration → 06_evaluation
 ├── src/
-│   ├── data/            # dataset.py, download.py, preprocessing.py, label_encoding.py, split_films.py
-│   ├── models/          # static_classifier.py, movement_classifier.py, backbone.py
-│   ├── training/        # train.py, evaluate.py
-│   ├── inference/        # video_analyzer.py, shot_segmentation.py, script_generator.py
-│   └── script_planner/   # prompt_templates.py, retrieval.py
-├── app/                 # streamlit_app.py
-├── checkpoints/          # gitignored
+│ ├── data/ # dataset.py, download.py, preprocessing.py, label_encoding.py, split_films.py, compute_pos_weights.py
+│ ├── models/ # static_classifier.py, movement_classifier.py, backbone.py
+│ ├── training/ # train.py, evaluate.py, find_best_thresholds.py
+│ ├── inference/ # video_analyzer.py, shot_segmentation.py, script_generator.py
+│ └── script_planner/ # prompt_templates.py, retrieval.py
+├── app/ # streamlit_app.py
+├── checkpoints/ # gitignored
 ├── reports/
 ├── requirements.txt
-├── PROJECT_NOTES.md      # this file
+├── PROJECT_NOTES.md # this file
 └── .gitignore
-```
+
 
 ---
 
 ## 5. Weekly plan
 
 - **Week 1:** HF access approved → inspect ShotQA schema, class balance, image-vs-video split → stratified sample (not full 50GB) → PyTorch Dataset class
-- **Week 2:** Train the 7 static-dimension multi-task classifier (frozen CLIP + heads) → evaluate on ShotBench, confusion matrices
-- **Week 3:** Temporal movement model → shot segmentation (PySceneDetect) → wire up Video Analyzer + Script Generator pipelines
+- **Week 2:** Train the 7 static-dimension multi-task classifier (frozen CLIP + heads) → evaluate on ShotBench, confusion matrices ✅ **DONE — see section 11**
+- **Week 3 (current):** Temporal movement model → shot segmentation (PySceneDetect) → wire up Video Analyzer + Script Generator pipelines
 - **Week 4:** Script Planner (LLM + optional retrieval, bonus only if on schedule) → Streamlit polish → Grad-CAM/explainability → write-up comparing to GPT-4o/ShotVL baselines
 
 ---
@@ -114,10 +112,10 @@ cinevision-ai/
 
 - Split train/val/test **by film**, not by frame — same-scene frames leak between splits otherwise. (Done — see section 10, `data/processed/film_splits.csv`.)
 - Check class balance before training — "medium shot" will dominate if unaddressed. (Checked — see section 2b, less severe than expected but confirmed multi-label.)
-- Look at confusion matrices per dimension, not just overall accuracy. (Note: with multi-label, per-class precision/recall/F1 replaces standard confusion matrices — plan for this in evaluation code.)
+- Look at confusion matrices per dimension, not just overall accuracy. (Note: with multi-label, per-class precision/recall/F1 replaces standard confusion matrices — implemented, see section 11.)
 - Pin package versions in `requirements.txt` early (Kaggle vs local mismatches are common).
 - Never commit secrets (HF tokens, API keys) — use `.env`, gitignored.
-- Never commit large files (checkpoints, videos, raw data) to git.
+- Never commit large files (checkpoints, videos, raw data) to git. **Note: `.gitignore` initially only had the generic Python template and did NOT exclude these — fixed in section 11's session, verify this stays correct in future commits.**
 
 ---
 
@@ -126,8 +124,7 @@ cinevision-ai/
 - **VS Code** for all local code editing.
 - **Claude Code extension** (Extensions → search "Claude Code") for in-editor AI help with full repo context — needs Pro plan or API key.
 - **GitHub CLI (`gh`)** authenticated via `gh auth login` — enables git push/pull and Claude Code git actions without manual token entry.
-- **GitHub repo** `Athul-C-Joji/cinevision-ai` — `.gitignore` covers `data/raw/`, `data/processed/` (partially — see note below), `checkpoints/`, `*.mp4`, `.env`, `__pycache__/`.
-  - Note: `data/processed/film_splits.csv` is small and useful to version — confirm it's not being blanket-ignored if `data/processed/` is fully excluded; adjust `.gitignore` to allow this specific file if needed.
+- **GitHub repo** `Athul-C-Joji/cinevision-ai` — `.gitignore` covers `data/raw/`, `data/processed/*` (with `!data/processed/film_splits.csv` explicitly un-ignored), `checkpoints/`, `*.mp4`/`*.mkv`/`*.webm`/`*.mov`/`*.avi`, `.env`, `__pycache__/`.
 - **Hugging Face** — authenticated via `hf auth login` (CLI renamed from `huggingface-cli` to `hf`). Token stored in `.env` as `HF_TOKEN` (never committed).
 
 ---
@@ -137,36 +134,31 @@ cinevision-ai/
 - Be explicit: **Video Analyzer + Script Generator = your deep learning contribution.** **Script Planner = LLM orchestration**, not trained. Don't blur this — interviewers ask, and clarity reads as maturity.
 - Lens size, lighting condition, camera movement are the hardest dimensions across nearly every published model (including GPT-4o, ShotVL) — don't be surprised or embarrassed if your model struggles there too; it's a documented, known-hard problem, not a modeling mistake.
 - The multi-label vs single-label decision (section 2b) is itself a good talking point — shows deliberate tradeoff analysis rather than defaulting to the simplest option.
+- **The class-weighting experiment (section 11) is another good talking point** — shows a hypothesis was tested (pos_weight should help rare classes), the result was honestly reported even though it didn't help, and the correct conclusion was drawn (data scarcity, not loss weighting, is the bottleneck) rather than just picking whichever number looked better.
 
 ---
 
-## 10. Current status / next actions
+## 10. Week 1 setup (historical)
 
-**Done (Week 1-2):**
-- Environment fully set up: Python 3.11, Git, GitHub repo, VS Code, GitHub CLI, 
-  venv active
-- ShotQA fully downloaded + extracted: data/raw/images/ (flat structure), 
-  58,343 files, verified 100% coverage against meta.jsonl's 61,405 rows
-- 824 images (1.45%) found corrupted/unreadable via validate_images.py -- 
-  documented in reports/broken_images.csv, auto-filtered by Dataset class
-- Multi-label decision implemented and CORRECTED: 7 static dimensions 
-  (not 6) -- Frame Size, Lens Size, Composition, Shot Framing, Camera Angle, 
-  Lighting Type, Lighting -- src/data/label_encoding.py, tested
-- Film-level 70/15/15 split done, seed=42 -- data/processed/film_splits.csv
-- src/data/dataset.py: ShotDataset PyTorch class built and tested, 
-  auto-excludes broken images
-- src/models/static_classifier.py: frozen CLIP (openai/clip-vit-base-patch32, 
-  ~151M frozen params) + 7 trainable linear heads (~26.7k trainable params), 
-  built and tested
-- Local CUDA fixed and confirmed working: torch 2.11.0+cu128, GTX 1650 detected
-- src/training/train.py: full training loop (BCEWithLogitsLoss per head, 
-  mixed precision, checkpointing, CSV logging), debug run confirmed working
+**Done (Week 1, Day 1):**
+- Environment fully set up: Python 3.11, Git, GitHub repo, VS Code, Claude Code extension, GitHub CLI authenticated, venv active, `requirements.txt` installed (fixed `pyscenedetect` → `scenedetect` typo)
+- Kaggle: Tesla T4 GPU confirmed working (`torch.cuda.is_available()` → `True`), phone verified
+- Hugging Face: authenticated, confirmed access to `Vchitect/ShotQA` (no separate request needed)
+- `meta.jsonl` inspected: 61,405 rows, 709 unique films, schema mapped to target dimensions (see section 3)
+- Multi-label decision made and implemented (section 2b) — `src/data/label_encoding.py` built and tested
+- Film-level 70/15/15 split done — `src/data/split_films.py`, seed=42, saved to `data/processed/film_splits.csv` (train 44,218 / val 8,430 / test 8,757 rows)
+- `data.tar.gz` (~40GB) downloaded and extracted — 58,343 files, verified 100% coverage against `meta.jsonl`, flat structure in `data/raw/images/`
+- `validate_images.py` run: found 824 broken images (1.45%), saved to `reports/broken_images.csv`, auto-filtered by `ShotDataset`
 
-  ---
+---
 
 ## 11. Module 1 — training results & class-weighting experiment (Week 2)
 
-**First full training run:** 5 epochs, frozen CLIP + 7 linear heads, unweighted BCEWithLogitsLoss. Loss decreased steadily every epoch (train 2.14→1.83, val 1.97→1.90), train/val gap small and stable — no overfitting, could likely train longer. `checkpoints/best_model_unweighted.pt`.
+**Architecture finalized as 7 dimensions, not 6:** `CLASS_VOCAB` in `src/data/label_encoding.py` was split — the original combined "Shot Type" field is now two separate heads, **Shot Framing** (7 classes) and **Camera Angle** (5 classes), both reading from the same raw `Shot Type` meta.jsonl field via a `SOURCE_FIELD` dict. Matches ShotBench's 8 core dimensions minus camera movement (handled separately by a not-yet-built temporal model). Full 7: Frame Size, Lens Size, Composition, Shot Framing, Camera Angle, Lighting Type, Lighting.
+
+**Model built:** `src/models/static_classifier.py` — `StaticShotClassifier`, frozen CLIP (`openai/clip-vit-base-patch32`, ~151M frozen params) + 7 trainable linear heads (~26.7k trainable params). Had to bypass `self.clip.get_image_features()` due to a transformers-version API quirk (wrong return type); `forward()` calls `self.clip.vision_model()` + `self.clip.visual_projection()` directly instead, which is stable across versions.
+
+**First full training run:** 5 epochs, frozen CLIP + 7 linear heads, unweighted `BCEWithLogitsLoss`. Loss decreased steadily every epoch (train 2.14→1.83, val 1.97→1.90), train/val gap small and stable — no overfitting, could likely train longer. `checkpoints/best_model_unweighted.pt`.
 
 **Flat 0.5 threshold eval (`reports/eval_metrics.csv`)** revealed low recall on rare classes (e.g. HMI, LED, Tungsten all near-0 F1) despite reasonable precision — classic signature of a fixed threshold suppressing minority-class predictions.
 
@@ -184,30 +176,22 @@ cinevision-ai/
 
 Genuinely data-starved classes (support <200, e.g. HMI=56, LED=76, Tungsten=183) stayed near-zero F1 even after tuning — a data scarcity problem, not a threshold problem.
 
-**Class-weighted loss experiment:** computed per-class `pos_weight` (`src/data/compute_pos_weights.py`, capped at 20.0), retrained 5 epochs (`checkpoints/best_model_weighted.pt`). Result: **no meaningful improvement over unweighted+tuned** — macro-F1 identical within noise on every dimension, and the target starved classes (HMI, LED, Tungsten) didn't improve either. Conclusion: the bottleneck is feature separability for these classes given how little train data they have, not loss-function weighting — threshold tuning and pos_weight were correcting for the same underlying imbalance via different mechanisms, so combining them added nothing. **Decision: kept the simpler unweighted model + tuned thresholds as the final Module 1 artifact** (`checkpoints/best_model.pt`, `reports/best_thresholds.json`).
+**Note on methodology:** thresholds were tuned on the same val split used to report these numbers — some improvement is real generalization, some is overfitting to val noise (especially tiny-support classes). The true test will be re-running eval on the held-out **test** split or ShotBench once the pipeline reaches that stage, not re-checking val again.
+
+**Class-weighted loss experiment:** computed per-class `pos_weight` (`src/data/compute_pos_weights.py`, raw weights ranged 0.99–82.63, capped at `MAX_POS_WEIGHT=20.0` to avoid instability), retrained 5 epochs (`checkpoints/best_model_weighted.pt`). Result: **no meaningful improvement over unweighted+tuned** — macro-F1 identical within noise on every dimension (all within ±0.003), and the target starved classes (HMI, LED, Tungsten) didn't meaningfully improve either. Conclusion: the bottleneck is feature separability for these classes given how little train data they have, not loss-function weighting — threshold tuning and pos_weight were correcting for the same underlying imbalance via different mechanisms, so combining them added nothing.
+
+**Decision: kept the simpler unweighted model + tuned thresholds as the final Module 1 artifact.**
+- `checkpoints/best_model.pt` (= restored copy of `best_model_unweighted.pt`)
+- `reports/best_thresholds.json` (= restored copy of the unweighted-tuned thresholds)
+- `reports/eval_metrics_tuned.csv` (final per-class P/R/F1, unweighted+tuned)
 
 This finding is consistent with GPT-4o/ShotVL also struggling on similar hard categories (section 9) — worth citing directly in the report as a deliberate, documented experiment rather than an oversight.
 
-**Files added this session:** `src/training/evaluate.py`, `src/training/find_best_thresholds.py`, `src/data/compute_pos_weights.py`.
+**Files added this session:** `src/training/evaluate.py` (per-class P/R/F1 at a flat threshold), `src/training/find_best_thresholds.py` (threshold sweep + tuning), `src/data/compute_pos_weights.py` (pos_weight computation — used but ultimately not adopted for the final model).
 
-**Bug fixed:** `get_preprocess()` originally returned a local closure, unpicklable by Windows' `spawn`-based multiprocessing — blocked `num_workers>0`. Replaced with a module-level `ClipPreprocess` class in `static_classifier.py`.
+**Bugs fixed:**
+- `get_preprocess()` originally returned a local closure, unpicklable by Windows' `spawn`-based multiprocessing — blocked `num_workers>0`, forcing slow CPU-bound single-threaded data loading. Replaced with a module-level `ClipPreprocess` class in `static_classifier.py`.
+- Missing `__init__.py` in `src/` and `src/data/` caused `ModuleNotFoundError` when running scripts via `python -m`. Added across all `src/` subpackages.
+- `.gitignore` was just the generic Python template — did not actually exclude `data/raw/`, `checkpoints/`, or video files. Fixed by adding a project-specific block; verified with `git status` before committing that no dataset/video files get staged.
 
-**Next:** Module 1 finalized — moving to shot segmentation (PySceneDetect) and Module 2 (Script Generator) per Week 3 plan. Also still pending: inspect `sft.json`/`sft_v1.1.json`/`grpo.json` schemas, check ShotBench eval schema for baseline comparison.
-
-**In progress:**
-- Full local training run -- currently CPU-bound (JPEG decoding bottleneck 
-  with num_workers=0), testing num_workers>0 to parallelize data loading
-
-**Next actions:**
-1. Confirm num_workers>0 works on Windows, complete a real local training run
-2. Upload extracted dataset to Kaggle as a Dataset (avoid re-downloading 40GB 
-   every session)
-3. Run real training on Kaggle T4 for the full result
-4. Inspect sft.json / sft_v1.1.json / grpo.json schemas
-5. Check ShotBench eval schema for baseline comparison (GPT-4o 59.3%, 
-   ShotVL-7B 70.1% avg -- note: ShotVL is a 3B-param VLM on Qwen2.5-VL, 
-   not a frozen-CLIP approach, so not a direct architecture reference)
-6. Known ShotBench data quality issue: documented Artificial/Practical light 
-   confusion in "lighting condition" per RefineShot paper -- worth flagging 
-   in report if model struggles there
-7. Move to Module 2 (Script Generator) once Module 1 is trained
+**Next:** Module 1 finalized — moving to shot segmentation (PySceneDetect) and Module 2 (Script Generator) per Week 3 plan. Also still pending: inspect `sft.json`/`sft_v1.1.json`/`grpo.json` schemas, check ShotBench's exact eval schema for a fair baseline comparison.
