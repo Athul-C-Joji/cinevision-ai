@@ -215,3 +215,18 @@ Best-performing tuned class: **Push in** (58 val support) at **0.4813 F1**. Weak
 **Outputs:** `reports/movement_best_thresholds.json`, `reports/movement_eval_metrics_tuned.csv`
 
 **Next:** shot segmentation via PySceneDetect, then Module 2 (Script Generator) pipeline wiring, per Week 3 plan.
+
+## 14. Movement classifier inference fix — threshold over-triggering (Week 3)
+
+**Problem discovered through real-data testing (not the stock-footage domain-shift test):** ran the full pipeline on several real ShotQA clips with known ground truth and compared predictions directly. Results were bad in a specific, diagnosable way — the movement model predicted 6-8 labels per clip regardless of actual content, including physically impossible simultaneous opposite pairs (Push in + Pull out, Tilt up + Tilt down, Boom up + Boom down all firing together on the same clip).
+
+**Root cause:** inspected `movement_best_thresholds.json` (from section 12's tuning) — every single one of the 21 tuned thresholds was at or near the sweep floor (0.05-0.15, none above 0.15). This happened because F1-maximization was run on a small, sparse val split (183 clips across 21 classes, many with single-digit support), so the optimizer kept walking toward the minimum threshold rather than settling on a genuinely confident cutoff.
+
+**Diagnosis confirmed by inspecting raw probabilities directly** (bypassing thresholds entirely): across several real test clips, the highest probability for any class never exceeded ~0.35 — well below any threshold that would represent real confidence. But critically, the *relative ranking* was often meaningful: the single highest-probability class matched the true label on 2 of 4 manually-checked real clips, and was on the correct axis (panning) on a 3rd. This showed the model had learned real, weak signal — the failure was in how that signal was being turned into discrete predictions, not in the model itself.
+
+**Fix:** switched `classify_movement()` in `src/inference/video_analyzer.py` from absolute-threshold selection to **top-2 selection** (always return the 2 highest-probability classes, regardless of their raw score). Result: 2 labels per clip instead of 6-8, zero contradictory opposite-pairs, same underlying accuracy on the small manual test (~50% top-1 correct) but dramatically more usable and honest output.
+
+**Framing for report/interviews:** this is a deliberate, evidence-driven design decision — threshold-based multi-label inference assumes well-separated per-class confidence, which testing showed doesn't hold for the movement model (likely due to only 5 training epochs on 711 clips spread across 21 classes). The static classifier's thresholding, by contrast, genuinely works — its probabilities are better separated, and threshold tuning there produced real, defensible gains (section 11). Worth citing as an example of diagnosing a problem empirically rather than assuming a fix and moving on. `movement_best_thresholds.json` / threshold-based inference is effectively superseded for the movement model specifically; the static classifier is unaffected and still correctly uses its tuned thresholds.
+
+**Files changed:** `src/inference/video_analyzer.py` (`classify_movement()` rewritten)
+**Sample outputs regenerated:** `data/scripts/-4dDC0lPRB0.webm_14.txt`, `data/scripts/4005541-hd_1920_1080_30fps.txt`
