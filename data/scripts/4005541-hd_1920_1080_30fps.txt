@@ -1,0 +1,7 @@
+# Shot Breakdown: 4005541-hd_1920_1080_30fps.mp4
+
+Scene 1
+  Shot 1 (00:00:00.000–00:00:01.134): Extreme Close Up, Insert, High angle, Long Lens. Composition: Center. Lighting: Daylight, Low contrast, Soft light. Movement: Push in, Tilt up, Tilt down, Pan left, Tracking, Static shot.
+  Shot 2 (00:00:01.134–00:00:02.803): Extreme Close Up, Insert, High angle, Long Lens. Composition: Center. Lighting: Daylight, Low contrast, Soft light. Movement: Push in, Tilt up, Tilt down, Pan left, Boom down.
+  Shot 3 (00:00:02.803–00:00:03.971): Close Up / Extreme Close Up, Insert, High angle / Low angle, Long Lens. Composition: Center, Left heavy. Lighting: Daylight, Sunny, High contrast, Low contrast, Soft light. Movement: Push in, Tilt up, Tilt down, Pan left, Tracking.
+  Shot 4 (00:00:03.971–00:00:04.238): Close Up / Extreme Close Up, Insert, High angle, Long Lens. Composition: Center, Left heavy, Short side. Lighting: Daylight, Overcast, Sunny, Low contrast, Soft light. Movement: Push in, Tilt up, Tilt down, Pan left, Boom down.
