@@ -93,18 +93,29 @@ def classify_static(model, preprocess, frame_img, thresholds, device):
     return predictions
 
 
-def classify_movement(model, preprocess, frame_imgs, thresholds_dict, device):
+def classify_movement(model, preprocess, frame_imgs, device, top_k=2):
+    """
+    Returns the top-k highest-probability movement classes.
+
+    Switched from absolute-threshold selection to top-k after empirical
+    testing (on real ShotQA clips) showed raw probabilities were uniformly
+    low and poorly separated across all 21 classes (max ~0.21-0.35, no
+    class ever confidently exceeding a reasonable threshold) -- a
+    consequence of only 5 training epochs on 711 clips spread across 21
+    classes, many with single-digit support. Threshold-based selection
+    caused systematic over-triggering (6-8 labels per clip, including
+    physically contradictory opposite pairs like Push in + Pull out).
+    Top-k selection uses the model's *relative* ranking, which testing
+    showed was often correct even when absolute confidence was low.
+    """
     pixel_values = torch.stack([preprocess(f) for f in frame_imgs])  # (T, C, H, W)
     pixel_values = pixel_values.unsqueeze(0).to(device)  # (1, T, C, H, W)
     with torch.no_grad():
         logits = model(pixel_values)
     probs = torch.sigmoid(logits).squeeze(0).cpu().numpy()
 
-    predicted = [
-        name for name, p in zip(MOVEMENT_CLASS_NAMES, probs)
-        if p >= thresholds_dict.get(name, 0.5)
-    ]
-    return predicted if predicted else ["Static shot"]
+    sorted_preds = sorted(zip(MOVEMENT_CLASS_NAMES, probs), key=lambda x: -x[1])
+    return [name for name, _ in sorted_preds[:top_k]]
 
 
 def analyze_video(video_path, device=None):
@@ -142,7 +153,7 @@ def analyze_video(video_path, device=None):
 
         indices = np.linspace(start_f, end_f - 1, num=N_MOVEMENT_FRAMES, dtype=int)
         shot_frames = [all_frames[i] for i in indices]
-        movement_preds = classify_movement(movement_model, preprocess, shot_frames, movement_thresholds, device)
+        movement_preds = classify_movement(movement_model, preprocess, shot_frames, device)
 
         results.append({
             "shot_index": shot["shot_index"],
