@@ -235,3 +235,4 @@ checkpoints/
 *.webm
 *.mov
 *.avi
+data/raw/test_videos/
