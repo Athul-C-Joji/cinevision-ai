@@ -1,0 +1,23 @@
+{
+  "Push in": 0.05,
+  "Push out": 0.05,
+  "Pull in": 0.05,
+  "Pull out": 0.15,
+  "Tilt up": 0.15,
+  "Tilt down": 0.1,
+  "Pan left": 0.1,
+  "Pan right": 0.1,
+  "Boom up": 0.1,
+  "Boom down": 0.1,
+  "Tracking": 0.1,
+  "Trucking left": 0.05,
+  "Trucking right": 0.05,
+  "Move left": 0.05,
+  "Move right": 0.15,
+  "Arc": 0.05,
+  "Camera roll": 0.05,
+  "Rack focus": 0.1,
+  "Zoom in": 0.05,
+  "Zoom out": 0.05,
+  "Static shot": 0.15
+}

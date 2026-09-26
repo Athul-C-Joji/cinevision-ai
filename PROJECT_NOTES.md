@@ -195,3 +195,23 @@ This finding is consistent with GPT-4o/ShotVL also struggling on similar hard ca
 - `.gitignore` was just the generic Python template — did not actually exclude `data/raw/`, `checkpoints/`, or video files. Fixed by adding a project-specific block; verified with `git status` before committing that no dataset/video files get staged.
 
 **Next:** Module 1 finalized — moving to shot segmentation (PySceneDetect) and Module 2 (Script Generator) per Week 3 plan. Also still pending: inspect `sft.json`/`sft_v1.1.json`/`grpo.json` schemas, check ShotBench's exact eval schema for a fair baseline comparison.
+
+
+---
+
+## 12. Module 1 movement sub-pipeline — threshold tuning results (Week 3)
+
+**Per-class threshold tuning done** for the LSTM movement classifier (`src/training/find_movement_thresholds.py`, mirroring `find_best_thresholds.py`'s sweep-and-pick-max-F1 approach, thresholds 0.05–0.95). Same dramatic improvement pattern as Module 1's static classifier:
+
+- Macro-F1 flat 0.5: **0.0088**
+- Macro-F1 tuned (all 21 classes): **0.1870**
+- Macro-F1 tuned (15 classes with actual val support): **0.2617** ← the number to cite
+
+**Caveat worth stating explicitly (don't let this slide past unnoticed):** 6 of the 21 classes — Push out, Pull in, Trucking left, Trucking right, Zoom in, Zoom out — have **zero positive examples in the val split**. Their F1 is mathematically pinned at 0.0 regardless of threshold, and the "tuned" threshold values saved for them (all 0.05, the grid minimum) are meaningless artifacts of no signal, not real tuning. This isn't a script bug — it's the direct consequence of some movement classes having as few as 3–15 examples in the *entire* dataset (documented in section on movement label normalization), so a video-level 70/15/15 split can easily leave a rare class with zero representation in val or test.
+
+Best-performing tuned class: **Push in** (58 val support) at **0.4813 F1**. Weakest genuinely-evaluable classes (Arc=4, Camera roll=3, Rack focus=4 support) stayed low even after tuning — consistent with the same data-scarcity conclusion as section 11's class-weighting experiment.
+
+**Files added:** `src/training/find_movement_thresholds.py`
+**Outputs:** `reports/movement_best_thresholds.json`, `reports/movement_eval_metrics_tuned.csv`
+
+**Next:** shot segmentation via PySceneDetect, then Module 2 (Script Generator) pipeline wiring, per Week 3 plan.
