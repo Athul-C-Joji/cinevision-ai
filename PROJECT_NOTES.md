@@ -230,3 +230,26 @@ Best-performing tuned class: **Push in** (58 val support) at **0.4813 F1**. Weak
 
 **Files changed:** `src/inference/video_analyzer.py` (`classify_movement()` rewritten)
 **Sample outputs regenerated:** `data/scripts/-4dDC0lPRB0.webm_14.txt`, `data/scripts/4005541-hd_1920_1080_30fps.txt`
+
+
+---
+
+## 15. Movement dataset — verified clip counts (Week 3)
+
+Counted directly from `data/processed/movement_splits.csv` (columns: `filename`, `base_video_id`, `split`) with a throwaway counting script. These are the verified numbers. Earlier figures written in chat or memory were not checked and should not be reused.
+
+| Split | Clips | Source videos (`base_video_id`) | Avg clips per video |
+|---|---|---|---|
+| Train | 711 | 90 | 7.9 |
+| Val | 183 | 19 | 9.6 |
+| Test | 144 | 20 | 7.2 |
+| **Total** | **1,038** | **129** | 8.0 |
+
+**How the split was made:** by source video, not by clip, so clips from the same video never appear in two different splits (same reason as the film-level split in section 10).
+
+**Why the clip ratios are not exactly 70/15/15:** at video level the split is almost exactly 70/15/15 (90 / 19 / 20 of 129 videos). The clip percentages (68.5% / 17.6% / 13.9%) drift because videos contribute different numbers of clips.
+
+**What this means for the results (honest caveat):**
+- The val split is only 19 source videos and the test split only 20. Movement metrics are therefore noisy, and many of the 21 classes have single-digit support.
+- This backs up sections 12 and 14: tuning thresholds on 183 clips from 19 videos is fragile, which is part of why the tuned thresholds collapsed to 0.05–0.15.
+- For the report: state these counts alongside any movement result, and describe the movement model's numbers as indicative, not definitive.
