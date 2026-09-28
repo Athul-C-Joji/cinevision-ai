@@ -216,6 +216,33 @@ Best-performing tuned class: **Push in** (58 val support) at **0.4813 F1**. Weak
 
 **Next:** shot segmentation via PySceneDetect, then Module 2 (Script Generator) pipeline wiring, per Week 3 plan.
 
+## 13. Movement data pipeline, Module 2 build, and domain-shift test (Week 3)
+
+**Movement data prep (Module 1, movement sub-model):**
+- The 1,058 video-named `.mp4` files in `data/raw/images/` are the movement training clips. Labels come from the `"videos"` key in `grpo.json` (multiple-choice movement questions with an `<answer>` tag). All 1,058 files were verified present on disk and all labels parsed.
+- Raw labels are free text: about 15-18 atomic camera-movement primitives combined with "and" (simultaneous) or "Firstly X, then Y" (sequential), with inconsistent punctuation. There were 309 distinct raw strings.
+- `src/data/movement_label_encoding.py` parses them clause by clause into a 21-class multi-hot vocabulary (`MOVEMENT_CLASS_VOCAB`). First run: 0 unmatched rows, 0 unmatched clauses. Output: `data/processed/movement_labels_encoded.csv`.
+- Bug fixed in `src/data/extract_movement_labels.py`: it wrote CSV rows with manual string formatting, so labels containing commas broke parsing. Now uses `csv.writer` with `newline=""`.
+- `src/data/extract_movement_frames.py` decodes each clip in memory and saves 16 evenly spaced frames per clip under `data/processed/movement_frames/<clip_id>/`. 1,038 of 1,058 clips succeeded. 20 failed with "moov atom not found" (16 distinct corrupted source videos) and were excluded, consistent with the broken-images finding in section 10.
+- Split: by source video, not by clip (see section 15 for the verified counts: 711 / 183 / 144 clips).
+- `MovementDataset` (`src/data/movement_dataset.py`) mirrors `ShotDataset`, returning (16-frame sequence, multi-hot label).
+
+**Movement model choice (LSTM vs Transformer):** `MovementClassifier` (`src/models/movement_classifier.py`) supports both heads on frozen CLIP frame embeddings. LSTM head: 331,413 trainable params. Transformer head: 1,203,349. Both trained 5 epochs (`src/training/train_movement.py`), compared on val macro average-precision (flat-0.5 macro-F1 read 0.0000 for both, the same threshold-suppression problem as section 11).
+- LSTM: steady, plateaued (last 3 epochs 0.1943 / 0.1950 / 0.1942).
+- Transformer: higher peak at epoch 3 (0.2319) but noisy (last 3 epochs 0.2319 / 0.1915 / 0.1948) while train loss kept falling, a sign of overfitting on 711 training clips.
+- **Decision:** kept the LSTM. Checkpoints for both are saved (`checkpoints/movement_lstm.pt`, `checkpoints/movement_transformer.pt`).
+
+**Module 2 build (shot segmentation, Video Analyzer, Script Generator):**
+- `src/inference/shot_segmentation.py` uses PySceneDetect `ContentDetector`. `src/inference/video_analyzer.py` runs each shot's representative frame through the static classifier and each shot's 16 sampled frames through the movement LSTM. `src/inference/script_generator.py` formats the result as a shot-by-shot breakdown, saved to `data/scripts/`.
+- PySceneDetect finds cuts, not scene groupings, so the Script Generator treats the whole video as one scene containing all detected shots. Real scene grouping has not been built.
+
+**Domain-shift test (informal, not a benchmark):** ran the full pipeline on a downloaded stock b-roll clip that is not part of ShotQA.
+- Shot detection worked: 4 real cuts found, and saved per-shot frames were visibly different and correctly indexed.
+- Predictions, however, were nearly identical across all 4 shots regardless of content, including contradictory movement labels (for example Tilt up + Tilt down).
+- **Hypothesis (not tested):** domain shift. Both models were trained only on professional film footage from ShotQA, and generic stock footage is out of domain. This was not confirmed by a controlled experiment.
+- The contradictory movement labels were later traced to a separate cause, the threshold over-triggering described in section 14, so part of what looked like domain shift may have been that bug.
+- The model's real evaluation is the held-out ShotQA test split and ShotBench, not informal stock footage.
+
 ## 14. Movement classifier inference fix — threshold over-triggering (Week 3)
 
 **Problem discovered through real-data testing (not the stock-footage domain-shift test):** ran the full pipeline on several real ShotQA clips with known ground truth and compared predictions directly. Results were bad in a specific, diagnosable way — the movement model predicted 6-8 labels per clip regardless of actual content, including physically impossible simultaneous opposite pairs (Push in + Pull out, Tilt up + Tilt down, Boom up + Boom down all firing together on the same clip).
