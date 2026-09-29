@@ -1,0 +1,247 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "scenes_in_script": 2,
+  "scenes_planned": 2,
+  "usage": {
+    "input": 1244,
+    "output": 893
+  },
+  "scenes": [
+    {
+      "heading": "INT. SMALL KITCHEN - NIGHT",
+      "shots": [
+        {
+          "shot_number": 1,
+          "description": "Maya sits alone at the kitchen table staring at the face-down phone.",
+          "purpose": "Establishes Maya's isolation and her hesitation before the device.",
+          "labels": {
+            "Frame Size": [
+              "Wide"
+            ],
+            "Lens Size": [
+              "Wide"
+            ],
+            "Composition": [
+              "Center"
+            ],
+            "Shot Framing": [
+              "Establishing shot"
+            ],
+            "Camera Angle": [
+              "High angle"
+            ],
+            "Lighting Type": [
+              "Artificial light"
+            ],
+            "Lighting": [
+              "Low contrast"
+            ],
+            "Movement": [
+              "Static shot"
+            ]
+          },
+          "invalid_labels": []
+        },
+        {
+          "shot_number": 2,
+          "description": "Close up of the phone lying face-down on the table surface.",
+          "purpose": "Focuses attention on the source of Maya's anxiety.",
+          "labels": {
+            "Frame Size": [
+              "Extreme Close Up"
+            ],
+            "Lens Size": [
+              "Medium"
+            ],
+            "Composition": [
+              "Center"
+            ],
+            "Shot Framing": [
+              "Insert"
+            ],
+            "Camera Angle": [
+              "Overhead"
+            ],
+            "Lighting Type": [
+              "Artificial light"
+            ],
+            "Lighting": [
+              "Hard light"
+            ],
+            "Movement": [
+              "Static shot"
+            ]
+          },
+          "invalid_labels": []
+        },
+        {
+          "shot_number": 3,
+          "description": "Maya's hand turns the phone over to reveal the message from her brother.",
+          "purpose": "Reveals the catalyst for her immediate action.",
+          "labels": {
+            "Frame Size": [
+              "Close Up"
+            ],
+            "Lens Size": [
+              "Medium"
+            ],
+            "Composition": [
+              "Balanced"
+            ],
+            "Shot Framing": [
+              "Insert"
+            ],
+            "Camera Angle": [
+              "High angle"
+            ],
+            "Lighting Type": [
+              "Artificial light"
+            ],
+            "Lighting": [
+              "Soft light"
+            ],
+            "Movement": [
+              "Push in"
+            ]
+          },
+          "invalid_labels": []
+        },
+        {
+          "shot_number": 4,
+          "description": "Maya types, deletes, and types her reply on the glowing screen.",
+          "purpose": "Highlights her inner turmoil and difficulty finding the right words.",
+          "labels": {
+            "Frame Size": [
+              "Medium Close Up"
+            ],
+            "Lens Size": [
+              "Long Lens"
+            ],
+            "Composition": [
+              "Center"
+            ],
+            "Shot Framing": [
+              "Clean single"
+            ],
+            "Camera Angle": [
+              "High angle"
+            ],
+            "Lighting Type": [
+              "Artificial light"
+            ],
+            "Lighting": [
+              "High contrast"
+            ],
+            "Movement": [
+              "Static shot"
+            ]
+          },
+          "invalid_labels": []
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "heading": "EXT. APARTMENT ROOFTOP - CONTINUOUS",
+      "shots": [
+        {
+          "shot_number": 1,
+          "description": "Maya steps out onto the expansive apartment rooftop as the city stretches out far below her.",
+          "purpose": "Establishes the setting and Maya's isolation high above the city.",
+          "labels": {
+            "Frame Size": [
+              "Extreme Wide"
+            ],
+            "Lens Size": [
+              "Wide"
+            ],
+            "Composition": [
+              "Balanced"
+            ],
+            "Shot Framing": [
+              "Establishing shot"
+            ],
+            "Camera Angle": [
+              "High angle"
+            ],
+            "Lighting Type": [
+              "Daylight"
+            ],
+            "Lighting": [],
+            "Movement": [
+              "Static shot"
+            ]
+          },
+          "invalid_labels": [
+            "Lighting: Natural light"
+          ]
+        },
+        {
+          "shot_number": 2,
+          "description": "Maya sits on the low wall at the edge with her legs dangling over the precipice.",
+          "purpose": "Highlights the physical danger and emotional weight of Maya's position.",
+          "labels": {
+            "Frame Size": [
+              "Wide"
+            ],
+            "Lens Size": [
+              "Medium"
+            ],
+            "Composition": [
+              "Center"
+            ],
+            "Shot Framing": [
+              "Clean single"
+            ],
+            "Camera Angle": [
+              "Low angle"
+            ],
+            "Lighting Type": [
+              "Daylight"
+            ],
+            "Lighting": [
+              "Soft light"
+            ],
+            "Movement": [
+              "Push in"
+            ]
+          },
+          "invalid_labels": []
+        },
+        {
+          "shot_number": 3,
+          "description": "Dev stands out of breath in the open doorway behind Maya.",
+          "purpose": "Introduces Dev into the space and reveals his urgent arrival.",
+          "labels": {
+            "Frame Size": [
+              "Medium Wide"
+            ],
+            "Lens Size": [
+              "Medium"
+            ],
+            "Composition": [
+              "Right heavy"
+            ],
+            "Shot Framing": [
+              "Clean single"
+            ],
+            "Camera Angle": [],
+            "Lighting Type": [
+              "Daylight"
+            ],
+            "Lighting": [
+              "Hard light"
+            ],
+            "Movement": [
+              "Static shot"
+            ]
+          },
+          "invalid_labels": [
+            "Camera Angle: Eye level"
+          ]
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

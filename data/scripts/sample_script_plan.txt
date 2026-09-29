@@ -1,0 +1,29 @@
+# Suggested Shot Plan: sample_script.txt
+(LLM-generated suggestions from the script text. Not produced by a trained model.)
+
+Scene 1: INT. SMALL KITCHEN - NIGHT
+  Shot 1: Maya sits alone at the kitchen table staring at the face-down phone.
+    Frame Size: Wide | Lens Size: Wide | Composition: Center | Shot Framing: Establishing shot | Camera Angle: High angle | Lighting Type: Artificial light | Lighting: Low contrast | Movement: Static shot
+    Why: Establishes Maya's isolation and her hesitation before the device.
+  Shot 2: Close up of the phone lying face-down on the table surface.
+    Frame Size: Extreme Close Up | Lens Size: Medium | Composition: Center | Shot Framing: Insert | Camera Angle: Overhead | Lighting Type: Artificial light | Lighting: Hard light | Movement: Static shot
+    Why: Focuses attention on the source of Maya's anxiety.
+  Shot 3: Maya's hand turns the phone over to reveal the message from her brother.
+    Frame Size: Close Up | Lens Size: Medium | Composition: Balanced | Shot Framing: Insert | Camera Angle: High angle | Lighting Type: Artificial light | Lighting: Soft light | Movement: Push in
+    Why: Reveals the catalyst for her immediate action.
+  Shot 4: Maya types, deletes, and types her reply on the glowing screen.
+    Frame Size: Medium Close Up | Lens Size: Long Lens | Composition: Center | Shot Framing: Clean single | Camera Angle: High angle | Lighting Type: Artificial light | Lighting: High contrast | Movement: Static shot
+    Why: Highlights her inner turmoil and difficulty finding the right words.
+
+Scene 2: EXT. APARTMENT ROOFTOP - CONTINUOUS
+  Shot 1: Maya steps out onto the expansive apartment rooftop as the city stretches out far below her.
+    Frame Size: Extreme Wide | Lens Size: Wide | Composition: Balanced | Shot Framing: Establishing shot | Camera Angle: High angle | Lighting Type: Daylight | Movement: Static shot
+    Why: Establishes the setting and Maya's isolation high above the city.
+    (dropped labels not in the vocabulary: Lighting: Natural light)
+  Shot 2: Maya sits on the low wall at the edge with her legs dangling over the precipice.
+    Frame Size: Wide | Lens Size: Medium | Composition: Center | Shot Framing: Clean single | Camera Angle: Low angle | Lighting Type: Daylight | Lighting: Soft light | Movement: Push in
+    Why: Highlights the physical danger and emotional weight of Maya's position.
+  Shot 3: Dev stands out of breath in the open doorway behind Maya.
+    Frame Size: Medium Wide | Lens Size: Medium | Composition: Right heavy | Shot Framing: Clean single | Lighting Type: Daylight | Lighting: Hard light | Movement: Static shot
+    Why: Introduces Dev into the space and reveals his urgent arrival.
+    (dropped labels not in the vocabulary: Camera Angle: Eye level)

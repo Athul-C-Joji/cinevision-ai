@@ -368,3 +368,43 @@ Counted directly from `data/processed/movement_splits.csv` (columns: `filename`,
 - `requirements.txt` now pins every package to the version installed in the working local venv (Python 3.11), for example torch 2.11.0, torchvision 0.26.0, transformers 5.14.1, streamlit 1.60.0, scenedetect 0.7.1.
 - torch and torchvision are pinned without the `+cu128` build tag, because that tag only exists on PyTorch's own download server and breaks a plain `pip install` elsewhere. The file header explains how to install the CUDA build. `torchaudio` was left out (unused).
 - Not yet tested: installing from this file on a clean machine or on Kaggle.
+
+
+---
+
+## 18. Script Planner (Module 3): LLM orchestration, not trained (Week 4)
+
+### 18.1 What it does
+- Script text in, suggested shots per scene out, using the same label vocabulary as Module 1 (the 7 static dimensions plus Movement).
+- Files: `src/script_planner/prompt_templates.py` (prompt text, independent of which LLM is used) and `src/script_planner/planner.py`.
+- Run: `python -m src.script_planner.planner data\scripts\sample_script.txt` (optional `--max-scenes N`, `--max-shots N`, `--model NAME`). Writes `data/scripts/<name>_plan.txt` and `.json`.
+
+### 18.2 How it works
+- The script is split into scenes by lines starting with INT. / EXT. (regex). Each scene is sent to the LLM on its own, together with a system prompt that lists every allowed label (built from `CLASS_VOCAB` and `MOVEMENT_CLASS_VOCAB`).
+- The reply is JSON. Every label is checked against the vocabulary (exact match ignoring case). Labels that do not match are dropped and shown in the output. **This checks spelling only, not whether a suggestion is good.**
+- Temporary API errors (429, 503, 500) are retried with growing waits (20s, 40s, 60s). `--max-scenes` (default 8) limits the number of requests.
+- Nothing in `src/` outside `src/script_planner/` was modified. `retrieval.py` (planned in section 4) was not built.
+
+### 18.3 Choice of LLM
+- Uses the Gemini API free tier through the `google-genai` package (2.25.0), with `GEMINI_API_KEY` in `.env` (gitignored, never committed). A first version was written for the Anthropic API, but it needs paid credit, so it was replaced.
+- Models tried: `gemini-2.5-flash` returned 404 ("no longer available to new users"); `gemini-3.8-flash` returned 503 "high demand" on every retry for both scenes; `gemini-3.5-flash-lite` worked and is the default.
+- Model names, availability and free-tier limits change and vary per project (Google's own docs say so), so check `aistudio.google.com/rate-limit`.
+
+### 18.4 Sample run
+- Input: `data/scripts/sample_script.txt` (a 2-scene example written for testing). Output: 7 shots (4 in scene 1, 3 in scene 2), 1,244 input tokens and 893 output tokens in total, model `gemini-3.5-flash-lite`.
+- The vocabulary check dropped two labels: "Natural light" (Lighting) and "Eye level" (Camera Angle). Neither is in the vocabulary. Possible reason for the second (hypothesis, not checked): eye level is the default angle and is not a class in the source data.
+
+### 18.5 Limitations and observations (from two small runs)
+- **Not evaluated.** There is no ground truth for "good" shot suggestions, so no accuracy number exists for this module.
+- Output differs from run to run (a 1-scene test and the 2-scene run gave different labels for scene 1).
+- Scenes are planned independently. Scene 2 is marked CONTINUOUS after a night scene but got "Daylight". Likely cause (hypothesis): the model never sees scene 1.
+- Camera angle was "High angle" on 4 of 4 shots in the first run of scene 1 and 3 of 4 in the second. Possible default-label behavior (hypothesis).
+- Mild additions beyond the script text (e.g. "anxiety", "precipice") despite the instruction not to invent.
+- Script text is sent to Google. The free-tier data-use terms were not confirmed, so only non-sensitive scripts should be used.
+- Google now recommends its newer Interactions API; this code uses `generate_content`, which worked in these runs and may need updating later.
+
+
+### 18.7 Vocabulary check (supersedes the "unchecked" note in 18.4)
+- Checked directly with `CLASS_VOCAB`: Camera Angle has 5 classes (Aerial, Dutch angle, High angle, Low angle, Overhead), so there is **no eye-level or neutral class**. Lighting has 10 classes (Backlight, Edge light, Hard light, High contrast, Low contrast, Side light, Silhouette, Soft light, Top light, Underlight), with no "natural light". This is why "Eye level" and "Natural light" were dropped by the validator in the sample run.
+- Hypothesis (not tested): because the prompt asks for one label per dimension and every allowed angle is a marked angle, the planner is pushed toward "High angle" for ordinary shots. A possible fix, untried, is to let the prompt return an empty list when no label fits.
+- Possible consequence for Module 1 (hypothesis, not measured): `classify_static` falls back to the top-1 class when no class crosses its threshold, so every shot gets some Camera Angle label and can never be reported as eye-level. Worth stating as a limitation of the label vocabulary in the write-up.
