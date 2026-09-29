@@ -1,0 +1,9 @@
+{
+  "limit_per_category": null,
+  "n_questions_scored": 3572,
+  "macro_average_accuracy_across_categories": 0.5983,
+  "micro_average_accuracy_all_questions": 0.5998,
+  "files_failed_to_load": 0,
+  "questions_skipped_missing_file": 0,
+  "random_baseline_approx": 0.25
+}

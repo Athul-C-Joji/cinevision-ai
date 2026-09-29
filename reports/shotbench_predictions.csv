@@ -1,0 +1,3573 @@
+index,category,correct_credit,predicted,answer,n_tied,answer_tag_count,answer_type,answer_option_unmatched,any_option_unmatched
+1,shot size,1.0,D,D,1,1,single,False,False
+2,shot size,1.0,C,C,1,1,single,False,False
+3,shot size,1.0,B,B,1,1,single,False,False
+4,shot size,1.0,D,D,1,1,single,False,False
+5,shot size,1.0,B,B,1,1,single,False,False
+6,shot size,1.0,A,A,1,1,single,False,False
+7,shot size,1.0,D,D,1,1,single,False,False
+8,shot size,1.0,B,B,1,1,single,False,False
+9,shot size,1.0,C,C,1,1,single,False,False
+10,shot size,0.0,D,B,1,1,single,False,False
+11,shot size,0.0,B,C,1,1,single,False,False
+12,shot size,1.0,D,D,1,1,single,False,False
+13,shot size,0.0,B,A,1,1,single,False,False
+14,shot size,1.0,D,D,1,1,single,False,False
+15,shot size,1.0,A,A,1,1,single,False,False
+16,shot size,1.0,C,C,1,1,single,False,False
+17,shot size,0.0,C,D,1,1,single,False,False
+18,shot size,1.0,B,B,1,2,combination,False,False
+19,shot size,1.0,D,D,1,1,single,False,False
+20,shot size,1.0,D,D,1,1,single,False,False
+21,shot size,1.0,C,C,1,1,single,False,False
+22,shot size,1.0,C,C,1,1,single,False,False
+23,shot size,1.0,B,B,1,1,single,False,False
+24,shot size,0.0,D,A,1,1,single,False,False
+25,shot size,1.0,D,D,1,1,single,False,False
+26,shot size,1.0,A,A,1,1,single,False,False
+27,shot size,1.0,A,A,1,1,single,False,False
+28,shot size,0.0,B,D,1,1,single,False,False
+29,shot size,1.0,A,A,1,1,single,False,False
+30,shot size,1.0,A,A,1,1,single,False,False
+31,shot size,0.0,D,C,1,1,single,False,False
+32,shot size,1.0,D,D,1,1,single,False,False
+33,shot size,0.0,C,A,1,1,single,False,False
+34,shot size,0.0,B,A,1,1,single,False,False
+35,shot size,1.0,B,B,1,1,single,False,False
+36,shot size,0.0,C,D,1,1,single,False,False
+37,shot size,1.0,B,B,1,1,single,False,False
+38,shot size,0.0,D,C,1,1,single,False,False
+39,shot size,1.0,D,D,1,1,single,False,False
+40,shot size,1.0,C,C,1,1,single,False,False
+41,shot size,1.0,C,C,1,1,single,False,False
+42,shot size,0.0,A,D,1,1,single,False,False
+43,shot size,1.0,C,C,1,1,single,False,False
+44,shot size,1.0,A,A,1,1,single,False,False
+45,shot size,1.0,B,B,1,1,single,False,False
+46,shot size,0.0,B,C,1,1,single,False,False
+47,shot size,1.0,B,B,1,2,combination,False,False
+48,shot size,1.0,B,B,1,1,single,False,False
+49,shot size,0.0,A,D,1,1,single,False,False
+50,shot size,1.0,D,D,1,1,single,False,False
+51,shot size,1.0,C,C,1,1,single,False,False
+52,shot size,0.0,A,C,1,1,single,False,False
+53,shot size,0.0,B,A,1,1,single,False,False
+54,shot size,0.0,A,B,1,1,single,False,False
+55,shot size,1.0,A,A,1,1,single,False,False
+56,shot size,1.0,D,D,1,1,single,False,False
+57,shot size,1.0,B,B,1,1,single,False,False
+58,shot size,1.0,C,C,1,1,single,False,False
+59,shot size,1.0,D,D,1,1,single,False,False
+60,shot size,1.0,A,A,1,1,single,False,False
+61,shot size,1.0,B,B,1,1,single,False,False
+62,shot size,1.0,D,D,1,1,single,False,False
+63,shot size,1.0,A,A,1,1,single,False,False
+64,shot size,0.0,A,B,1,1,single,False,False
+65,shot size,1.0,C,C,1,1,single,False,False
+66,shot size,1.0,B,B,1,1,single,False,False
+67,shot size,1.0,A,A,1,1,single,False,False
+68,shot size,1.0,C,C,1,1,single,False,False
+69,shot size,1.0,C,C,1,1,single,False,False
+70,shot size,1.0,D,D,1,1,single,False,False
+71,shot size,1.0,D,D,1,1,single,False,False
+72,shot size,0.0,C,A,1,1,single,False,False
+73,shot size,0.0,A,D,1,1,single,False,False
+74,shot size,1.0,B,B,1,1,single,False,False
+75,shot size,1.0,A,A,1,1,single,False,False
+76,shot size,1.0,A,A,1,1,single,False,False
+77,shot size,1.0,D,D,1,1,single,False,False
+78,shot size,0.0,B,C,1,1,single,False,False
+79,shot size,1.0,A,A,1,2,combination,False,False
+80,shot size,0.0,A,D,1,1,single,False,False
+81,shot size,1.0,B,B,1,1,single,False,False
+82,shot size,1.0,D,D,1,1,single,False,False
+83,shot size,1.0,B,B,1,1,single,False,False
+84,shot size,1.0,D,D,1,1,single,False,False
+85,shot size,1.0,D,D,1,1,single,False,False
+86,shot size,1.0,D,D,1,1,single,False,False
+87,shot size,1.0,A,A,1,1,single,False,False
+88,shot size,1.0,D,D,1,1,single,False,False
+89,shot size,1.0,D,D,1,1,single,False,False
+90,shot size,1.0,D,D,1,1,single,False,False
+91,shot size,0.0,D,C,1,1,single,False,False
+92,shot size,1.0,C,C,1,1,single,False,False
+93,shot size,1.0,D,D,1,1,single,False,False
+94,shot size,1.0,C,C,1,2,combination,False,False
+95,shot size,1.0,C,C,1,1,single,False,False
+96,shot size,1.0,B,B,1,1,single,False,False
+97,shot size,1.0,D,D,1,1,single,False,False
+98,shot size,1.0,B,B,1,1,single,False,False
+99,shot size,1.0,C,C,1,1,single,False,False
+100,shot size,1.0,A,A,1,1,single,False,False
+101,shot size,0.0,A,B,1,1,single,False,False
+102,shot size,1.0,C,C,1,1,single,False,False
+103,shot size,1.0,B,B,1,1,single,False,False
+104,shot size,0.0,C,D,1,1,single,False,False
+105,shot size,0.0,D,B,1,1,single,False,False
+106,shot size,1.0,A,A,1,1,single,False,False
+107,shot size,1.0,B,B,1,1,single,False,False
+108,shot size,1.0,C,C,1,1,single,False,False
+109,shot size,0.0,B,D,1,1,single,False,False
+110,shot size,0.0,B,C,1,1,single,False,False
+111,shot size,1.0,D,D,1,1,single,False,False
+112,shot size,1.0,A,A,1,1,single,False,False
+113,shot size,1.0,A,A,1,1,single,False,False
+114,shot size,1.0,C,C,1,1,single,False,False
+115,shot size,1.0,C,C,1,1,single,False,False
+116,shot size,0.0,A,C,1,1,single,False,False
+117,shot size,1.0,D,D,1,1,single,False,False
+118,shot size,0.0,B,C,1,1,single,False,False
+119,shot size,1.0,A,A,1,2,combination,False,False
+120,shot size,0.0,A,D,1,1,single,False,False
+121,shot size,0.0,A,C,1,1,single,False,False
+122,shot size,1.0,C,C,1,1,single,False,False
+123,shot size,1.0,A,A,1,1,single,False,False
+124,shot size,1.0,B,B,1,1,single,False,False
+125,shot size,1.0,B,B,1,1,single,False,False
+126,shot size,0.0,C,D,1,1,single,False,False
+127,shot size,1.0,C,C,1,1,single,False,False
+128,shot size,1.0,A,A,1,1,single,False,False
+129,shot size,0.0,D,B,1,1,single,False,False
+130,shot size,1.0,B,B,1,1,single,False,False
+131,shot size,0.0,A,D,1,1,single,False,False
+132,shot size,0.0,B,C,1,1,single,False,False
+133,shot size,1.0,B,B,1,1,single,False,False
+134,shot size,1.0,A,A,1,1,single,False,False
+135,shot size,0.0,C,D,1,1,single,False,False
+136,shot size,1.0,A,A,1,1,single,False,False
+137,shot size,1.0,B,B,1,1,single,False,False
+138,shot size,1.0,D,D,1,1,single,False,False
+139,shot size,1.0,C,C,1,1,single,False,False
+140,shot size,1.0,C,C,1,1,single,False,False
+141,shot size,1.0,D,D,1,1,single,False,False
+142,shot size,1.0,A,A,1,2,combination,False,False
+143,shot size,1.0,D,D,1,1,single,False,False
+144,shot size,1.0,D,D,1,1,single,False,False
+145,shot size,1.0,B,B,1,1,single,False,False
+146,shot size,0.0,B,D,1,1,single,False,False
+147,shot size,0.0,D,B,1,1,single,False,False
+148,shot size,1.0,B,B,1,1,single,False,False
+149,shot size,1.0,D,D,1,1,single,False,False
+150,shot size,1.0,C,C,1,1,single,False,False
+151,shot size,0.0,C,D,1,1,single,False,False
+152,shot size,1.0,A,A,1,1,single,False,False
+153,shot size,1.0,D,D,1,1,single,False,False
+154,shot size,1.0,B,B,1,1,single,False,False
+155,shot size,0.0,D,C,1,1,single,False,False
+156,shot size,1.0,C,C,1,1,single,False,False
+157,shot size,1.0,A,A,1,1,single,False,False
+158,shot size,1.0,A,A,1,1,single,False,False
+159,shot size,1.0,B,B,1,1,single,False,False
+160,shot size,1.0,D,D,1,1,single,False,False
+161,shot size,1.0,C,C,1,1,single,False,False
+162,shot size,1.0,C,C,1,1,single,False,False
+163,shot size,0.0,D,A,1,1,single,False,False
+164,shot size,1.0,B,B,1,1,single,False,False
+165,shot size,1.0,D,D,1,1,single,False,False
+166,shot size,0.0,B,C,1,1,single,False,False
+167,shot size,1.0,D,D,1,1,single,False,False
+168,shot size,1.0,B,B,1,1,single,False,False
+169,shot size,1.0,D,D,1,1,single,False,False
+170,shot size,1.0,C,C,1,1,single,False,False
+171,shot size,0.0,B,D,1,1,single,False,False
+172,shot size,0.0,A,D,1,1,single,False,False
+173,shot size,1.0,B,B,1,1,single,False,False
+174,shot size,1.0,B,B,1,1,single,False,False
+175,shot size,1.0,A,A,1,1,single,False,False
+176,shot size,1.0,D,D,1,1,single,False,False
+177,shot size,1.0,B,B,1,1,single,False,False
+178,shot size,0.0,D,C,1,1,single,False,False
+179,shot size,0.0,B,C,1,1,single,False,False
+180,shot size,1.0,D,D,1,1,single,False,False
+181,shot size,1.0,B,B,1,1,single,False,False
+182,shot size,0.0,C,A,1,2,combination,False,False
+183,shot size,1.0,C,C,1,2,combination,False,False
+184,shot size,1.0,C,C,1,1,single,False,False
+185,shot size,1.0,A,A,1,1,single,False,False
+186,shot size,1.0,D,D,1,1,single,False,False
+187,shot size,0.0,B,D,1,1,single,False,False
+188,shot size,1.0,A,A,1,1,single,False,False
+189,shot size,1.0,B,B,1,1,single,False,False
+190,shot size,0.0,A,D,1,1,single,False,False
+191,shot size,1.0,B,B,1,1,single,False,False
+192,shot size,1.0,D,D,1,1,single,False,False
+193,shot size,1.0,C,C,1,1,single,False,False
+194,shot size,1.0,A,A,1,1,single,False,False
+195,shot size,1.0,D,D,1,2,combination,False,False
+196,shot size,1.0,C,C,1,1,single,False,False
+197,shot size,1.0,C,C,1,1,single,False,False
+198,shot size,1.0,D,D,1,2,combination,False,False
+199,shot size,1.0,B,B,1,1,single,False,False
+200,shot size,1.0,D,D,1,1,single,False,False
+201,shot size,1.0,D,D,1,1,single,False,False
+202,shot size,1.0,D,D,1,1,single,False,False
+203,shot size,1.0,A,A,1,1,single,False,False
+204,shot size,0.0,C,D,1,1,single,False,False
+205,shot size,1.0,A,A,1,1,single,False,False
+206,shot size,1.0,B,B,1,1,single,False,False
+207,shot size,1.0,A,A,1,1,single,False,False
+208,shot size,0.0,B,A,1,1,single,False,False
+209,shot size,0.0,C,D,1,1,single,False,False
+210,shot size,1.0,B,B,1,1,single,False,False
+211,shot size,1.0,A,A,1,1,single,False,False
+212,shot size,1.0,C,C,1,1,single,False,False
+213,shot size,1.0,A,A,1,1,single,False,False
+214,shot size,1.0,A,A,1,1,single,False,False
+215,shot size,1.0,C,C,1,1,single,False,False
+216,shot size,1.0,B,B,1,1,single,False,False
+217,shot size,1.0,D,D,1,1,single,False,False
+218,shot size,1.0,B,B,1,1,single,False,False
+219,shot size,1.0,C,C,1,1,single,False,False
+220,shot size,1.0,B,B,1,1,single,False,False
+221,shot size,1.0,D,D,1,1,single,False,False
+222,shot size,1.0,C,C,1,2,combination,False,False
+223,shot size,1.0,B,B,1,1,single,False,False
+224,shot size,0.0,C,A,1,1,single,False,False
+225,shot size,1.0,A,A,1,1,single,False,False
+226,shot size,0.0,A,C,1,1,single,False,False
+227,shot size,1.0,B,B,1,1,single,False,False
+228,shot size,1.0,B,B,1,1,single,False,False
+229,shot size,1.0,C,C,1,1,single,False,False
+230,shot size,1.0,A,A,1,1,single,False,False
+231,shot size,1.0,A,A,1,1,single,False,False
+232,shot size,0.0,B,C,1,1,single,False,False
+233,shot size,1.0,B,B,1,1,single,False,False
+234,shot size,1.0,D,D,1,1,single,False,False
+235,shot size,0.0,B,D,1,1,single,False,False
+236,shot size,1.0,C,C,1,1,single,False,False
+237,shot size,1.0,D,D,1,1,single,False,False
+238,shot size,1.0,B,B,1,1,single,False,False
+239,shot size,0.0,D,A,1,1,single,False,False
+240,shot size,1.0,A,A,1,1,single,False,False
+241,shot size,1.0,D,D,1,1,single,False,False
+242,shot size,1.0,C,C,1,1,single,False,False
+243,shot size,0.0,C,D,1,1,single,False,False
+244,shot size,1.0,A,A,1,1,single,False,False
+245,shot size,1.0,B,B,1,1,single,False,False
+246,shot size,0.0,A,B,1,1,single,False,False
+247,shot size,0.0,A,D,1,1,single,False,False
+248,shot size,1.0,A,A,1,2,combination,False,False
+249,shot size,0.0,D,A,1,1,single,False,False
+250,shot size,1.0,A,A,1,1,single,False,False
+251,shot size,1.0,B,B,1,1,single,False,False
+252,shot size,1.0,D,D,1,1,single,False,False
+253,shot size,1.0,A,A,1,1,single,False,False
+254,shot size,1.0,B,B,1,1,single,False,False
+255,shot size,1.0,B,B,1,1,single,False,False
+256,shot size,0.0,D,C,1,1,single,False,False
+257,shot size,1.0,C,C,1,1,single,False,False
+258,shot size,0.0,A,D,1,1,single,False,False
+259,shot size,1.0,A,A,1,1,single,False,False
+260,shot size,1.0,A,A,1,1,single,False,False
+261,shot size,1.0,D,D,1,1,single,False,False
+262,shot size,1.0,A,A,1,1,single,False,False
+263,shot size,0.0,D,A,1,1,single,False,False
+264,shot size,1.0,D,D,1,1,single,False,False
+265,shot size,0.0,B,A,1,1,single,False,False
+266,shot size,0.0,D,A,1,1,single,False,False
+267,shot size,0.0,B,C,1,1,single,False,False
+268,shot size,1.0,A,A,1,1,single,False,False
+269,shot size,0.0,B,D,1,1,single,False,False
+270,shot size,1.0,C,C,1,1,single,False,False
+271,shot size,1.0,D,D,1,1,single,False,False
+272,shot size,1.0,B,B,1,1,single,False,False
+273,shot size,0.0,B,A,1,1,single,False,False
+274,shot size,1.0,C,C,1,1,single,False,False
+275,shot size,0.0,A,C,1,1,single,False,False
+276,shot size,1.0,C,C,1,1,single,False,False
+277,shot size,1.0,A,A,1,1,single,False,False
+278,shot size,1.0,D,D,1,1,single,False,False
+279,shot size,1.0,B,B,1,1,single,False,False
+280,shot size,1.0,D,D,1,1,single,False,False
+281,shot size,1.0,A,A,1,1,single,False,False
+282,shot size,0.0,D,C,1,1,single,False,False
+283,shot size,1.0,C,C,1,1,single,False,False
+284,shot size,1.0,A,A,1,1,single,False,False
+285,shot size,0.0,A,C,1,1,single,False,False
+286,shot size,1.0,B,B,1,1,single,False,False
+287,shot size,1.0,C,C,1,1,single,False,False
+288,shot size,1.0,C,C,1,1,single,False,False
+289,shot size,0.0,C,A,1,1,single,False,False
+290,shot size,1.0,C,C,1,1,single,False,False
+291,shot size,1.0,D,D,1,1,single,False,False
+292,shot size,1.0,C,C,1,1,single,False,False
+293,shot size,1.0,D,D,1,1,single,False,False
+294,shot size,1.0,C,C,1,1,single,False,False
+295,shot size,1.0,B,B,1,2,combination,False,False
+296,shot size,1.0,D,D,1,1,single,False,False
+297,shot size,1.0,A,A,1,1,single,False,False
+298,shot size,1.0,C,C,1,1,single,False,False
+299,shot size,1.0,D,D,1,1,single,False,False
+300,shot size,1.0,D,D,1,1,single,False,False
+301,shot size,1.0,C,C,1,1,single,False,False
+302,shot size,1.0,D,D,1,1,single,False,False
+303,shot size,1.0,D,D,1,1,single,False,False
+304,shot size,1.0,D,D,1,1,single,False,False
+305,shot size,0.0,D,C,1,1,single,False,False
+306,shot size,1.0,C,C,1,1,single,False,False
+307,shot size,1.0,B,B,1,1,single,False,False
+308,shot size,1.0,B,B,1,1,single,False,False
+309,shot size,1.0,A,A,1,1,single,False,False
+310,shot size,0.0,A,C,1,1,single,False,False
+311,shot size,1.0,B,B,1,1,single,False,False
+312,shot size,1.0,C,C,1,1,single,False,False
+313,shot size,1.0,B,B,1,1,single,False,False
+314,shot size,1.0,D,D,1,1,single,False,False
+315,shot size,1.0,C,C,1,1,single,False,False
+316,shot size,1.0,A,A,1,1,single,False,False
+317,shot size,1.0,D,D,1,1,single,False,False
+318,shot size,1.0,D,D,1,1,single,False,False
+319,shot size,1.0,C,C,1,1,single,False,False
+320,shot size,1.0,D,D,1,1,single,False,False
+321,shot size,0.0,D,A,1,1,single,False,False
+322,shot size,1.0,B,B,1,1,single,False,False
+323,shot size,1.0,A,A,1,1,single,False,False
+324,shot size,0.0,B,D,1,1,single,False,False
+325,shot size,1.0,B,B,1,1,single,False,False
+326,shot size,1.0,A,A,1,1,single,False,False
+327,shot size,1.0,B,B,1,1,single,False,False
+328,shot size,1.0,D,D,1,1,single,False,False
+329,shot size,1.0,A,A,1,1,single,False,False
+330,shot size,0.0,B,C,1,1,single,False,False
+331,shot size,1.0,A,A,1,1,single,False,False
+332,shot size,1.0,A,A,1,1,single,False,False
+333,shot size,1.0,B,B,1,2,combination,False,False
+334,shot size,0.0,B,D,1,1,single,False,False
+335,shot size,1.0,B,B,1,1,single,False,False
+336,shot size,1.0,B,B,1,1,single,False,False
+337,shot size,0.0,D,C,1,1,single,False,False
+338,shot size,0.0,D,A,1,1,single,False,False
+339,shot size,1.0,B,B,1,1,single,False,False
+340,shot size,1.0,C,C,1,1,single,False,False
+341,shot size,1.0,A,A,1,1,single,False,False
+342,shot size,1.0,A,A,1,1,single,False,False
+343,shot size,1.0,D,D,1,1,single,False,False
+344,shot size,1.0,C,C,1,1,single,False,False
+345,shot size,1.0,B,B,1,1,single,False,False
+346,shot size,0.0,C,A,1,1,single,False,False
+347,shot size,0.0,D,B,1,1,single,False,False
+348,shot size,1.0,D,D,1,1,single,False,False
+349,shot size,1.0,C,C,1,1,single,False,False
+350,shot size,1.0,D,D,1,1,single,False,False
+351,shot size,0.0,A,D,1,1,single,False,False
+352,shot size,0.0,C,D,1,1,single,False,False
+353,shot size,0.0,C,D,1,1,single,False,False
+354,shot size,1.0,D,D,1,1,single,False,False
+355,shot size,1.0,C,C,1,1,single,False,False
+356,shot size,1.0,C,C,1,1,single,False,False
+357,shot size,1.0,A,A,1,1,single,False,False
+358,shot size,0.0,A,D,1,1,single,False,False
+359,shot size,1.0,B,B,1,1,single,False,False
+360,shot size,1.0,A,A,1,1,single,False,False
+361,shot size,1.0,B,B,1,1,single,False,False
+362,shot size,1.0,C,C,1,1,single,False,False
+363,shot size,1.0,C,C,1,1,single,False,False
+364,shot size,1.0,C,C,1,1,single,False,False
+365,shot size,0.0,B,D,1,1,single,False,False
+366,shot size,1.0,B,B,1,1,single,False,False
+367,shot size,1.0,C,C,1,1,single,False,False
+368,shot size,1.0,C,C,1,1,single,False,False
+369,shot size,1.0,D,D,1,2,combination,False,False
+370,shot size,1.0,C,C,1,1,single,False,False
+371,shot size,1.0,D,D,1,1,single,False,False
+372,shot size,0.0,C,D,1,1,single,False,False
+373,shot size,1.0,C,C,1,1,single,False,False
+374,shot size,0.0,B,C,1,1,single,False,False
+375,shot size,1.0,D,D,1,1,single,False,False
+376,shot size,1.0,C,C,1,1,single,False,False
+377,shot size,1.0,C,C,1,1,single,False,False
+378,shot size,0.0,A,C,1,1,single,False,False
+379,shot size,0.0,A,B,1,1,single,False,False
+380,shot size,1.0,A,A,1,1,single,False,False
+381,shot size,1.0,D,D,1,1,single,False,False
+382,shot size,0.0,A,B,1,1,single,False,False
+383,shot size,1.0,B,B,1,1,single,False,False
+384,shot size,0.0,B,A,1,1,single,False,False
+385,shot size,0.0,D,B,1,1,single,False,False
+386,shot size,1.0,A,A,1,1,single,False,False
+387,shot size,1.0,C,C,1,1,single,False,False
+388,shot size,1.0,C,C,1,1,single,False,False
+389,shot size,1.0,C,C,1,1,single,False,False
+390,shot size,1.0,C,C,1,1,single,False,False
+391,shot size,0.0,B,C,1,1,single,False,False
+392,shot size,1.0,D,D,1,1,single,False,False
+393,shot size,1.0,D,D,1,1,single,False,False
+394,shot size,1.0,C,C,1,1,single,False,False
+395,shot size,0.0,B,C,1,1,single,False,False
+396,shot size,1.0,D,D,1,1,single,False,False
+397,shot size,1.0,D,D,1,1,single,False,False
+398,shot size,1.0,D,D,1,1,single,False,False
+399,shot size,1.0,A,A,1,1,single,False,False
+400,shot size,0.0,B,A,1,1,single,False,False
+401,shot size,1.0,A,A,1,1,single,False,False
+402,shot size,1.0,D,D,1,1,single,False,False
+403,shot size,1.0,C,C,1,1,single,False,False
+404,shot size,0.0,A,B,1,1,single,False,False
+405,shot size,1.0,C,C,1,1,single,False,False
+406,shot size,1.0,C,C,1,1,single,False,False
+407,shot size,1.0,B,B,1,1,single,False,False
+408,shot size,1.0,A,A,1,1,single,False,False
+409,shot size,1.0,B,B,1,1,single,False,False
+410,shot size,1.0,A,A,1,1,single,False,False
+411,shot size,1.0,A,A,1,1,single,False,False
+412,shot size,1.0,C,C,1,1,single,False,False
+413,shot size,1.0,B,B,1,1,single,False,False
+414,shot size,1.0,D,D,1,1,single,False,False
+415,shot size,1.0,A,A,1,1,single,False,False
+416,shot size,1.0,D,D,1,1,single,False,False
+417,shot size,1.0,D,D,1,1,single,False,False
+418,shot size,1.0,C,C,1,1,single,False,False
+419,shot size,1.0,A,A,1,1,single,False,False
+420,shot size,0.0,C,B,1,1,single,False,False
+421,shot size,1.0,A,A,1,1,single,False,False
+422,shot size,1.0,A,A,1,1,single,False,False
+423,shot size,1.0,B,B,1,1,single,False,False
+424,shot size,1.0,D,D,1,1,single,False,False
+425,shot size,1.0,B,B,1,1,single,False,False
+426,shot size,1.0,B,B,1,1,single,False,False
+427,shot size,1.0,D,D,1,1,single,False,False
+428,shot size,0.0,C,D,1,1,single,False,False
+429,shot size,1.0,C,C,1,1,single,False,False
+430,shot size,1.0,C,C,1,1,single,False,False
+431,shot size,1.0,C,C,1,1,single,False,False
+432,shot size,1.0,C,C,1,1,single,False,False
+433,shot size,1.0,D,D,1,1,single,False,False
+434,shot size,1.0,C,C,1,1,single,False,False
+435,shot size,1.0,D,D,1,1,single,False,False
+436,shot size,1.0,B,B,1,1,single,False,False
+437,shot size,1.0,A,A,1,1,single,False,False
+438,shot size,0.0,D,A,1,1,single,False,False
+439,shot size,1.0,B,B,1,1,single,False,False
+440,shot size,1.0,C,C,1,1,single,False,False
+441,shot size,1.0,B,B,1,1,single,False,False
+442,shot size,1.0,C,C,1,1,single,False,False
+443,shot size,1.0,B,B,1,1,single,False,False
+444,shot size,1.0,D,D,1,1,single,False,False
+445,shot size,1.0,B,B,1,1,single,False,False
+446,shot size,1.0,C,C,1,1,single,False,False
+447,shot size,1.0,B,B,1,1,single,False,False
+448,shot size,1.0,A,A,1,1,single,False,False
+449,shot size,1.0,C,C,1,1,single,False,False
+450,shot size,1.0,B,B,1,1,single,False,False
+451,shot size,1.0,C,C,1,1,single,False,False
+452,shot size,1.0,B,B,1,1,single,False,False
+453,shot size,1.0,C,C,1,1,single,False,False
+454,shot size,0.0,A,C,1,1,single,False,False
+455,shot size,0.0,D,B,1,1,single,False,False
+456,shot size,1.0,C,C,1,1,single,False,False
+457,shot size,0.0,C,A,1,1,single,False,False
+458,shot size,1.0,B,B,1,1,single,False,False
+459,shot size,1.0,B,B,1,1,single,False,False
+460,shot size,1.0,B,B,1,1,single,False,False
+461,shot size,1.0,D,D,1,1,single,False,False
+462,shot size,0.0,C,B,1,1,single,False,False
+463,shot size,1.0,A,A,1,1,single,False,False
+464,shot size,1.0,D,D,1,1,single,False,False
+465,shot size,1.0,C,C,1,1,single,False,False
+466,shot size,1.0,A,A,1,1,single,False,False
+467,shot size,1.0,D,D,1,1,single,False,False
+468,shot size,0.0,A,C,1,1,single,False,False
+469,shot size,1.0,A,A,1,1,single,False,False
+470,shot size,1.0,C,C,1,1,single,False,False
+471,shot size,1.0,C,C,1,1,single,False,False
+472,shot size,1.0,C,C,1,1,single,False,False
+473,shot size,1.0,B,B,1,1,single,False,False
+474,shot size,0.0,D,B,1,1,single,False,False
+475,shot size,1.0,A,A,1,1,single,False,False
+476,shot size,1.0,C,C,1,1,single,False,False
+477,shot size,1.0,B,B,1,1,single,False,False
+478,shot size,1.0,D,D,1,1,single,False,False
+479,shot size,0.0,A,C,1,1,single,False,False
+480,shot size,1.0,B,B,1,1,single,False,False
+481,shot size,1.0,A,A,1,1,single,False,False
+482,shot size,0.0,C,B,1,1,single,False,False
+483,shot size,1.0,B,B,1,1,single,False,False
+484,shot size,1.0,A,A,1,1,single,False,False
+485,shot size,1.0,B,B,1,1,single,False,False
+486,shot framing,1.0,B,B,1,2,combination,False,False
+487,shot framing,1.0,B,B,1,1,single,False,False
+488,shot framing,0.0,B,A,1,1,single,False,False
+489,shot framing,1.0,A,A,1,1,single,False,False
+490,shot framing,1.0,D,D,1,2,combination,False,False
+491,shot framing,1.0,C,C,1,1,single,False,False
+492,shot framing,1.0,D,D,1,1,single,False,False
+493,shot framing,0.0,A,C,1,1,single,False,False
+494,shot framing,1.0,A,A,1,1,single,False,False
+495,shot framing,1.0,A,A,1,1,single,False,False
+496,shot framing,1.0,A,A,1,1,single,False,False
+497,shot framing,0.0,A,B,1,2,combination,False,False
+498,shot framing,1.0,D,D,1,1,single,False,False
+499,shot framing,1.0,D,D,1,1,single,False,False
+500,shot framing,0.0,B,A,1,1,single,False,False
+501,shot framing,1.0,C,C,1,1,single,False,False
+502,shot framing,0.0,D,A,1,1,single,False,False
+503,shot framing,1.0,C,C,1,1,single,False,False
+504,shot framing,1.0,C,C,1,1,single,False,False
+505,shot framing,1.0,B,B,1,1,single,False,False
+506,shot framing,1.0,D,D,1,1,single,False,False
+507,shot framing,1.0,C,C,1,1,single,False,False
+508,shot framing,1.0,A,A,1,1,single,False,False
+509,shot framing,1.0,C,C,1,1,single,False,False
+510,shot framing,1.0,B,B,1,1,single,False,False
+511,shot framing,1.0,D,D,1,1,single,False,False
+512,shot framing,1.0,A,A,1,2,combination,False,False
+513,shot framing,1.0,A,A,1,1,single,False,False
+514,shot framing,1.0,A,A,1,1,single,False,False
+515,shot framing,1.0,D,D,1,1,single,False,False
+516,shot framing,1.0,A,A,1,1,single,False,False
+517,shot framing,1.0,B,B,1,1,single,False,False
+518,shot framing,1.0,D,D,1,1,single,False,False
+519,shot framing,1.0,A,A,1,1,single,False,False
+520,shot framing,1.0,A,A,1,1,single,False,False
+521,shot framing,1.0,C,C,1,1,single,False,False
+522,shot framing,1.0,D,D,1,1,single,False,False
+523,shot framing,1.0,D,D,1,1,single,False,False
+524,shot framing,1.0,C,C,1,1,single,False,False
+525,shot framing,1.0,B,B,1,1,single,False,False
+526,shot framing,1.0,B,B,1,2,combination,False,False
+527,shot framing,1.0,B,B,1,1,single,False,False
+528,shot framing,1.0,D,D,1,1,single,False,False
+529,shot framing,1.0,A,A,1,1,single,False,False
+530,shot framing,1.0,D,D,1,2,combination,False,False
+531,shot framing,1.0,C,C,1,1,single,False,False
+532,shot framing,1.0,D,D,1,1,single,False,False
+533,shot framing,1.0,C,C,1,1,single,False,False
+534,shot framing,1.0,D,D,1,1,single,False,False
+535,shot framing,1.0,B,B,1,1,single,False,False
+536,shot framing,1.0,C,C,1,1,single,False,False
+537,shot framing,1.0,D,D,1,1,single,False,False
+538,shot framing,1.0,C,C,1,1,single,False,False
+539,shot framing,1.0,B,B,1,1,single,False,False
+540,shot framing,1.0,A,A,1,1,single,False,False
+541,shot framing,1.0,A,A,1,1,single,False,False
+542,shot framing,0.0,C,B,1,1,single,False,False
+543,shot framing,1.0,D,D,1,1,single,False,False
+544,shot framing,1.0,B,B,1,1,single,False,False
+545,shot framing,1.0,A,A,1,1,single,False,False
+546,shot framing,0.0,C,A,1,1,single,False,False
+547,shot framing,1.0,D,D,1,1,single,False,False
+548,shot framing,0.0,A,D,1,1,single,False,False
+549,shot framing,1.0,A,A,1,2,combination,False,False
+550,shot framing,1.0,A,A,1,1,single,False,False
+551,shot framing,1.0,D,D,1,1,single,False,False
+552,shot framing,1.0,C,C,1,2,combination,False,False
+553,shot framing,1.0,C,C,1,1,single,False,False
+554,shot framing,0.0,C,B,1,1,single,False,False
+555,shot framing,1.0,C,C,1,1,single,False,False
+556,shot framing,1.0,B,B,1,2,combination,False,False
+557,shot framing,1.0,C,C,1,1,single,False,False
+558,shot framing,1.0,D,D,1,1,single,False,False
+559,shot framing,0.0,D,B,1,1,single,False,False
+560,shot framing,1.0,C,C,1,1,single,False,False
+561,shot framing,1.0,C,C,1,1,single,False,False
+562,shot framing,1.0,B,B,1,1,single,False,False
+563,shot framing,0.0,C,A,1,1,single,False,False
+564,shot framing,1.0,D,D,1,1,single,False,False
+565,shot framing,1.0,D,D,1,1,single,False,False
+566,shot framing,0.0,B,D,1,2,combination,False,False
+567,shot framing,1.0,B,B,1,1,single,False,False
+568,shot framing,1.0,C,C,1,1,single,False,False
+569,shot framing,0.0,A,D,1,2,combination,False,False
+570,shot framing,1.0,D,D,1,2,combination,False,False
+571,shot framing,1.0,D,D,1,1,single,False,False
+572,shot framing,1.0,D,D,1,2,combination,False,False
+573,shot framing,0.0,B,D,1,1,single,False,False
+574,shot framing,1.0,B,B,1,1,single,False,False
+575,shot framing,1.0,C,C,1,1,single,False,False
+576,shot framing,1.0,C,C,1,1,single,False,False
+577,shot framing,1.0,B,B,1,1,single,False,False
+578,shot framing,1.0,D,D,1,1,single,False,False
+579,shot framing,1.0,B,B,1,1,single,False,False
+580,shot framing,1.0,A,A,1,1,single,False,False
+581,shot framing,1.0,A,A,1,1,single,False,False
+582,shot framing,0.0,A,D,1,1,single,False,False
+583,shot framing,0.0,C,D,1,1,single,False,False
+584,shot framing,1.0,C,C,1,1,single,False,False
+585,shot framing,0.0,C,D,1,1,single,False,False
+586,shot framing,1.0,A,A,1,1,single,False,False
+587,shot framing,1.0,A,A,1,2,combination,False,False
+588,shot framing,0.0,A,D,1,1,single,False,False
+589,shot framing,1.0,C,C,1,1,single,False,False
+590,shot framing,1.0,C,C,1,1,single,False,False
+591,shot framing,1.0,B,B,1,1,single,False,False
+592,shot framing,1.0,A,A,1,1,single,False,False
+593,shot framing,0.0,C,D,1,2,combination,False,False
+594,shot framing,1.0,B,B,1,1,single,False,False
+595,shot framing,1.0,B,B,1,1,single,False,False
+596,shot framing,1.0,D,D,1,1,single,False,False
+597,shot framing,0.0,B,C,1,1,single,False,False
+598,shot framing,0.0,B,C,1,1,single,False,False
+599,shot framing,1.0,B,B,1,1,single,False,False
+600,shot framing,1.0,C,C,1,1,single,False,False
+601,shot framing,1.0,C,C,1,1,single,False,False
+602,shot framing,1.0,A,A,1,1,single,False,False
+603,shot framing,1.0,A,A,1,1,single,False,False
+604,shot framing,0.0,D,C,1,2,combination,False,False
+605,shot framing,1.0,D,D,1,2,combination,False,False
+606,shot framing,1.0,C,C,1,1,single,False,False
+607,shot framing,1.0,D,D,1,1,single,False,False
+608,shot framing,1.0,D,D,1,1,single,False,False
+609,shot framing,1.0,C,C,1,1,single,False,False
+610,shot framing,1.0,B,B,1,2,combination,False,False
+611,shot framing,1.0,C,C,1,1,single,False,False
+612,shot framing,0.0,C,A,1,1,single,False,False
+613,shot framing,1.0,B,B,1,1,single,False,False
+614,shot framing,0.0,D,B,1,1,single,False,False
+615,shot framing,1.0,A,A,1,1,single,False,False
+616,shot framing,1.0,B,B,1,1,single,False,False
+617,shot framing,1.0,A,A,1,2,combination,False,False
+618,shot framing,0.0,A,C,1,1,single,False,False
+619,shot framing,0.0,A,D,1,1,single,False,False
+620,shot framing,1.0,C,C,1,1,single,False,False
+621,shot framing,1.0,C,C,1,2,combination,False,False
+622,shot framing,0.0,D,B,1,1,single,False,False
+623,shot framing,0.0,B,C,1,1,single,False,False
+624,shot framing,1.0,A,A,1,1,single,False,False
+625,shot framing,1.0,A,A,1,1,single,False,False
+626,shot framing,1.0,D,D,1,1,single,False,False
+627,shot framing,1.0,D,D,1,1,single,False,False
+628,shot framing,1.0,D,D,1,1,single,False,False
+629,shot framing,1.0,B,B,1,1,single,False,False
+630,shot framing,0.0,C,A,1,1,single,False,False
+631,shot framing,1.0,B,B,1,1,single,False,False
+632,shot framing,1.0,D,D,1,1,single,False,False
+633,shot framing,1.0,B,B,1,1,single,False,False
+634,shot framing,1.0,C,C,1,1,single,False,False
+635,shot framing,1.0,B,B,1,1,single,False,False
+636,shot framing,1.0,D,D,1,1,single,False,False
+637,shot framing,0.0,D,C,1,1,single,False,False
+638,shot framing,1.0,B,B,1,1,single,False,False
+639,shot framing,0.0,C,B,1,2,combination,False,False
+640,shot framing,1.0,C,C,1,1,single,False,False
+641,shot framing,0.0,A,D,1,1,single,False,False
+642,shot framing,1.0,B,B,1,2,combination,False,False
+643,shot framing,1.0,A,A,1,1,single,False,False
+644,shot framing,0.0,B,C,1,3,combination,False,False
+645,shot framing,1.0,C,C,1,1,single,False,False
+646,shot framing,1.0,C,C,1,2,combination,False,False
+647,shot framing,1.0,D,D,1,1,single,False,False
+648,shot framing,1.0,A,A,1,1,single,False,False
+649,shot framing,1.0,C,C,1,1,single,False,False
+650,shot framing,1.0,D,D,1,1,single,False,False
+651,shot framing,1.0,C,C,1,1,single,False,False
+652,shot framing,0.0,A,D,1,1,single,False,False
+653,shot framing,1.0,D,D,1,2,combination,False,False
+654,shot framing,1.0,D,D,1,1,single,False,False
+655,shot framing,1.0,C,C,1,1,single,False,False
+656,shot framing,1.0,C,C,1,1,single,False,False
+657,shot framing,1.0,B,B,1,1,single,False,False
+658,shot framing,1.0,A,A,1,1,single,False,False
+659,shot framing,1.0,C,C,1,1,single,False,False
+660,shot framing,1.0,B,B,1,2,combination,False,False
+661,shot framing,1.0,A,A,1,2,combination,False,False
+662,shot framing,1.0,A,A,1,2,combination,False,False
+663,shot framing,1.0,B,B,1,1,single,False,False
+664,shot framing,1.0,A,A,1,1,single,False,False
+665,shot framing,0.0,A,B,1,1,single,False,False
+666,shot framing,1.0,A,A,1,1,single,False,False
+667,shot framing,0.0,D,B,1,1,single,False,False
+668,shot framing,1.0,A,A,1,1,single,False,False
+669,shot framing,1.0,A,A,1,2,combination,False,False
+670,shot framing,0.0,C,A,1,1,single,False,False
+671,shot framing,1.0,A,A,1,1,single,False,False
+672,shot framing,1.0,B,B,1,2,combination,False,False
+673,shot framing,1.0,C,C,1,1,single,False,False
+674,shot framing,1.0,A,A,1,2,combination,False,False
+675,shot framing,1.0,C,C,1,1,single,False,False
+676,shot framing,1.0,A,A,1,1,single,False,False
+677,shot framing,1.0,C,C,1,1,single,False,False
+678,shot framing,1.0,D,D,1,1,single,False,False
+679,shot framing,1.0,C,C,1,1,single,False,False
+680,shot framing,0.0,D,B,1,2,combination,False,False
+681,shot framing,1.0,A,A,1,1,single,False,False
+682,shot framing,0.0,C,A,1,2,combination,False,False
+683,shot framing,0.0,B,A,1,1,single,False,False
+684,shot framing,1.0,A,A,1,1,single,False,False
+685,shot framing,1.0,C,C,1,1,single,False,False
+686,shot framing,1.0,D,D,1,1,single,False,False
+687,shot framing,0.0,D,B,1,1,single,False,False
+688,shot framing,1.0,B,B,1,1,single,False,False
+689,shot framing,1.0,D,D,1,1,single,False,False
+690,shot framing,1.0,C,C,1,1,single,False,False
+691,shot framing,0.0,B,A,1,1,single,False,False
+692,shot framing,1.0,A,A,1,1,single,False,False
+693,shot framing,0.0,C,D,1,1,single,False,False
+694,shot framing,0.0,A,B,1,1,single,False,False
+695,shot framing,1.0,D,D,1,1,single,False,False
+696,shot framing,0.0,D,A,1,1,single,False,False
+697,shot framing,1.0,B,B,1,1,single,False,False
+698,shot framing,1.0,A,A,1,1,single,False,False
+699,shot framing,1.0,D,D,1,2,combination,False,False
+700,shot framing,1.0,B,B,1,2,combination,False,False
+701,shot framing,1.0,D,D,1,1,single,False,False
+702,shot framing,1.0,A,A,1,2,combination,False,False
+703,shot framing,0.0,D,A,1,1,single,False,False
+704,shot framing,0.0,D,A,1,1,single,False,False
+705,shot framing,1.0,A,A,1,1,single,False,False
+706,shot framing,1.0,C,C,1,1,single,False,False
+707,shot framing,1.0,D,D,1,1,single,False,False
+708,shot framing,1.0,A,A,1,1,single,False,False
+709,shot framing,1.0,C,C,1,1,single,False,False
+710,shot framing,1.0,B,B,1,1,single,False,False
+711,shot framing,1.0,D,D,1,1,single,False,False
+712,shot framing,1.0,A,A,1,1,single,False,False
+713,shot framing,1.0,A,A,1,1,single,False,False
+714,shot framing,1.0,A,A,1,1,single,False,False
+715,shot framing,1.0,D,D,1,1,single,False,False
+716,shot framing,1.0,B,B,1,2,combination,False,False
+717,shot framing,1.0,B,B,1,1,single,False,False
+718,shot framing,1.0,A,A,1,1,single,False,False
+719,shot framing,1.0,D,D,1,2,combination,False,False
+720,shot framing,1.0,D,D,1,1,single,False,False
+721,shot framing,1.0,A,A,1,1,single,False,False
+722,shot framing,1.0,C,C,1,1,single,False,False
+723,shot framing,1.0,C,C,1,2,combination,False,False
+724,shot framing,1.0,D,D,1,1,single,False,False
+725,shot framing,1.0,A,A,1,1,single,False,False
+726,shot framing,1.0,A,A,1,1,single,False,False
+727,shot framing,1.0,D,D,1,1,single,False,False
+728,shot framing,1.0,B,B,1,1,single,False,False
+729,shot framing,0.0,A,D,1,1,single,False,False
+730,shot framing,1.0,D,D,1,2,combination,False,False
+731,shot framing,1.0,C,C,1,1,single,False,False
+732,shot framing,0.0,C,B,1,1,single,False,False
+733,shot framing,1.0,D,D,1,1,single,False,False
+734,shot framing,1.0,C,C,1,1,single,False,False
+735,shot framing,1.0,A,A,1,1,single,False,False
+736,shot framing,1.0,C,C,1,1,single,False,False
+737,shot framing,1.0,D,D,1,1,single,False,False
+738,shot framing,1.0,D,D,1,1,single,False,False
+739,shot framing,0.0,B,A,1,2,combination,False,False
+740,shot framing,1.0,C,C,1,1,single,False,False
+741,shot framing,1.0,A,A,1,1,single,False,False
+742,shot framing,0.0,A,B,1,2,combination,False,False
+743,shot framing,1.0,D,D,1,1,single,False,False
+744,shot framing,1.0,A,A,1,1,single,False,False
+745,shot framing,1.0,B,B,1,1,single,False,False
+746,shot framing,1.0,D,D,1,1,single,False,False
+747,shot framing,1.0,B,B,1,1,single,False,False
+748,shot framing,0.0,A,D,1,1,single,False,False
+749,shot framing,0.0,A,C,1,2,combination,False,False
+750,shot framing,0.0,B,A,1,1,single,False,False
+751,shot framing,1.0,B,B,1,1,single,False,False
+752,shot framing,1.0,B,B,1,1,single,False,False
+753,shot framing,1.0,D,D,1,2,combination,False,False
+754,shot framing,1.0,C,C,1,1,single,False,False
+755,shot framing,1.0,A,A,1,1,single,False,False
+756,shot framing,0.0,B,D,1,1,single,False,False
+757,shot framing,1.0,D,D,1,1,single,False,False
+758,shot framing,0.0,B,D,1,1,single,False,False
+759,shot framing,0.0,D,A,1,1,single,False,False
+760,shot framing,1.0,B,B,1,1,single,False,False
+761,shot framing,1.0,D,D,1,1,single,False,False
+762,shot framing,1.0,B,B,1,1,single,False,False
+763,shot framing,1.0,D,D,1,1,single,False,False
+764,shot framing,1.0,B,B,1,1,single,False,False
+765,shot framing,1.0,A,A,1,1,single,False,False
+766,shot framing,0.0,B,C,1,1,single,False,False
+767,shot framing,0.0,D,A,1,1,single,False,False
+768,shot framing,0.0,C,A,1,1,single,False,False
+769,shot framing,0.0,C,A,1,1,single,False,False
+770,shot framing,1.0,D,D,1,1,single,False,False
+771,shot framing,0.0,A,C,1,1,single,False,False
+772,shot framing,1.0,A,A,1,1,single,False,False
+773,shot framing,1.0,C,C,1,1,single,False,False
+774,shot framing,0.0,C,B,1,1,single,False,False
+775,shot framing,1.0,C,C,1,2,combination,False,False
+776,shot framing,1.0,C,C,1,2,combination,False,False
+777,shot framing,1.0,D,D,1,2,combination,False,False
+778,shot framing,1.0,D,D,1,2,combination,False,False
+779,shot framing,1.0,D,D,1,1,single,False,False
+780,shot framing,0.0,A,D,1,1,single,False,False
+781,shot framing,0.0,D,B,1,1,single,False,False
+782,shot framing,1.0,A,A,1,1,single,False,False
+783,shot framing,1.0,C,C,1,1,single,False,False
+784,shot framing,1.0,D,D,1,1,single,False,False
+785,shot framing,1.0,A,A,1,1,single,False,False
+786,shot framing,0.0,B,A,1,1,single,False,False
+787,shot framing,0.0,D,A,1,1,single,False,False
+788,shot framing,1.0,D,D,1,1,single,False,False
+789,shot framing,1.0,C,C,1,1,single,False,False
+790,shot framing,1.0,C,C,1,1,single,False,False
+791,shot framing,1.0,C,C,1,1,single,False,False
+792,shot framing,1.0,A,A,1,1,single,False,False
+793,shot framing,1.0,A,A,1,1,single,False,False
+794,shot framing,1.0,D,D,1,1,single,False,False
+795,shot framing,0.0,D,B,1,1,single,False,False
+796,shot framing,1.0,C,C,1,1,single,False,False
+797,shot framing,0.0,A,D,1,1,single,False,False
+798,shot framing,1.0,B,B,1,1,single,False,False
+799,shot framing,1.0,D,D,1,1,single,False,False
+800,shot framing,1.0,B,B,1,1,single,False,False
+801,shot framing,1.0,D,D,1,1,single,False,False
+802,shot framing,1.0,A,A,1,1,single,False,False
+803,shot framing,1.0,D,D,1,1,single,False,False
+804,shot framing,1.0,A,A,1,1,single,False,False
+805,shot framing,1.0,A,A,1,1,single,False,False
+806,shot framing,1.0,C,C,1,2,combination,False,False
+807,shot framing,0.0,C,A,1,1,single,False,False
+808,shot framing,1.0,D,D,1,1,single,False,False
+809,shot framing,1.0,A,A,1,2,combination,False,False
+810,shot framing,1.0,D,D,1,1,single,False,False
+811,shot framing,1.0,B,B,1,2,combination,False,False
+812,shot framing,1.0,A,A,1,1,single,False,False
+813,shot framing,1.0,A,A,1,1,single,False,False
+814,shot framing,1.0,D,D,1,1,single,False,False
+815,shot framing,1.0,D,D,1,1,single,False,False
+816,shot framing,1.0,A,A,1,1,single,False,False
+817,shot framing,1.0,D,D,1,1,single,False,False
+818,shot framing,1.0,C,C,1,2,combination,False,False
+819,shot framing,1.0,C,C,1,1,single,False,False
+820,shot framing,1.0,C,C,1,1,single,False,False
+821,shot framing,1.0,C,C,1,1,single,False,False
+822,shot framing,1.0,D,D,1,1,single,False,False
+823,shot framing,0.0,C,D,1,1,single,False,False
+824,shot framing,0.0,A,B,1,1,single,False,False
+825,shot framing,1.0,B,B,1,1,single,False,False
+826,shot framing,1.0,B,B,1,1,single,False,False
+827,shot framing,1.0,A,A,1,1,single,False,False
+828,shot framing,1.0,C,C,1,1,single,False,False
+829,shot framing,0.0,A,D,1,1,single,False,False
+830,shot framing,1.0,D,D,1,1,single,False,False
+831,shot framing,0.0,B,D,1,1,single,False,False
+832,shot framing,1.0,C,C,1,1,single,False,False
+833,shot framing,1.0,B,B,1,2,combination,False,False
+834,shot framing,0.0,D,A,1,1,single,False,False
+835,shot framing,1.0,D,D,1,1,single,False,False
+836,shot framing,1.0,A,A,1,1,single,False,False
+837,shot framing,1.0,C,C,1,1,single,False,False
+838,shot framing,1.0,A,A,1,1,single,False,False
+839,shot framing,0.0,D,A,1,1,single,False,False
+840,shot framing,1.0,D,D,1,1,single,False,False
+841,shot framing,1.0,B,B,1,1,single,False,False
+842,shot framing,1.0,C,C,1,1,single,False,False
+843,shot framing,1.0,C,C,1,1,single,False,False
+844,shot framing,1.0,C,C,1,1,single,False,False
+845,shot framing,1.0,B,B,1,1,single,False,False
+846,shot framing,1.0,B,B,1,1,single,False,False
+847,shot framing,1.0,B,B,1,2,combination,False,False
+848,shot framing,1.0,D,D,1,1,single,False,False
+849,shot framing,1.0,A,A,1,1,single,False,False
+850,shot framing,1.0,B,B,1,1,single,False,False
+851,shot framing,1.0,D,D,1,1,single,False,False
+852,shot framing,1.0,D,D,1,1,single,False,False
+853,shot framing,0.0,C,D,1,1,single,False,False
+854,shot framing,0.0,C,D,1,1,single,False,False
+855,shot framing,1.0,A,A,1,1,single,False,False
+856,shot framing,1.0,C,C,1,1,single,False,False
+857,shot framing,1.0,D,D,1,1,single,False,False
+858,shot framing,1.0,A,A,1,1,single,False,False
+859,shot framing,0.0,A,D,1,1,single,False,False
+860,shot framing,1.0,B,B,1,1,single,False,False
+861,shot framing,1.0,D,D,1,1,single,False,False
+862,shot framing,1.0,D,D,1,1,single,False,False
+863,shot framing,1.0,B,B,1,1,single,False,False
+864,shot framing,1.0,B,B,1,1,single,False,False
+865,shot framing,0.0,C,B,1,1,single,False,False
+866,shot framing,1.0,D,D,1,1,single,False,False
+867,shot framing,1.0,B,B,1,1,single,False,False
+868,shot framing,0.0,C,B,1,1,single,False,False
+869,shot framing,0.0,A,B,1,1,single,False,False
+870,shot framing,0.0,D,C,1,1,single,False,False
+871,shot framing,1.0,D,D,1,1,single,False,False
+872,shot framing,0.0,D,A,1,1,single,False,False
+873,shot framing,1.0,B,B,1,1,single,False,False
+874,shot framing,1.0,D,D,1,1,single,False,False
+875,shot framing,0.0,B,A,1,1,single,False,False
+876,shot framing,1.0,B,B,1,1,single,False,False
+877,shot framing,1.0,A,A,1,1,single,False,False
+878,shot framing,1.0,C,C,1,1,single,False,False
+879,shot framing,0.0,C,D,1,1,single,False,False
+880,shot framing,1.0,C,C,1,1,single,False,False
+881,shot framing,1.0,C,C,1,1,single,False,False
+882,shot framing,0.0,D,A,1,1,single,False,False
+883,shot framing,1.0,A,A,1,1,single,False,False
+884,shot framing,1.0,D,D,1,1,single,False,False
+885,shot framing,1.0,D,D,1,1,single,False,False
+886,shot framing,1.0,D,D,1,1,single,False,False
+887,shot framing,0.0,B,C,1,1,single,False,False
+888,shot framing,0.0,B,C,1,1,single,False,False
+889,shot framing,1.0,B,B,1,1,single,False,False
+890,shot framing,1.0,A,A,1,1,single,False,False
+891,shot framing,0.0,C,A,1,1,single,False,False
+892,shot framing,1.0,A,A,1,1,single,False,False
+893,shot framing,1.0,A,A,1,1,single,False,False
+894,shot framing,1.0,B,B,1,1,single,False,False
+895,shot framing,1.0,D,D,1,1,single,False,False
+896,shot framing,0.0,B,A,1,1,single,False,False
+897,shot framing,1.0,C,C,1,1,single,False,False
+898,shot framing,0.0,B,A,1,1,single,False,False
+899,shot framing,0.0,A,B,1,1,single,False,False
+900,shot framing,1.0,D,D,1,1,single,False,False
+901,shot framing,1.0,D,D,1,1,single,False,False
+902,shot framing,1.0,D,D,1,1,single,False,False
+903,shot framing,1.0,C,C,1,1,single,False,False
+904,shot framing,0.0,B,C,1,1,single,False,False
+905,shot framing,0.0,C,D,1,1,single,False,False
+906,shot framing,0.0,B,D,1,1,single,False,False
+907,shot framing,0.0,A,D,1,1,single,False,False
+908,shot framing,0.0,D,A,1,1,single,False,False
+909,shot framing,0.0,B,D,1,1,single,False,False
+910,shot framing,0.0,C,D,1,1,single,False,False
+911,shot framing,0.0,C,B,1,1,single,False,False
+912,shot framing,1.0,D,D,1,1,single,False,False
+913,shot framing,0.0,B,A,1,1,single,False,False
+914,shot framing,1.0,D,D,1,1,single,False,False
+915,shot framing,0.0,C,A,1,1,single,False,False
+916,shot framing,0.0,D,B,1,1,single,False,False
+917,shot framing,0.0,C,D,1,1,single,False,False
+918,shot framing,1.0,D,D,1,1,single,False,False
+919,shot framing,0.0,B,C,1,1,single,False,False
+920,shot framing,0.0,D,B,1,1,single,False,False
+921,shot framing,1.0,B,B,1,1,single,False,False
+922,shot framing,0.0,C,D,1,1,single,False,False
+923,shot framing,0.0,C,B,1,1,single,False,False
+924,shot framing,0.0,C,B,1,1,single,False,False
+925,shot framing,0.0,B,A,1,1,single,False,False
+926,shot framing,0.0,A,D,1,1,single,False,False
+927,shot framing,1.0,A,A,1,1,single,False,False
+928,shot framing,0.0,A,D,1,1,single,False,False
+929,shot framing,0.0,B,A,1,1,single,False,False
+930,shot framing,0.0,C,D,1,1,single,False,False
+931,camera angle,1.0,D,D,1,2,combination,False,False
+932,camera angle,1.0,B,B,1,1,single,False,False
+933,camera angle,1.0,C,C,1,1,single,False,False
+934,camera angle,1.0,B,B,1,1,single,False,False
+935,camera angle,1.0,C,C,1,1,single,False,False
+936,camera angle,1.0,D,D,1,1,single,False,False
+937,camera angle,1.0,D,D,1,1,single,False,False
+938,camera angle,1.0,D,D,1,1,single,False,False
+939,camera angle,1.0,A,A,1,1,single,False,False
+940,camera angle,1.0,D,D,1,1,single,False,False
+941,camera angle,1.0,B,B,1,2,combination,False,False
+942,camera angle,1.0,C,C,1,2,combination,False,False
+943,camera angle,0.0,D,B,1,1,single,False,False
+944,camera angle,1.0,C,C,1,1,single,False,False
+945,camera angle,1.0,A,A,1,1,single,False,False
+946,camera angle,0.0,A,B,1,1,single,False,False
+947,camera angle,1.0,D,D,1,1,single,False,False
+948,camera angle,1.0,A,A,1,1,single,False,False
+949,camera angle,1.0,B,B,1,2,combination,False,False
+950,camera angle,1.0,D,D,1,1,single,False,False
+951,camera angle,1.0,A,A,1,2,combination,False,False
+952,camera angle,1.0,C,C,1,1,single,False,False
+953,camera angle,1.0,B,B,1,1,single,False,False
+954,camera angle,0.0,C,D,1,1,single,False,False
+955,camera angle,1.0,C,C,1,1,single,False,False
+956,camera angle,1.0,A,A,1,1,single,False,False
+957,camera angle,1.0,A,A,1,1,single,False,False
+958,camera angle,1.0,A,A,1,1,single,False,False
+959,camera angle,1.0,B,B,1,1,single,False,False
+960,camera angle,1.0,B,B,1,1,single,False,False
+961,camera angle,1.0,D,D,1,1,single,False,False
+962,camera angle,1.0,B,B,1,1,single,False,False
+963,camera angle,0.0,B,A,1,1,single,False,False
+964,camera angle,1.0,D,D,1,1,single,False,False
+965,camera angle,0.0,D,B,1,1,single,False,False
+966,camera angle,1.0,A,A,1,1,single,False,False
+967,camera angle,1.0,A,A,1,1,single,False,False
+968,camera angle,0.0,B,A,1,2,combination,False,False
+969,camera angle,1.0,A,A,1,1,single,False,False
+970,camera angle,1.0,C,C,1,1,single,False,False
+971,camera angle,1.0,D,D,1,1,single,False,False
+972,camera angle,0.0,C,D,1,1,single,False,False
+973,camera angle,1.0,B,B,1,1,single,False,False
+974,camera angle,1.0,A,A,1,4,combination,False,False
+975,camera angle,1.0,A,A,1,1,single,False,False
+976,camera angle,1.0,A,A,1,1,single,False,False
+977,camera angle,1.0,C,C,1,1,single,False,False
+978,camera angle,1.0,C,C,1,2,combination,False,False
+979,camera angle,1.0,B,B,1,1,single,False,False
+980,camera angle,1.0,A,A,1,1,single,False,False
+981,camera angle,1.0,B,B,1,1,single,False,False
+982,camera angle,0.0,D,A,1,1,single,False,False
+983,camera angle,1.0,D,D,1,1,single,False,False
+984,camera angle,1.0,A,A,1,1,single,False,False
+985,camera angle,0.0,C,A,1,2,combination,False,False
+986,camera angle,1.0,D,D,1,1,single,False,False
+987,camera angle,1.0,B,B,1,1,single,False,False
+988,camera angle,1.0,A,A,1,1,single,False,False
+989,camera angle,1.0,C,C,1,1,single,False,False
+990,camera angle,1.0,C,C,1,1,single,False,False
+991,camera angle,1.0,A,A,1,1,single,False,False
+992,camera angle,0.0,C,D,1,1,single,False,False
+993,camera angle,1.0,D,D,1,1,single,False,False
+994,camera angle,1.0,C,C,1,1,single,False,False
+995,camera angle,1.0,B,B,1,1,single,False,False
+996,camera angle,1.0,C,C,1,2,combination,False,False
+997,camera angle,1.0,D,D,1,1,single,False,False
+998,camera angle,1.0,A,A,1,1,single,False,False
+999,camera angle,1.0,C,C,1,1,single,False,False
+1000,camera angle,1.0,A,A,1,1,single,False,False
+1001,camera angle,1.0,D,D,1,1,single,False,False
+1002,camera angle,0.0,C,D,1,1,single,False,False
+1003,camera angle,1.0,C,C,1,1,single,False,False
+1004,camera angle,1.0,D,D,1,1,single,False,False
+1005,camera angle,0.0,C,D,1,1,single,False,False
+1006,camera angle,1.0,C,C,1,1,single,False,False
+1007,camera angle,1.0,A,A,1,1,single,False,False
+1008,camera angle,1.0,C,C,1,1,single,False,False
+1009,camera angle,1.0,A,A,1,1,single,False,False
+1010,camera angle,1.0,B,B,1,1,single,False,False
+1011,camera angle,1.0,B,B,1,2,combination,False,False
+1012,camera angle,1.0,D,D,1,1,single,False,False
+1013,camera angle,0.0,C,B,1,2,combination,False,False
+1014,camera angle,1.0,B,B,1,1,single,False,False
+1015,camera angle,1.0,D,D,1,1,single,False,False
+1016,camera angle,1.0,C,C,1,1,single,False,False
+1017,camera angle,1.0,A,A,1,1,single,False,False
+1018,camera angle,1.0,D,D,1,1,single,False,False
+1019,camera angle,1.0,A,A,1,1,single,False,False
+1020,camera angle,1.0,A,A,1,1,single,False,False
+1021,camera angle,0.0,D,A,1,1,single,False,False
+1022,camera angle,1.0,B,B,1,1,single,False,False
+1023,camera angle,1.0,C,C,1,2,combination,False,False
+1024,camera angle,1.0,D,D,1,2,combination,False,False
+1025,camera angle,1.0,C,C,1,1,single,False,False
+1026,camera angle,1.0,C,C,1,1,single,False,False
+1027,camera angle,1.0,B,B,1,1,single,False,False
+1028,camera angle,0.0,B,C,1,3,combination,False,False
+1029,camera angle,1.0,D,D,1,1,single,False,False
+1030,camera angle,1.0,D,D,1,1,single,False,False
+1031,camera angle,1.0,B,B,1,1,single,False,False
+1032,camera angle,1.0,B,B,1,1,single,False,False
+1033,camera angle,1.0,B,B,1,1,single,False,False
+1034,camera angle,0.0,A,C,1,1,single,False,False
+1035,camera angle,1.0,A,A,1,1,single,False,False
+1036,camera angle,1.0,C,C,1,1,single,False,False
+1037,camera angle,0.0,B,D,1,2,combination,False,False
+1038,camera angle,1.0,B,B,1,1,single,False,False
+1039,camera angle,1.0,A,A,1,1,single,False,False
+1040,camera angle,1.0,B,B,1,1,single,False,False
+1041,camera angle,1.0,B,B,1,1,single,False,False
+1042,camera angle,1.0,B,B,1,1,single,False,False
+1043,camera angle,0.0,B,D,1,1,single,False,False
+1044,camera angle,1.0,A,A,1,1,single,False,False
+1045,camera angle,1.0,B,B,1,1,single,False,False
+1046,camera angle,1.0,D,D,1,1,single,False,False
+1047,camera angle,1.0,D,D,1,1,single,False,False
+1048,camera angle,0.0,B,D,1,1,single,False,False
+1049,camera angle,1.0,A,A,1,1,single,False,False
+1050,camera angle,1.0,D,D,1,1,single,False,False
+1051,camera angle,1.0,B,B,1,2,combination,False,False
+1052,camera angle,0.0,D,C,1,1,single,False,False
+1053,camera angle,1.0,B,B,1,1,single,False,False
+1054,camera angle,1.0,D,D,1,1,single,False,False
+1055,camera angle,1.0,B,B,1,1,single,False,False
+1056,camera angle,1.0,C,C,1,1,single,False,False
+1057,camera angle,1.0,D,D,1,1,single,False,False
+1058,camera angle,0.0,D,B,1,1,single,False,False
+1059,camera angle,1.0,D,D,1,1,single,False,False
+1060,camera angle,1.0,B,B,1,1,single,False,False
+1061,camera angle,1.0,A,A,1,1,single,False,False
+1062,camera angle,1.0,B,B,1,1,single,False,False
+1063,camera angle,1.0,C,C,1,1,single,False,False
+1064,camera angle,1.0,D,D,1,1,single,False,False
+1065,camera angle,1.0,B,B,1,1,single,False,False
+1066,camera angle,0.0,C,D,1,1,single,False,False
+1067,camera angle,1.0,D,D,1,1,single,False,False
+1068,camera angle,1.0,A,A,1,1,single,False,False
+1069,camera angle,0.0,A,D,1,1,single,False,False
+1070,camera angle,0.0,D,A,1,1,single,False,False
+1071,camera angle,1.0,D,D,1,1,single,False,False
+1072,camera angle,1.0,A,A,1,1,single,False,False
+1073,camera angle,1.0,D,D,1,1,single,False,False
+1074,camera angle,1.0,A,A,1,1,single,False,False
+1075,camera angle,1.0,C,C,1,1,single,False,False
+1076,camera angle,1.0,D,D,1,2,combination,False,False
+1077,camera angle,1.0,C,C,1,1,single,False,False
+1078,camera angle,1.0,C,C,1,1,single,False,False
+1079,camera angle,1.0,B,B,1,1,single,False,False
+1080,camera angle,1.0,D,D,1,1,single,False,False
+1081,camera angle,1.0,D,D,1,1,single,False,False
+1082,camera angle,1.0,D,D,1,1,single,False,False
+1083,camera angle,1.0,D,D,1,1,single,False,False
+1084,camera angle,1.0,B,B,1,1,single,False,False
+1085,camera angle,1.0,B,B,1,1,single,False,False
+1086,camera angle,0.0,C,A,1,1,single,False,False
+1087,camera angle,1.0,C,C,1,1,single,False,False
+1088,camera angle,1.0,C,C,1,1,single,False,False
+1089,camera angle,1.0,B,B,1,1,single,False,False
+1090,camera angle,1.0,C,C,1,1,single,False,False
+1091,camera angle,1.0,D,D,1,2,combination,False,False
+1092,camera angle,1.0,C,C,1,1,single,False,False
+1093,camera angle,1.0,D,D,1,1,single,False,False
+1094,camera angle,1.0,A,A,1,1,single,False,False
+1095,camera angle,1.0,C,C,1,1,single,False,False
+1096,camera angle,1.0,B,B,1,1,single,False,False
+1097,camera angle,1.0,C,C,1,1,single,False,False
+1098,camera angle,1.0,C,C,1,2,combination,False,False
+1099,camera angle,1.0,A,A,1,1,single,False,False
+1100,camera angle,1.0,D,D,1,1,single,False,False
+1101,camera angle,1.0,C,C,1,1,single,False,False
+1102,camera angle,1.0,C,C,1,1,single,False,False
+1103,camera angle,0.0,A,D,1,1,single,False,False
+1104,camera angle,1.0,C,C,1,1,single,False,False
+1105,camera angle,1.0,A,A,1,1,single,False,False
+1106,camera angle,1.0,B,B,1,1,single,False,False
+1107,camera angle,1.0,D,D,1,1,single,False,False
+1108,camera angle,1.0,C,C,1,1,single,False,False
+1109,camera angle,1.0,A,A,1,1,single,False,False
+1110,camera angle,1.0,C,C,1,1,single,False,False
+1111,camera angle,0.0,A,D,1,2,combination,False,False
+1112,camera angle,1.0,B,B,1,1,single,False,False
+1113,camera angle,0.0,C,B,1,1,single,False,False
+1114,camera angle,1.0,C,C,1,1,single,False,False
+1115,camera angle,1.0,A,A,1,1,single,False,False
+1116,camera angle,1.0,D,D,1,1,single,False,False
+1117,camera angle,0.0,C,A,1,1,single,False,False
+1118,camera angle,1.0,A,A,1,1,single,False,False
+1119,camera angle,1.0,B,B,1,1,single,False,False
+1120,camera angle,0.0,C,A,1,1,single,False,False
+1121,camera angle,1.0,A,A,1,1,single,False,False
+1122,camera angle,1.0,B,B,1,1,single,False,False
+1123,camera angle,0.0,D,A,1,2,combination,False,False
+1124,camera angle,1.0,A,A,1,1,single,False,False
+1125,camera angle,1.0,D,D,1,1,single,False,False
+1126,camera angle,1.0,D,D,1,1,single,False,False
+1127,camera angle,1.0,A,A,1,1,single,False,False
+1128,camera angle,0.0,D,B,1,1,single,False,False
+1129,camera angle,1.0,C,C,1,1,single,False,False
+1130,camera angle,1.0,D,D,1,1,single,False,False
+1131,camera angle,1.0,A,A,1,1,single,False,False
+1132,camera angle,1.0,A,A,1,1,single,False,False
+1133,camera angle,1.0,B,B,1,1,single,False,False
+1134,camera angle,1.0,C,C,1,1,single,False,False
+1135,camera angle,1.0,B,B,1,1,single,False,False
+1136,camera angle,1.0,D,D,1,2,combination,False,False
+1137,camera angle,1.0,D,D,1,1,single,False,False
+1138,camera angle,1.0,A,A,1,1,single,False,False
+1139,camera angle,1.0,C,C,1,1,single,False,False
+1140,camera angle,1.0,B,B,1,1,single,False,False
+1141,camera angle,1.0,C,C,1,1,single,False,False
+1142,camera angle,1.0,C,C,1,1,single,False,False
+1143,camera angle,0.0,C,D,1,1,single,False,False
+1144,camera angle,0.0,B,D,1,1,single,False,False
+1145,camera angle,0.0,D,C,1,1,single,False,False
+1146,camera angle,1.0,A,A,1,1,single,False,False
+1147,camera angle,1.0,D,D,1,1,single,False,False
+1148,camera angle,1.0,B,B,1,1,single,False,False
+1149,camera angle,1.0,A,A,1,1,single,False,False
+1150,camera angle,1.0,D,D,1,1,single,False,False
+1151,camera angle,1.0,B,B,1,1,single,False,False
+1152,camera angle,1.0,C,C,1,1,single,False,False
+1153,camera angle,1.0,A,A,1,1,single,False,False
+1154,camera angle,1.0,D,D,1,2,combination,False,False
+1155,camera angle,1.0,A,A,1,1,single,False,False
+1156,camera angle,1.0,C,C,1,1,single,False,False
+1157,camera angle,1.0,A,A,1,1,single,False,False
+1158,camera angle,1.0,A,A,1,1,single,False,False
+1159,camera angle,0.0,B,A,1,1,single,False,False
+1160,camera angle,0.0,A,B,1,1,single,False,False
+1161,camera angle,1.0,B,B,1,1,single,False,False
+1162,camera angle,1.0,D,D,1,1,single,False,False
+1163,camera angle,1.0,B,B,1,2,combination,False,False
+1164,camera angle,1.0,B,B,1,1,single,False,False
+1165,camera angle,1.0,C,C,1,1,single,False,False
+1166,camera angle,1.0,D,D,1,1,single,False,False
+1167,camera angle,1.0,D,D,1,1,single,False,False
+1168,camera angle,1.0,C,C,1,1,single,False,False
+1169,camera angle,0.0,A,C,1,1,single,False,False
+1170,camera angle,1.0,C,C,1,1,single,False,False
+1171,camera angle,0.0,A,C,1,1,single,False,False
+1172,camera angle,1.0,D,D,1,1,single,False,False
+1173,camera angle,0.0,B,C,1,2,combination,False,False
+1174,camera angle,1.0,A,A,1,1,single,False,False
+1175,camera angle,1.0,D,D,1,1,single,False,False
+1176,camera angle,1.0,C,C,1,1,single,False,False
+1177,camera angle,0.0,B,C,1,2,combination,False,False
+1178,camera angle,1.0,C,C,1,1,single,False,False
+1179,camera angle,1.0,C,C,1,1,single,False,False
+1180,camera angle,0.0,B,D,1,1,single,False,False
+1181,camera angle,0.0,C,B,1,1,single,False,False
+1182,camera angle,1.0,A,A,1,2,combination,False,False
+1183,camera angle,1.0,D,D,1,1,single,False,False
+1184,camera angle,0.0,C,D,1,1,single,False,False
+1185,camera angle,0.0,A,C,1,1,single,False,False
+1186,camera angle,1.0,A,A,1,1,single,False,False
+1187,camera angle,1.0,D,D,1,1,single,False,False
+1188,camera angle,1.0,C,C,1,1,single,False,False
+1189,camera angle,1.0,B,B,1,1,single,False,False
+1190,camera angle,0.0,D,A,1,1,single,False,False
+1191,camera angle,1.0,B,B,1,2,combination,False,False
+1192,camera angle,0.0,A,D,1,1,single,False,False
+1193,camera angle,0.0,B,C,1,1,single,False,False
+1194,camera angle,1.0,B,B,1,1,single,False,False
+1195,camera angle,1.0,A,A,1,1,single,False,False
+1196,camera angle,1.0,B,B,1,1,single,False,False
+1197,camera angle,1.0,C,C,1,2,combination,False,False
+1198,camera angle,0.0,A,B,1,1,single,False,False
+1199,camera angle,1.0,A,A,1,2,combination,False,False
+1200,camera angle,1.0,D,D,1,1,single,False,False
+1201,camera angle,1.0,C,C,1,1,single,False,False
+1202,camera angle,0.0,B,D,1,1,single,False,False
+1203,camera angle,0.0,A,C,1,1,single,False,False
+1204,camera angle,1.0,B,B,1,1,single,False,False
+1205,camera angle,0.0,B,D,1,1,single,False,False
+1206,camera angle,0.0,C,B,1,1,single,False,False
+1207,camera angle,1.0,C,C,1,1,single,False,False
+1208,camera angle,1.0,D,D,1,1,single,False,False
+1209,camera angle,1.0,B,B,1,1,single,False,False
+1210,camera angle,0.0,C,A,1,2,combination,False,False
+1211,camera angle,0.0,D,B,1,1,single,False,False
+1212,camera angle,1.0,A,A,1,1,single,False,False
+1213,camera angle,1.0,A,A,1,1,single,False,False
+1214,camera angle,0.0,A,B,1,1,single,False,False
+1215,camera angle,1.0,A,A,1,1,single,False,False
+1216,camera angle,1.0,D,D,1,1,single,False,False
+1217,camera angle,1.0,B,B,1,1,single,False,False
+1218,camera angle,0.0,A,D,1,1,single,False,False
+1219,camera angle,1.0,C,C,1,1,single,False,False
+1220,camera angle,0.0,C,D,1,1,single,False,False
+1221,camera angle,1.0,D,D,1,1,single,False,False
+1222,camera angle,1.0,D,D,1,1,single,False,False
+1223,camera angle,1.0,C,C,1,1,single,False,False
+1224,camera angle,0.0,A,B,1,1,single,False,False
+1225,camera angle,0.0,B,A,1,1,single,False,False
+1226,camera angle,1.0,B,B,1,1,single,False,False
+1227,camera angle,1.0,C,C,1,1,single,False,False
+1228,camera angle,0.0,C,D,1,1,single,False,False
+1229,camera angle,1.0,A,A,1,1,single,False,False
+1230,camera angle,1.0,B,B,1,1,single,False,False
+1231,camera angle,0.0,C,B,1,1,single,False,False
+1232,camera angle,0.0,B,D,1,1,single,False,False
+1233,camera angle,1.0,A,A,1,1,single,False,False
+1234,camera angle,1.0,D,D,1,1,single,False,False
+1235,camera angle,1.0,A,A,1,1,single,False,False
+1236,camera angle,1.0,D,D,1,1,single,False,False
+1237,camera angle,1.0,B,B,1,1,single,False,False
+1238,camera angle,1.0,A,A,1,1,single,False,False
+1239,camera angle,1.0,D,D,1,1,single,False,False
+1240,camera angle,1.0,D,D,1,1,single,False,False
+1241,camera angle,0.0,A,B,1,2,combination,False,False
+1242,camera angle,0.0,B,A,1,1,single,False,False
+1243,camera angle,1.0,C,C,1,1,single,False,False
+1244,camera angle,1.0,D,D,1,1,single,False,False
+1245,camera angle,1.0,C,C,1,1,single,False,False
+1246,camera angle,1.0,D,D,1,1,single,False,False
+1247,camera angle,1.0,C,C,1,1,single,False,False
+1248,camera angle,0.0,B,C,1,1,single,False,False
+1249,camera angle,1.0,D,D,1,1,single,False,False
+1250,camera angle,0.0,B,D,1,1,single,False,False
+1251,camera angle,1.0,B,B,1,1,single,False,False
+1252,camera angle,1.0,D,D,1,1,single,False,False
+1253,camera angle,1.0,D,D,1,1,single,False,False
+1254,camera angle,0.0,D,C,1,1,single,False,False
+1255,camera angle,1.0,C,C,1,1,single,False,False
+1256,camera angle,0.0,B,A,1,1,single,False,False
+1257,camera angle,1.0,B,B,1,2,combination,False,False
+1258,camera angle,0.0,C,B,1,1,single,False,False
+1259,camera angle,0.0,A,D,1,2,combination,False,False
+1260,camera angle,0.0,D,A,1,1,single,False,False
+1261,camera angle,1.0,D,D,1,1,single,False,False
+1262,camera angle,0.0,A,C,1,1,single,False,False
+1263,camera angle,1.0,B,B,1,1,single,False,False
+1264,camera angle,0.0,C,D,1,1,single,False,False
+1265,camera angle,0.0,B,A,1,1,single,False,False
+1266,camera angle,0.0,A,C,1,1,single,False,False
+1267,camera angle,0.0,A,D,1,2,combination,False,False
+1268,camera angle,0.0,B,A,1,1,single,False,False
+1269,camera angle,0.0,B,A,1,1,single,False,False
+1270,camera angle,0.0,D,C,1,1,single,False,False
+1271,camera angle,1.0,B,B,1,1,single,False,False
+1272,camera angle,1.0,D,D,1,1,single,False,False
+1273,camera angle,0.0,D,B,1,2,combination,False,False
+1274,camera angle,0.0,B,D,1,1,single,False,False
+1275,camera angle,0.0,D,C,1,1,single,False,False
+1276,camera angle,0.0,B,A,1,1,single,False,False
+1277,camera angle,1.0,D,D,1,1,single,False,False
+1278,camera angle,0.0,C,D,1,1,single,False,False
+1279,camera angle,0.0,B,A,1,1,single,False,False
+1280,camera angle,0.0,A,B,1,1,single,False,False
+1281,camera angle,1.0,D,D,1,1,single,False,False
+1282,camera angle,1.0,A,A,1,3,combination,False,False
+1283,camera angle,1.0,D,D,1,1,single,False,False
+1284,camera angle,1.0,D,D,1,1,single,False,False
+1285,camera angle,1.0,A,A,1,1,single,False,False
+1286,camera angle,0.0,C,B,1,1,single,False,False
+1287,camera angle,1.0,B,B,1,1,single,False,False
+1288,camera angle,1.0,D,D,1,1,single,False,False
+1289,camera angle,1.0,A,A,1,1,single,False,False
+1290,camera angle,1.0,B,B,1,1,single,False,False
+1291,camera angle,1.0,C,C,1,1,single,False,False
+1292,camera angle,1.0,C,C,1,1,single,False,False
+1293,camera angle,0.0,B,C,1,1,single,False,False
+1294,camera angle,0.0,A,D,1,1,single,False,False
+1295,camera angle,0.0,D,C,1,1,single,False,False
+1296,camera angle,0.0,A,B,1,1,single,False,False
+1297,camera angle,1.0,B,B,1,1,single,False,False
+1298,camera angle,0.0,D,B,1,1,single,False,False
+1299,camera angle,1.0,C,C,1,1,single,False,False
+1300,camera angle,1.0,C,C,1,1,single,False,False
+1301,camera angle,1.0,B,B,1,1,single,False,False
+1302,camera angle,0.0,B,A,1,1,single,False,False
+1303,camera angle,1.0,C,C,1,1,single,False,False
+1304,camera angle,1.0,D,D,1,1,single,False,False
+1305,camera angle,0.0,D,C,1,1,single,False,False
+1306,camera angle,0.0,B,A,1,2,combination,False,False
+1307,camera angle,0.0,D,C,1,1,single,False,False
+1308,camera angle,1.0,A,A,1,1,single,False,False
+1309,camera angle,0.0,C,D,1,1,single,False,False
+1310,camera angle,0.0,B,D,1,1,single,False,False
+1311,camera angle,0.0,D,A,1,1,single,False,False
+1312,camera angle,0.0,D,A,1,1,single,False,False
+1313,camera angle,1.0,A,A,1,1,single,False,False
+1314,camera angle,0.0,A,B,1,1,single,False,False
+1315,camera angle,1.0,C,C,1,1,single,False,False
+1316,camera angle,0.0,B,C,1,1,single,False,False
+1317,camera angle,0.0,D,C,1,1,single,False,False
+1318,camera angle,0.0,B,C,1,1,single,False,False
+1319,camera angle,0.0,C,B,1,1,single,False,False
+1320,camera angle,0.0,B,D,1,1,single,False,False
+1321,camera angle,0.0,D,C,1,1,single,False,False
+1322,camera angle,0.0,C,D,1,1,single,False,False
+1323,camera angle,0.0,B,A,1,2,combination,False,False
+1324,camera angle,1.0,D,D,1,1,single,False,False
+1325,camera angle,1.0,A,A,1,1,single,False,False
+1326,camera angle,0.0,C,A,1,1,single,False,False
+1327,camera angle,0.0,B,C,1,1,single,False,False
+1328,camera angle,0.0,A,C,1,1,single,False,False
+1329,camera angle,0.0,D,C,1,1,single,False,False
+1330,camera angle,0.0,A,D,1,1,single,False,False
+1331,camera angle,0.0,D,A,1,1,single,False,False
+1332,camera angle,0.0,D,B,1,1,single,False,False
+1333,camera angle,0.0,C,B,1,1,single,False,False
+1334,camera angle,0.0,A,D,1,1,single,False,False
+1335,camera angle,0.0,C,A,1,1,single,False,False
+1336,camera angle,0.0,C,B,1,1,single,False,False
+1337,camera angle,0.0,C,B,1,1,single,False,False
+1338,camera angle,0.0,A,D,1,1,single,False,False
+1339,camera angle,1.0,B,B,1,1,single,False,False
+1340,camera angle,0.0,A,B,1,1,single,False,False
+1341,camera angle,0.0,B,A,1,2,combination,False,False
+1342,camera angle,0.0,C,B,1,1,single,False,False
+1343,camera angle,0.0,A,B,1,1,single,False,False
+1344,camera angle,0.0,C,B,1,1,single,False,False
+1345,camera angle,1.0,A,A,1,1,single,False,False
+1346,camera angle,0.0,D,C,1,1,single,False,False
+1347,camera angle,1.0,D,D,1,1,single,False,False
+1348,camera angle,1.0,C,C,1,1,single,False,False
+1349,camera angle,0.0,A,C,1,1,single,False,False
+1350,camera angle,0.0,A,B,1,1,single,False,False
+1351,camera angle,0.0,C,A,1,1,single,False,False
+1352,camera angle,0.0,A,D,1,1,single,False,False
+1353,camera angle,0.0,D,C,1,1,single,False,False
+1354,camera angle,0.0,C,B,1,1,single,False,False
+1355,camera angle,1.0,A,A,1,1,single,False,False
+1356,camera angle,0.0,D,B,1,1,single,False,False
+1357,camera angle,0.0,C,D,1,1,single,False,False
+1358,camera angle,1.0,D,D,1,1,single,False,False
+1359,camera angle,0.0,A,D,1,1,single,False,False
+1360,camera angle,0.0,A,D,1,1,single,False,False
+1361,camera angle,1.0,A,A,1,1,single,False,False
+1362,camera angle,0.0,A,C,1,1,single,False,False
+1363,camera angle,0.0,D,A,1,1,single,False,False
+1364,camera angle,0.0,C,D,1,1,single,False,False
+1365,camera angle,0.0,A,B,1,1,single,False,False
+1366,camera angle,0.0,B,A,1,1,single,False,False
+1367,camera angle,1.0,A,A,1,1,single,False,False
+1368,camera angle,0.0,D,B,1,1,single,False,False
+1369,camera angle,0.0,D,B,1,1,single,False,False
+1370,camera angle,0.0,C,B,1,1,single,False,False
+1371,camera angle,0.0,B,D,1,1,single,False,False
+1372,camera angle,1.0,C,C,1,1,single,False,False
+1373,camera angle,0.0,C,D,1,1,single,False,False
+1374,camera angle,0.0,A,D,1,1,single,False,False
+1375,camera angle,0.0,D,A,1,1,single,False,False
+1376,camera angle,0.0,B,C,1,1,single,False,False
+1377,camera angle,1.0,A,A,1,1,single,False,False
+1378,camera angle,0.0,B,C,1,1,single,False,False
+1379,camera angle,0.0,D,A,1,1,single,False,False
+1380,camera angle,1.0,B,B,1,1,single,False,False
+1381,camera angle,0.0,C,A,1,1,single,False,False
+1382,camera angle,0.0,A,C,1,1,single,False,False
+1383,camera angle,0.0,C,D,1,1,single,False,False
+1384,camera angle,1.0,C,C,1,1,single,False,False
+1385,camera angle,1.0,B,B,1,1,single,False,False
+1386,lens size,1.0,A,A,1,1,single,False,False
+1387,lens size,1.0,A,A,1,1,single,False,False
+1388,lens size,1.0,B,B,1,1,single,False,False
+1389,lens size,0.0,A,C,1,1,single,False,False
+1390,lens size,1.0,C,C,1,1,single,False,False
+1391,lens size,1.0,C,C,1,1,single,False,False
+1392,lens size,0.0,D,C,1,1,single,False,False
+1393,lens size,0.0,B,C,1,1,single,False,False
+1394,lens size,0.0,D,C,1,1,single,False,False
+1395,lens size,1.0,B,B,1,1,single,False,False
+1396,lens size,1.0,D,D,1,1,single,False,False
+1397,lens size,1.0,A,A,1,1,single,False,False
+1398,lens size,1.0,D,D,1,1,single,False,False
+1399,lens size,1.0,B,B,1,1,single,False,False
+1400,lens size,1.0,B,B,1,1,single,False,False
+1401,lens size,1.0,B,B,1,1,single,False,False
+1402,lens size,1.0,C,C,1,1,single,False,False
+1403,lens size,1.0,B,B,1,1,single,False,False
+1404,lens size,1.0,B,B,1,1,single,False,False
+1405,lens size,1.0,C,C,1,1,single,False,False
+1406,lens size,1.0,C,C,1,1,single,False,False
+1407,lens size,1.0,A,A,1,1,single,False,False
+1408,lens size,1.0,D,D,1,1,single,False,False
+1409,lens size,1.0,A,A,1,1,single,False,False
+1410,lens size,0.0,A,B,1,1,single,False,False
+1411,lens size,0.0,B,D,1,1,single,False,False
+1412,lens size,1.0,B,B,1,1,single,False,False
+1413,lens size,0.0,D,A,1,1,single,False,False
+1414,lens size,1.0,D,D,1,1,single,False,False
+1415,lens size,0.0,C,D,1,1,single,False,False
+1416,lens size,0.0,C,A,1,1,single,False,False
+1417,lens size,0.0,D,A,1,1,single,False,False
+1418,lens size,1.0,C,C,1,1,single,False,False
+1419,lens size,0.0,A,C,1,1,single,False,False
+1420,lens size,0.0,A,C,1,1,single,False,False
+1421,lens size,1.0,C,C,1,1,single,False,False
+1422,lens size,0.0,B,D,1,1,single,False,False
+1423,lens size,1.0,A,A,1,1,single,False,False
+1424,lens size,0.0,C,D,1,1,single,False,False
+1425,lens size,1.0,D,D,1,1,single,False,False
+1426,lens size,0.0,C,A,1,1,single,False,False
+1427,lens size,1.0,C,C,1,1,single,False,False
+1428,lens size,1.0,A,A,1,1,single,False,False
+1429,lens size,0.0,C,B,1,1,single,False,False
+1430,lens size,1.0,C,C,1,1,single,False,False
+1431,lens size,0.0,B,A,1,1,single,False,False
+1432,lens size,1.0,B,B,1,2,combination,False,False
+1433,lens size,0.0,B,C,1,1,single,False,False
+1434,lens size,1.0,B,B,1,1,single,False,False
+1435,lens size,1.0,D,D,1,1,single,False,False
+1436,lens size,0.0,C,B,1,1,single,False,False
+1437,lens size,1.0,C,C,1,1,single,False,False
+1438,lens size,1.0,D,D,1,1,single,False,False
+1439,lens size,0.0,B,C,1,1,single,False,False
+1440,lens size,0.0,C,D,1,1,single,False,False
+1441,lens size,1.0,C,C,1,1,single,False,False
+1442,lens size,0.0,C,A,1,1,single,False,False
+1443,lens size,0.0,C,D,1,1,single,False,False
+1444,lens size,1.0,C,C,1,1,single,False,False
+1445,lens size,0.0,A,C,1,1,single,False,False
+1446,lens size,1.0,B,B,1,2,combination,False,False
+1447,lens size,1.0,C,C,1,1,single,False,False
+1448,lens size,1.0,D,D,1,1,single,False,False
+1449,lens size,1.0,D,D,1,1,single,False,False
+1450,lens size,0.0,A,C,1,1,single,False,False
+1451,lens size,0.0,D,A,1,1,single,False,False
+1452,lens size,1.0,B,B,1,1,single,False,False
+1453,lens size,1.0,A,A,1,1,single,False,False
+1454,lens size,1.0,B,B,1,1,single,False,False
+1455,lens size,1.0,A,A,1,1,single,False,False
+1456,lens size,0.0,C,D,1,1,single,False,False
+1457,lens size,1.0,C,C,1,1,single,False,False
+1458,lens size,1.0,D,D,1,1,single,False,False
+1459,lens size,1.0,D,D,1,1,single,False,False
+1460,lens size,1.0,A,A,1,1,single,False,False
+1461,lens size,1.0,D,D,1,1,single,False,False
+1462,lens size,0.0,C,A,1,1,single,False,False
+1463,lens size,1.0,D,D,1,1,single,False,False
+1464,lens size,0.0,B,C,1,1,single,False,False
+1465,lens size,0.0,A,C,1,1,single,False,False
+1466,lens size,1.0,C,C,1,1,single,False,False
+1467,lens size,0.0,C,B,1,1,single,False,False
+1468,lens size,1.0,D,D,1,1,single,False,False
+1469,lens size,1.0,A,A,1,1,single,False,False
+1470,lens size,0.0,A,C,1,1,single,False,False
+1471,lens size,1.0,A,A,1,1,single,False,False
+1472,lens size,1.0,D,D,1,1,single,False,False
+1473,lens size,1.0,B,B,1,1,single,False,False
+1474,lens size,1.0,D,D,1,1,single,False,False
+1475,lens size,1.0,B,B,1,1,single,False,False
+1476,lens size,0.0,B,D,1,1,single,False,False
+1477,lens size,0.0,A,B,1,1,single,False,False
+1478,lens size,1.0,B,B,1,2,combination,False,False
+1479,lens size,0.0,A,D,1,1,single,False,False
+1480,lens size,1.0,C,C,1,1,single,False,False
+1481,lens size,1.0,A,A,1,1,single,False,False
+1482,lens size,1.0,B,B,1,1,single,False,False
+1483,lens size,0.0,C,B,1,1,single,False,False
+1484,lens size,1.0,A,A,1,1,single,False,False
+1485,lens size,1.0,B,B,1,1,single,False,False
+1486,lens size,1.0,B,B,1,1,single,False,False
+1487,lens size,1.0,A,A,1,1,single,False,False
+1488,lens size,1.0,B,B,1,1,single,False,False
+1489,lens size,1.0,D,D,1,1,single,False,False
+1490,lens size,1.0,D,D,1,1,single,False,False
+1491,lens size,1.0,B,B,1,1,single,False,False
+1492,lens size,1.0,A,A,1,1,single,False,False
+1493,lens size,1.0,D,D,1,1,single,False,False
+1494,lens size,1.0,C,C,1,1,single,False,False
+1495,lens size,1.0,C,C,1,1,single,False,False
+1496,lens size,1.0,C,C,1,1,single,False,False
+1497,lens size,1.0,D,D,1,1,single,False,False
+1498,lens size,0.0,A,D,1,1,single,False,False
+1499,lens size,1.0,A,A,1,1,single,False,False
+1500,lens size,1.0,C,C,1,1,single,False,False
+1501,lens size,1.0,D,D,1,1,single,False,False
+1502,lens size,1.0,D,D,1,1,single,False,False
+1503,lens size,1.0,D,D,1,1,single,False,False
+1504,lens size,0.0,D,A,1,1,single,False,False
+1505,lens size,1.0,A,A,1,1,single,False,False
+1506,lens size,1.0,C,C,1,1,single,False,False
+1507,lens size,1.0,D,D,1,1,single,False,False
+1508,lens size,1.0,B,B,1,1,single,False,False
+1509,lens size,0.0,B,A,1,1,single,False,False
+1510,lens size,0.0,C,B,1,1,single,False,False
+1511,lens size,1.0,A,A,1,1,single,False,False
+1512,lens size,1.0,C,C,1,1,single,False,False
+1513,lens size,1.0,C,C,1,1,single,False,False
+1514,lens size,1.0,B,B,1,1,single,False,False
+1515,lens size,1.0,C,C,1,1,single,False,False
+1516,lens size,1.0,A,A,1,1,single,False,False
+1517,lens size,1.0,D,D,1,2,combination,False,False
+1518,lens size,0.0,B,A,1,1,single,False,False
+1519,lens size,1.0,B,B,1,1,single,False,False
+1520,lens size,0.0,B,A,1,1,single,False,False
+1521,lens size,1.0,B,B,1,1,single,False,False
+1522,lens size,0.0,B,D,1,1,single,False,False
+1523,lens size,1.0,B,B,1,1,single,False,False
+1524,lens size,0.0,D,B,1,1,single,False,False
+1525,lens size,1.0,C,C,1,1,single,False,False
+1526,lens size,0.0,D,C,1,1,single,False,False
+1527,lens size,0.0,D,A,1,1,single,False,False
+1528,lens size,1.0,C,C,1,1,single,False,False
+1529,lens size,1.0,C,C,1,1,single,False,False
+1530,lens size,0.0,D,C,1,1,single,False,False
+1531,lens size,1.0,B,B,1,1,single,False,False
+1532,lens size,0.0,C,A,1,1,single,False,False
+1533,lens size,1.0,D,D,1,1,single,False,False
+1534,lens size,1.0,A,A,1,1,single,False,False
+1535,lens size,1.0,C,C,1,2,combination,False,False
+1536,lens size,0.0,B,C,1,1,single,False,False
+1537,lens size,1.0,C,C,1,1,single,False,False
+1538,lens size,1.0,C,C,1,1,single,False,False
+1539,lens size,1.0,C,C,1,1,single,False,False
+1540,lens size,1.0,A,A,1,1,single,False,False
+1541,lens size,1.0,C,C,1,1,single,False,False
+1542,lens size,1.0,B,B,1,1,single,False,False
+1543,lens size,0.0,C,D,1,1,single,False,False
+1544,lens size,1.0,D,D,1,1,single,False,False
+1545,lens size,1.0,A,A,1,1,single,False,False
+1546,lens size,0.0,A,C,1,1,single,False,False
+1547,lens size,1.0,A,A,1,1,single,False,False
+1548,lens size,1.0,A,A,1,1,single,False,False
+1549,lens size,0.0,C,D,1,2,combination,False,False
+1550,lens size,0.0,D,A,1,1,single,False,False
+1551,lens size,0.0,A,B,1,1,single,False,False
+1552,lens size,1.0,B,B,1,1,single,False,False
+1553,lens size,0.0,D,B,1,1,single,False,False
+1554,lens size,1.0,D,D,1,1,single,False,False
+1555,lens size,1.0,A,A,1,1,single,False,False
+1556,lens size,0.0,A,B,1,1,single,False,False
+1557,lens size,1.0,A,A,1,1,single,False,False
+1558,lens size,1.0,A,A,1,1,single,False,False
+1559,lens size,1.0,C,C,1,1,single,False,False
+1560,lens size,1.0,A,A,1,1,single,False,False
+1561,lens size,1.0,D,D,1,2,combination,False,False
+1562,lens size,1.0,C,C,1,1,single,False,False
+1563,lens size,0.0,A,D,1,1,single,False,False
+1564,lens size,0.0,C,B,1,1,single,False,False
+1565,lens size,1.0,A,A,1,1,single,False,False
+1566,lens size,0.0,C,D,1,1,single,False,False
+1567,lens size,0.0,B,D,1,1,single,False,False
+1568,lens size,1.0,B,B,1,1,single,False,False
+1569,lens size,0.0,D,C,1,1,single,False,False
+1570,lens size,1.0,A,A,1,1,single,False,False
+1571,lens size,1.0,C,C,1,1,single,False,False
+1572,lens size,1.0,D,D,1,1,single,False,False
+1573,lens size,0.0,B,C,1,1,single,False,False
+1574,lens size,1.0,C,C,1,1,single,False,False
+1575,lens size,1.0,B,B,1,2,combination,False,False
+1576,lens size,0.0,B,A,1,1,single,False,False
+1577,lens size,0.0,A,C,1,1,single,False,False
+1578,lens size,1.0,A,A,1,1,single,False,False
+1579,lens size,1.0,D,D,1,1,single,False,False
+1580,lens size,1.0,D,D,1,1,single,False,False
+1581,lens size,1.0,B,B,1,2,combination,False,False
+1582,lens size,1.0,D,D,1,2,combination,False,False
+1583,lens size,1.0,D,D,1,1,single,False,False
+1584,lens size,1.0,D,D,1,1,single,False,False
+1585,lens size,0.0,D,C,1,1,single,False,False
+1586,lens size,1.0,B,B,1,1,single,False,False
+1587,lens size,1.0,C,C,1,1,single,False,False
+1588,lens size,1.0,A,A,1,1,single,False,False
+1589,lens size,1.0,D,D,1,1,single,False,False
+1590,lens size,1.0,A,A,1,1,single,False,False
+1591,lens size,0.0,C,B,1,1,single,False,False
+1592,lens size,0.0,C,A,1,1,single,False,False
+1593,lens size,0.0,D,B,1,1,single,False,False
+1594,lens size,1.0,B,B,1,1,single,False,False
+1595,lens size,1.0,A,A,1,1,single,False,False
+1596,lens size,1.0,A,A,1,1,single,False,False
+1597,lens size,1.0,C,C,1,1,single,False,False
+1598,lens size,1.0,A,A,1,1,single,False,False
+1599,lens size,0.0,B,A,1,1,single,False,False
+1600,lens size,1.0,A,A,1,1,single,False,False
+1601,lens size,0.0,D,B,1,1,single,False,False
+1602,lens size,0.0,B,A,1,1,single,False,False
+1603,lens size,1.0,B,B,1,1,single,False,False
+1604,lens size,1.0,B,B,1,1,single,False,False
+1605,lens size,1.0,D,D,1,1,single,False,False
+1606,lens size,0.0,A,B,1,1,single,False,False
+1607,lens size,1.0,D,D,1,1,single,False,False
+1608,lens size,1.0,C,C,1,1,single,False,False
+1609,lens size,1.0,B,B,1,1,single,False,False
+1610,lens size,0.0,B,D,1,1,single,False,False
+1611,lens size,1.0,A,A,1,1,single,False,False
+1612,lens size,0.0,D,C,1,1,single,False,False
+1613,lens size,1.0,C,C,1,1,single,False,False
+1614,lens size,0.0,D,B,1,1,single,False,False
+1615,lens size,1.0,C,C,1,1,single,False,False
+1616,lens size,1.0,A,A,1,1,single,False,False
+1617,lens size,0.0,B,A,1,1,single,False,False
+1618,lens size,1.0,C,C,1,2,combination,False,False
+1619,lens size,1.0,D,D,1,1,single,False,False
+1620,lens size,0.0,B,C,1,1,single,False,False
+1621,lens size,0.0,C,B,1,1,single,False,False
+1622,lens size,0.0,C,A,1,1,single,False,False
+1623,lens size,0.0,C,D,1,1,single,False,False
+1624,lens size,1.0,A,A,1,1,single,False,False
+1625,lens size,1.0,D,D,1,1,single,False,False
+1626,lens size,0.0,D,C,1,1,single,False,False
+1627,lens size,1.0,B,B,1,1,single,False,False
+1628,lens size,0.0,B,D,1,1,single,False,False
+1629,lens size,0.0,B,D,1,1,single,False,False
+1630,lens size,1.0,D,D,1,1,single,False,False
+1631,lens size,0.0,B,D,1,1,single,False,False
+1632,lens size,1.0,D,D,1,1,single,False,False
+1633,lens size,1.0,C,C,1,1,single,False,False
+1634,lens size,1.0,B,B,1,1,single,False,False
+1635,lens size,0.0,A,D,1,1,single,False,False
+1636,lens size,1.0,C,C,1,1,single,False,False
+1637,lens size,0.0,D,C,1,1,single,False,False
+1638,lens size,0.0,A,D,1,1,single,False,False
+1639,lens size,1.0,C,C,1,1,single,False,False
+1640,lens size,1.0,D,D,1,1,single,False,False
+1641,lens size,1.0,B,B,1,1,single,False,False
+1642,lens size,1.0,D,D,1,1,single,False,False
+1643,lens size,1.0,B,B,1,1,single,False,False
+1644,lens size,0.0,B,A,1,1,single,False,False
+1645,lens size,1.0,C,C,1,1,single,False,False
+1646,lens size,1.0,C,C,1,1,single,False,False
+1647,lens size,0.0,C,D,1,1,single,False,False
+1648,lens size,1.0,C,C,1,1,single,False,False
+1649,lens size,1.0,B,B,1,1,single,False,False
+1650,lens size,1.0,B,B,1,1,single,False,False
+1651,lens size,1.0,A,A,1,1,single,False,False
+1652,lens size,0.0,B,D,1,1,single,False,False
+1653,lens size,0.0,D,C,1,1,single,False,False
+1654,lens size,1.0,D,D,1,1,single,False,False
+1655,lens size,1.0,B,B,1,1,single,False,False
+1656,lens size,1.0,A,A,1,1,single,False,False
+1657,lens size,0.0,A,B,1,1,single,False,False
+1658,lens size,1.0,A,A,1,1,single,False,False
+1659,lens size,1.0,B,B,1,1,single,False,False
+1660,lens size,0.0,C,A,1,1,single,False,False
+1661,lens size,1.0,A,A,1,1,single,False,False
+1662,lens size,0.0,B,D,1,1,single,False,False
+1663,lens size,1.0,C,C,1,1,single,False,False
+1664,lens size,1.0,A,A,1,1,single,False,False
+1665,lens size,0.0,A,C,1,1,single,False,False
+1666,lens size,0.0,D,C,1,1,single,False,False
+1667,lens size,1.0,A,A,1,1,single,False,False
+1668,lens size,1.0,D,D,1,1,single,False,False
+1669,lens size,1.0,A,A,1,1,single,False,False
+1670,lens size,0.0,A,C,1,1,single,False,False
+1671,lens size,1.0,D,D,1,1,single,False,False
+1672,lens size,0.0,A,C,1,1,single,False,False
+1673,lens size,1.0,B,B,1,1,single,False,False
+1674,lens size,1.0,C,C,1,1,single,False,False
+1675,lens size,1.0,B,B,1,1,single,False,False
+1676,lens size,1.0,A,A,1,1,single,False,False
+1677,lens size,0.0,D,C,1,1,single,False,False
+1678,lens size,0.0,B,A,1,1,single,False,False
+1679,lens size,1.0,C,C,1,1,single,False,False
+1680,lens size,1.0,A,A,1,1,single,False,False
+1681,lens size,0.0,B,C,1,1,single,False,False
+1682,lens size,0.0,A,C,1,1,single,False,False
+1683,lens size,0.0,B,A,1,1,single,False,False
+1684,lens size,0.0,B,D,1,1,single,False,False
+1685,lens size,1.0,A,A,1,1,single,False,False
+1686,lens size,1.0,B,B,1,1,single,False,False
+1687,lens size,1.0,B,B,1,1,single,False,False
+1688,lens size,1.0,B,B,1,1,single,False,False
+1689,lens size,0.0,D,A,1,1,single,False,False
+1690,lens size,1.0,C,C,1,1,single,False,False
+1691,lens size,0.0,D,B,1,1,single,False,False
+1692,lens size,1.0,A,A,1,1,single,False,False
+1693,lens size,0.0,A,C,1,1,single,False,False
+1694,lens size,1.0,B,B,1,1,single,False,False
+1695,lens size,1.0,B,B,1,1,single,False,False
+1696,lens size,0.0,B,A,1,1,single,False,False
+1697,lens size,0.0,B,D,1,1,single,False,False
+1698,lens size,1.0,C,C,1,1,single,False,False
+1699,lens size,1.0,B,B,1,1,single,False,False
+1700,lens size,1.0,B,B,1,1,single,False,False
+1701,lens size,1.0,D,D,1,1,single,False,False
+1702,lens size,1.0,C,C,1,1,single,False,False
+1703,lens size,0.0,A,B,1,1,single,False,False
+1704,lens size,0.0,B,A,1,1,single,False,False
+1705,lens size,1.0,D,D,1,1,single,False,False
+1706,lens size,0.0,C,B,1,1,single,False,False
+1707,lens size,0.0,A,C,1,1,single,False,False
+1708,lens size,0.0,A,C,1,1,single,False,False
+1709,lens size,0.0,C,B,1,1,single,False,False
+1710,lens size,1.0,B,B,1,1,single,False,False
+1711,lens size,1.0,B,B,1,1,single,False,False
+1712,lens size,1.0,B,B,1,1,single,False,False
+1713,lens size,1.0,A,A,1,1,single,False,False
+1714,lens size,0.0,C,A,1,1,single,False,False
+1715,lens size,1.0,D,D,1,1,single,False,False
+1716,lens size,1.0,D,D,1,1,single,False,False
+1717,lens size,0.0,D,C,1,1,single,False,False
+1718,lens size,1.0,B,B,1,1,single,False,False
+1719,lens size,0.0,A,C,1,1,single,False,False
+1720,lens size,0.0,A,D,1,1,single,False,False
+1721,lens size,0.0,D,C,1,1,single,False,False
+1722,lens size,1.0,A,A,1,1,single,False,False
+1723,lens size,1.0,C,C,1,1,single,False,False
+1724,lens size,0.0,A,D,1,1,single,False,False
+1725,lens size,0.0,C,B,1,1,single,False,False
+1726,lens size,0.0,D,A,1,1,single,False,False
+1727,lens size,1.0,C,C,1,1,single,False,False
+1728,lens size,1.0,B,B,1,1,single,False,False
+1729,lens size,0.0,A,D,1,1,single,False,False
+1730,lens size,1.0,D,D,1,1,single,False,False
+1731,lens size,0.0,C,D,1,1,single,False,False
+1732,lens size,1.0,C,C,1,1,single,False,False
+1733,lens size,1.0,B,B,1,1,single,False,False
+1734,lens size,1.0,A,A,1,1,single,False,False
+1735,lens size,0.0,D,B,1,1,single,False,False
+1736,lens size,0.0,D,A,1,1,single,False,False
+1737,lens size,0.0,D,B,1,1,single,False,False
+1738,lens size,0.0,D,A,1,1,single,False,False
+1739,lens size,1.0,A,A,1,1,single,False,False
+1740,lens size,1.0,D,D,1,1,single,False,False
+1741,lens size,0.0,B,D,1,1,single,False,False
+1742,lens size,1.0,B,B,1,1,single,False,False
+1743,lens size,0.0,B,D,1,1,single,False,False
+1744,lens size,1.0,B,B,1,1,single,False,False
+1745,lens size,0.0,C,A,1,1,single,False,False
+1746,lens size,1.0,A,A,1,1,single,False,False
+1747,lens size,0.0,B,D,1,1,single,False,False
+1748,lens size,1.0,A,A,1,1,single,False,False
+1749,lens size,1.0,B,B,1,1,single,False,False
+1750,lens size,0.0,B,A,1,1,single,False,False
+1751,lens size,1.0,A,A,1,1,single,False,False
+1752,lens size,0.0,D,A,1,1,single,False,False
+1753,lens size,0.0,D,C,1,1,single,False,False
+1754,lens size,0.0,D,C,1,1,single,False,False
+1755,lens size,0.0,A,D,1,1,single,False,False
+1756,lens size,1.0,B,B,1,1,single,False,False
+1757,lens size,1.0,C,C,1,1,single,False,False
+1758,lens size,0.0,D,A,1,1,single,False,False
+1759,lens size,1.0,D,D,1,1,single,False,False
+1760,lens size,0.0,D,A,1,1,single,False,False
+1761,lens size,1.0,B,B,1,1,single,False,False
+1762,lens size,0.0,D,A,1,1,single,False,False
+1763,lens size,1.0,A,A,1,1,single,False,False
+1764,lens size,0.0,C,D,1,1,single,False,False
+1765,lens size,0.0,D,B,1,1,single,False,False
+1766,lens size,0.0,A,D,1,1,single,False,False
+1767,lens size,1.0,D,D,1,1,single,False,False
+1768,lens size,1.0,C,C,1,1,single,False,False
+1769,lens size,0.0,B,D,1,1,single,False,False
+1770,lens size,0.0,D,B,1,1,single,False,False
+1771,lens size,0.0,B,C,1,1,single,False,False
+1772,lens size,0.0,C,B,1,1,single,False,False
+1773,lens size,0.0,C,B,1,1,single,False,False
+1774,lens size,0.0,B,A,1,1,single,False,False
+1775,lens size,0.0,D,C,1,1,single,False,False
+1776,lens size,0.0,D,C,1,1,single,False,False
+1777,lens size,0.0,D,C,1,1,single,False,False
+1778,lens size,0.0,B,D,1,1,single,False,False
+1779,lens size,1.0,B,B,1,1,single,False,False
+1780,lens size,0.0,B,D,1,1,single,False,False
+1781,lens size,0.0,D,A,1,1,single,False,False
+1782,lens size,0.0,A,D,1,1,single,False,False
+1783,lens size,0.0,A,C,1,1,single,False,False
+1784,lens size,0.0,C,A,1,1,single,False,False
+1785,lens size,0.0,D,A,1,1,single,False,False
+1786,lens size,0.0,A,C,1,1,single,False,False
+1787,lens size,0.0,D,C,1,1,single,False,False
+1788,lens size,0.0,C,B,1,1,single,False,False
+1789,lens size,0.0,D,A,1,1,single,False,False
+1790,lens size,0.0,A,B,1,1,single,False,False
+1791,lens size,0.0,C,D,1,1,single,False,False
+1792,lens size,0.0,C,D,1,1,single,False,False
+1793,lens size,0.0,B,A,1,1,single,False,False
+1794,lens size,0.0,B,A,1,1,single,False,False
+1795,lens size,0.0,D,C,1,1,single,False,False
+1796,lens size,0.0,B,D,1,1,single,False,False
+1797,lens size,0.0,D,C,1,1,single,False,False
+1798,lens size,0.0,D,B,1,1,single,False,False
+1799,lens size,0.0,C,A,1,1,single,False,False
+1800,lens size,0.0,C,A,1,1,single,False,False
+1801,lens size,0.0,C,D,1,1,single,False,False
+1802,lens size,0.0,B,C,1,1,single,False,False
+1803,lens size,0.0,A,D,1,1,single,False,False
+1804,lens size,0.0,D,B,1,1,single,False,False
+1805,lens size,0.0,D,A,1,1,single,False,False
+1806,lens size,0.0,B,C,1,1,single,False,False
+1807,lens size,0.0,A,D,1,1,single,False,False
+1808,lens size,0.0,B,C,1,1,single,False,False
+1809,lens size,0.0,C,D,1,1,single,False,False
+1810,lens size,0.0,A,D,1,1,single,False,False
+1811,lens size,1.0,A,A,1,1,single,False,False
+1812,lens size,1.0,D,D,1,1,single,False,False
+1813,lens size,0.0,C,A,1,1,single,False,False
+1814,lens size,0.0,D,B,1,1,single,False,False
+1815,lens size,0.0,D,A,1,1,single,False,False
+1816,lens size,0.0,B,D,1,1,single,False,False
+1817,lens size,0.0,B,C,1,1,single,False,False
+1818,lens size,0.0,B,C,1,1,single,False,False
+1819,lens size,0.0,C,D,1,1,single,False,False
+1820,lens size,0.0,D,C,1,1,single,False,False
+1821,lens size,0.0,A,C,1,1,single,False,False
+1822,lens size,0.0,B,C,1,1,single,False,False
+1823,lens size,0.0,B,C,1,1,single,False,False
+1824,lens size,0.0,B,C,1,1,single,False,False
+1825,lens size,0.0,A,B,1,1,single,False,False
+1826,lens size,0.0,C,A,1,1,single,False,False
+1827,lens size,0.0,A,B,1,1,single,False,False
+1828,lens size,0.0,D,B,1,1,single,False,False
+1829,lens size,1.0,D,D,1,1,single,False,False
+1830,lens size,0.0,C,B,1,1,single,False,False
+1831,lens size,0.0,B,C,1,1,single,False,False
+1832,lens size,0.0,C,D,1,1,single,False,False
+1833,lens size,0.0,B,D,1,1,single,False,False
+1834,lens size,0.0,B,C,1,1,single,False,False
+1835,lens size,0.0,D,C,1,1,single,False,False
+1836,lens size,1.0,A,A,1,1,single,False,False
+1837,lens size,0.0,B,D,1,1,single,False,False
+1838,lens size,0.0,A,C,1,1,single,False,False
+1839,lens size,0.0,B,A,1,1,single,False,False
+1840,lens size,0.0,D,C,1,1,single,False,False
+1841,lens size,0.0,B,C,1,1,single,False,False
+1842,lens size,0.0,D,A,1,1,single,False,False
+1843,lens size,0.0,B,A,1,1,single,False,False
+1844,lens size,0.0,C,A,1,1,single,False,False
+1845,lens size,0.0,C,D,1,1,single,False,False
+1846,lens size,0.0,B,D,1,1,single,False,False
+1847,lens size,0.0,D,B,1,1,single,False,False
+1848,lens size,0.0,A,C,1,1,single,False,False
+1849,lens size,1.0,B,B,1,1,single,False,False
+1850,lens size,0.0,C,D,1,1,single,False,False
+1851,lens size,0.0,C,A,1,1,single,False,False
+1852,lens size,0.0,D,B,1,1,single,False,False
+1853,lens size,0.0,C,B,1,1,single,False,False
+1854,lens size,0.0,A,D,1,1,single,False,False
+1855,lens size,0.0,B,C,1,1,single,False,False
+1856,lens size,0.0,C,D,1,1,single,False,False
+1857,lens size,0.0,A,C,1,1,single,False,False
+1858,lens size,1.0,C,C,1,1,single,False,False
+1859,lens size,0.0,B,C,1,1,single,False,False
+1860,lens size,0.0,B,D,1,1,single,False,False
+1861,lens size,0.0,D,B,1,1,single,False,False
+1862,lens size,0.0,A,D,1,1,single,False,False
+1863,lens size,0.0,C,A,1,1,single,False,False
+1864,lens size,0.0,D,B,1,1,single,False,False
+1865,lens size,1.0,C,C,1,1,single,False,False
+1866,lens size,0.0,C,B,1,1,single,False,False
+1867,lens size,0.0,A,C,1,1,single,False,False
+1868,lens size,0.0,A,B,1,1,single,False,False
+1869,lens size,0.0,B,C,1,1,single,False,False
+1870,lens size,0.0,D,B,1,1,single,False,False
+1871,lens size,0.0,D,B,1,1,single,False,False
+1872,lens size,0.0,A,C,1,1,single,False,False
+1873,lens size,1.0,C,C,1,1,single,False,False
+1874,lens size,0.0,A,C,1,1,single,False,False
+1875,lighting type,1.0,C,C,1,1,single,False,False
+1876,lighting type,1.0,B,B,1,3,combination,False,False
+1877,lighting type,1.0,A,A,1,2,combination,False,False
+1878,lighting type,1.0,B,B,1,2,combination,False,False
+1879,lighting type,0.0,A,B,1,1,single,False,False
+1880,lighting type,1.0,A,A,1,2,combination,False,False
+1881,lighting type,0.0,B,C,1,1,single,False,False
+1882,lighting type,1.0,D,D,1,1,single,False,False
+1883,lighting type,1.0,C,C,1,2,combination,False,False
+1884,lighting type,1.0,C,C,1,2,combination,False,False
+1885,lighting type,0.0,D,B,1,1,single,False,False
+1886,lighting type,1.0,C,C,1,1,single,False,False
+1887,lighting type,1.0,B,B,1,2,combination,False,False
+1888,lighting type,1.0,D,D,1,2,combination,False,False
+1889,lighting type,1.0,A,A,1,1,single,False,False
+1890,lighting type,1.0,A,A,1,2,combination,False,False
+1891,lighting type,1.0,D,D,1,2,combination,False,False
+1892,lighting type,1.0,B,B,1,1,single,False,False
+1893,lighting type,1.0,A,A,1,2,combination,False,False
+1894,lighting type,1.0,B,B,1,2,combination,False,False
+1895,lighting type,0.0,A,D,1,1,single,False,False
+1896,lighting type,1.0,B,B,1,1,single,False,False
+1897,lighting type,1.0,B,B,1,2,combination,False,False
+1898,lighting type,1.0,A,A,1,2,combination,False,False
+1899,lighting type,1.0,D,D,1,4,combination,False,False
+1900,lighting type,1.0,A,A,1,1,single,False,False
+1901,lighting type,1.0,A,A,1,2,combination,False,False
+1902,lighting type,1.0,D,D,1,1,single,False,False
+1903,lighting type,1.0,D,D,1,2,combination,False,False
+1904,lighting type,1.0,D,D,1,1,single,False,False
+1905,lighting type,1.0,A,A,1,2,combination,False,False
+1906,lighting type,1.0,C,C,1,1,single,False,False
+1907,lighting type,0.0,B,A,1,2,combination,False,False
+1908,lighting type,1.0,C,C,1,1,single,False,False
+1909,lighting type,1.0,D,D,1,1,single,False,False
+1910,lighting type,1.0,A,A,1,1,single,False,False
+1911,lighting type,1.0,A,A,1,1,single,False,False
+1912,lighting type,1.0,B,B,1,1,single,False,False
+1913,lighting type,1.0,C,C,1,2,combination,False,False
+1914,lighting type,1.0,B,B,1,1,single,False,False
+1915,lighting type,1.0,B,B,1,2,combination,False,False
+1916,lighting type,1.0,B,B,1,1,single,False,False
+1917,lighting type,1.0,C,C,1,3,combination,False,False
+1918,lighting type,0.0,B,D,1,3,combination,False,False
+1919,lighting type,1.0,A,A,1,3,combination,False,False
+1920,lighting type,1.0,A,A,1,1,single,False,False
+1921,lighting type,1.0,A,A,1,1,single,False,False
+1922,lighting type,1.0,B,B,1,2,combination,False,False
+1923,lighting type,1.0,D,D,1,1,single,False,False
+1924,lighting type,1.0,B,B,1,1,single,False,False
+1925,lighting type,0.0,B,C,1,1,single,False,False
+1926,lighting type,1.0,D,D,1,1,single,False,False
+1927,lighting type,0.0,D,B,1,2,combination,False,False
+1928,lighting type,1.0,C,C,1,2,combination,False,False
+1929,lighting type,1.0,B,B,1,1,single,False,False
+1930,lighting type,1.0,C,C,1,1,single,False,False
+1931,lighting type,1.0,B,B,1,2,combination,False,False
+1932,lighting type,1.0,D,D,1,1,single,False,False
+1933,lighting type,1.0,C,C,1,1,single,False,False
+1934,lighting type,1.0,B,B,1,1,single,False,False
+1935,lighting type,1.0,B,B,1,5,combination,False,False
+1936,lighting type,1.0,B,B,1,2,combination,False,False
+1937,lighting type,1.0,D,D,1,1,single,False,False
+1938,lighting type,1.0,C,C,1,1,single,False,False
+1939,lighting type,1.0,C,C,1,2,combination,False,False
+1940,lighting type,1.0,D,D,1,1,single,False,False
+1941,lighting type,1.0,B,B,1,2,combination,False,False
+1942,lighting type,1.0,B,B,1,2,combination,False,False
+1943,lighting type,0.0,D,A,1,2,combination,False,False
+1944,lighting type,1.0,D,D,1,1,single,False,False
+1945,lighting type,1.0,B,B,1,1,single,False,False
+1946,lighting type,1.0,A,A,1,2,combination,False,False
+1947,lighting type,1.0,D,D,1,2,combination,False,False
+1948,lighting type,1.0,C,C,1,1,single,False,False
+1949,lighting type,1.0,D,D,1,1,single,False,False
+1950,lighting type,1.0,D,D,1,1,single,False,False
+1951,lighting type,1.0,B,B,1,1,single,False,False
+1952,lighting type,1.0,D,D,1,2,combination,False,False
+1953,lighting type,1.0,D,D,1,1,single,False,False
+1954,lighting type,1.0,A,A,1,2,combination,False,False
+1955,lighting type,1.0,D,D,1,1,single,False,False
+1956,lighting type,1.0,D,D,1,2,combination,False,False
+1957,lighting type,1.0,D,D,1,1,single,False,False
+1958,lighting type,0.0,B,A,1,1,single,False,False
+1959,lighting type,1.0,A,A,1,2,combination,False,False
+1960,lighting type,1.0,D,D,1,1,single,False,False
+1961,lighting type,1.0,A,A,1,2,combination,False,False
+1962,lighting type,0.0,A,C,1,1,single,False,False
+1963,lighting type,1.0,D,D,1,1,single,False,False
+1964,lighting type,0.0,C,D,1,1,single,False,False
+1965,lighting type,1.0,D,D,1,1,single,False,False
+1966,lighting type,1.0,D,D,1,1,single,False,False
+1967,lighting type,0.0,A,C,1,1,single,False,False
+1968,lighting type,1.0,A,A,1,1,single,False,False
+1969,lighting type,1.0,B,B,1,1,single,False,False
+1970,lighting type,0.0,D,C,1,1,single,False,False
+1971,lighting type,0.0,B,A,1,1,single,False,False
+1972,lighting type,0.0,C,B,1,1,single,False,False
+1973,lighting type,1.0,A,A,1,1,single,False,False
+1974,lighting type,0.0,C,B,1,1,single,False,False
+1975,lighting type,1.0,D,D,1,1,single,False,False
+1976,lighting type,0.0,D,A,1,1,single,False,False
+1977,lighting type,1.0,B,B,1,1,single,False,False
+1978,lighting type,0.0,D,B,1,1,single,False,False
+1979,lighting type,1.0,D,D,1,1,single,False,False
+1980,lighting type,1.0,D,D,1,1,single,False,False
+1981,lighting type,0.0,C,D,1,1,single,False,False
+1982,lighting type,1.0,C,C,1,1,single,False,False
+1983,lighting type,1.0,D,D,1,4,combination,False,False
+1984,lighting type,0.0,A,C,1,1,single,False,False
+1985,lighting type,1.0,D,D,1,1,single,False,False
+1986,lighting type,1.0,D,D,1,1,single,False,False
+1987,lighting type,1.0,A,A,1,3,combination,False,False
+1988,lighting type,1.0,B,B,1,4,combination,False,False
+1989,lighting type,0.0,D,A,1,1,single,False,False
+1990,lighting type,1.0,D,D,1,1,single,False,False
+1991,lighting type,1.0,C,C,1,1,single,False,False
+1992,lighting type,0.0,B,A,1,1,single,False,False
+1993,lighting type,0.0,C,A,1,1,single,False,False
+1994,lighting type,0.0,B,D,1,1,single,False,False
+1995,lighting type,1.0,D,D,1,1,single,False,False
+1996,lighting type,1.0,A,A,1,1,single,False,False
+1997,lighting type,1.0,B,B,1,1,single,False,False
+1998,lighting type,1.0,D,D,1,1,single,False,False
+1999,lighting type,0.0,C,B,1,1,single,False,False
+2000,lighting type,1.0,C,C,1,2,combination,False,False
+2001,lighting type,1.0,C,C,1,1,single,False,False
+2002,lighting type,0.0,A,C,1,1,single,False,False
+2003,lighting type,1.0,A,A,1,1,single,False,False
+2004,lighting type,0.0,A,B,1,1,single,False,False
+2005,lighting type,1.0,D,D,1,1,single,False,False
+2006,lighting type,1.0,B,B,1,1,single,False,False
+2007,lighting type,0.0,B,C,1,1,single,False,False
+2008,lighting type,1.0,A,A,1,1,single,False,False
+2009,lighting type,0.0,A,B,1,1,single,False,False
+2010,lighting type,0.0,C,B,1,1,single,False,False
+2011,lighting type,1.0,D,D,1,1,single,False,False
+2012,lighting type,0.0,A,D,1,1,single,False,False
+2013,lighting type,1.0,B,B,1,1,single,False,False
+2014,lighting type,0.0,A,B,1,1,single,False,False
+2015,lighting type,0.0,D,B,1,1,single,False,False
+2016,lighting type,0.0,B,C,1,2,combination,False,False
+2017,lighting type,1.0,C,C,1,3,combination,False,False
+2018,lighting type,0.0,B,C,1,1,single,False,False
+2019,lighting type,1.0,C,C,1,1,single,False,False
+2020,lighting type,0.0,A,B,1,2,combination,False,False
+2021,lighting type,1.0,C,C,1,1,single,False,False
+2022,lighting type,1.0,D,D,1,1,single,False,False
+2023,lighting type,0.0,C,A,1,1,single,False,False
+2024,lighting type,1.0,A,A,1,1,single,False,False
+2025,lighting type,0.0,B,C,1,1,single,False,False
+2026,lighting type,1.0,D,D,1,1,single,False,False
+2027,lighting type,1.0,C,C,1,1,single,False,False
+2028,lighting type,1.0,C,C,1,1,single,False,False
+2029,lighting type,0.0,B,C,1,1,single,False,False
+2030,lighting type,0.0,D,A,1,1,single,False,False
+2031,lighting type,0.0,B,D,1,1,single,False,False
+2032,lighting type,1.0,A,A,1,1,single,False,False
+2033,lighting type,0.0,D,A,1,1,single,False,False
+2034,lighting type,1.0,B,B,1,1,single,False,False
+2035,lighting type,0.0,D,C,1,1,single,False,False
+2036,lighting type,0.0,B,A,1,1,single,False,False
+2037,lighting type,1.0,A,A,1,1,single,False,False
+2038,lighting type,1.0,B,B,1,1,single,False,False
+2039,lighting type,1.0,A,A,1,1,single,False,False
+2040,lighting type,0.0,B,A,1,1,single,False,False
+2041,lighting type,1.0,A,A,1,1,single,False,False
+2042,lighting type,1.0,D,D,1,1,single,False,False
+2043,lighting type,1.0,B,B,1,1,single,False,False
+2044,lighting type,1.0,A,A,1,1,single,False,False
+2045,lighting type,1.0,C,C,1,1,single,False,False
+2046,lighting type,0.0,D,C,1,1,single,False,False
+2047,lighting type,0.0,C,A,1,1,single,False,False
+2048,lighting type,0.0,B,C,1,1,single,False,False
+2049,lighting type,1.0,D,D,1,1,single,False,False
+2050,lighting type,1.0,D,D,1,1,single,False,False
+2051,lighting type,0.0,C,D,1,1,single,False,False
+2052,lighting type,1.0,C,C,1,1,single,False,False
+2053,lighting type,1.0,A,A,1,1,single,False,False
+2054,lighting type,0.0,C,B,1,2,combination,False,False
+2055,lighting type,0.0,D,A,1,2,combination,False,False
+2056,lighting type,0.0,D,B,1,1,single,False,False
+2057,lighting type,1.0,A,A,1,1,single,False,False
+2058,lighting type,0.0,A,B,1,1,single,False,False
+2059,lighting type,1.0,B,B,1,1,single,False,False
+2060,lighting type,0.0,B,C,1,1,single,False,False
+2061,lighting type,0.0,A,C,1,1,single,False,False
+2062,lighting type,1.0,B,B,1,1,single,False,False
+2063,lighting type,0.0,B,D,1,1,single,False,False
+2064,lighting type,1.0,A,A,1,1,single,False,False
+2065,lighting type,0.0,D,C,1,1,single,False,False
+2066,lighting type,1.0,A,A,1,1,single,False,False
+2067,lighting type,0.0,B,D,1,1,single,False,False
+2068,lighting type,1.0,B,B,1,1,single,False,False
+2069,lighting type,0.0,C,A,1,1,single,False,False
+2070,lighting type,1.0,C,C,1,1,single,False,False
+2071,lighting type,1.0,B,B,1,1,single,False,False
+2072,lighting type,0.0,D,B,1,1,single,False,False
+2073,lighting type,1.0,C,C,1,1,single,False,False
+2074,lighting type,1.0,D,D,1,2,combination,False,False
+2075,lighting type,1.0,A,A,1,1,single,False,False
+2076,lighting type,0.0,A,C,1,1,single,False,False
+2077,lighting type,1.0,A,A,1,1,single,False,False
+2078,lighting type,1.0,C,C,1,1,single,False,False
+2079,lighting type,1.0,B,B,1,1,single,False,False
+2080,lighting type,0.0,D,B,1,1,single,False,False
+2081,lighting type,0.0,A,B,1,1,single,False,False
+2082,lighting type,0.0,A,B,1,1,single,False,False
+2083,lighting type,1.0,A,A,1,1,single,False,False
+2084,lighting type,1.0,D,D,1,1,single,False,False
+2085,lighting type,0.0,B,D,1,1,single,False,False
+2086,lighting type,0.0,D,C,1,1,single,False,False
+2087,lighting type,0.0,A,C,1,1,single,False,False
+2088,lighting type,0.0,B,C,1,1,single,False,False
+2089,lighting type,1.0,A,A,1,1,single,False,False
+2090,lighting type,1.0,B,B,1,1,single,False,False
+2091,lighting type,0.0,D,A,1,2,combination,False,False
+2092,lighting type,0.0,B,D,1,1,single,False,False
+2093,lighting type,1.0,B,B,1,1,single,False,False
+2094,lighting type,0.0,D,B,1,1,single,False,False
+2095,lighting type,0.0,B,C,1,1,single,False,False
+2096,lighting type,0.0,B,A,1,1,single,False,False
+2097,lighting type,0.0,A,B,1,1,single,False,False
+2098,lighting type,0.0,A,B,1,1,single,False,False
+2099,lighting type,1.0,D,D,1,1,single,False,False
+2100,lighting type,1.0,C,C,1,1,single,False,False
+2101,lighting type,1.0,D,D,1,1,single,False,False
+2102,lighting type,0.0,A,C,1,1,single,False,False
+2103,lighting type,0.0,A,D,1,1,single,False,False
+2104,lighting type,0.0,D,B,1,1,single,False,False
+2105,lighting type,0.0,A,D,1,1,single,False,False
+2106,lighting type,0.0,B,C,1,1,single,False,False
+2107,lighting type,0.0,B,A,1,1,single,False,False
+2108,lighting type,0.0,C,B,1,1,single,False,False
+2109,lighting type,0.0,B,D,1,1,single,False,False
+2110,lighting type,0.0,A,C,1,1,single,False,False
+2111,lighting type,0.0,D,B,1,1,single,False,False
+2112,lighting type,0.0,B,D,1,1,single,False,False
+2113,lighting type,1.0,C,C,1,1,single,False,False
+2114,lighting type,0.0,B,C,1,1,single,False,False
+2115,lighting type,0.0,D,A,1,1,single,False,False
+2116,lighting type,0.0,A,C,1,1,single,False,False
+2117,lighting type,1.0,A,A,1,1,single,False,False
+2118,lighting type,0.0,B,A,1,1,single,False,False
+2119,lighting type,1.0,A,A,1,1,single,False,False
+2120,lighting type,0.0,C,D,1,1,single,False,False
+2121,lighting type,0.0,C,A,1,1,single,False,False
+2122,lighting type,0.0,C,B,1,1,single,False,False
+2123,lighting type,1.0,B,B,1,1,single,False,False
+2124,lighting type,1.0,A,A,1,1,single,False,False
+2125,lighting type,0.0,B,D,1,1,single,False,False
+2126,lighting type,0.0,D,C,1,1,single,False,False
+2127,lighting type,1.0,B,B,1,1,single,False,False
+2128,lighting type,0.0,B,A,1,1,single,False,False
+2129,lighting type,0.0,B,C,1,1,single,False,False
+2130,lighting type,0.0,B,D,1,1,single,False,False
+2131,lighting type,0.0,D,A,1,1,single,False,False
+2132,lighting type,1.0,B,B,1,1,single,False,False
+2133,lighting type,1.0,B,B,1,1,single,False,False
+2134,lighting type,1.0,C,C,1,1,single,False,False
+2135,lighting type,0.0,B,C,1,1,single,False,False
+2136,lighting type,1.0,C,C,1,1,single,False,False
+2137,lighting type,0.0,C,A,1,1,single,False,False
+2138,lighting type,1.0,A,A,1,1,single,False,False
+2139,lighting type,0.0,D,B,1,1,single,False,False
+2140,lighting type,0.0,C,D,1,1,single,False,False
+2141,lighting type,1.0,C,C,1,1,single,False,False
+2142,lighting type,1.0,A,A,1,1,single,False,False
+2143,lighting type,0.0,B,A,1,1,single,False,False
+2144,lighting type,0.0,A,C,1,1,single,False,False
+2145,lighting type,0.0,D,B,1,1,single,False,False
+2146,lighting type,1.0,A,A,1,1,single,False,False
+2147,lighting type,0.0,C,A,1,2,combination,False,False
+2148,lighting type,0.0,A,C,1,1,single,False,False
+2149,lighting type,1.0,B,B,1,1,single,False,False
+2150,lighting type,0.0,A,B,1,1,single,False,False
+2151,lighting type,0.0,C,B,1,1,single,False,False
+2152,lighting type,1.0,B,B,1,1,single,False,False
+2153,lighting type,1.0,D,D,1,1,single,False,False
+2154,lighting type,0.0,D,A,1,1,single,False,False
+2155,lighting type,0.0,D,C,1,1,single,False,False
+2156,lighting type,0.0,C,B,1,1,single,False,False
+2157,lighting type,0.0,B,D,1,1,single,False,False
+2158,lighting type,1.0,B,B,1,1,single,False,False
+2159,lighting type,1.0,B,B,1,1,single,False,False
+2160,lighting type,0.0,A,D,1,1,single,False,False
+2161,lighting type,1.0,A,A,1,1,single,False,False
+2162,lighting type,1.0,D,D,1,1,single,False,False
+2163,lighting type,1.0,B,B,1,1,single,False,False
+2164,lighting type,0.0,D,A,1,1,single,False,False
+2165,lighting type,1.0,C,C,1,2,combination,False,False
+2166,lighting type,0.0,B,A,1,1,single,False,False
+2167,lighting type,1.0,C,C,1,1,single,False,False
+2168,lighting type,0.0,B,D,1,1,single,False,False
+2169,lighting type,0.0,A,B,1,1,single,False,False
+2170,lighting type,0.0,B,D,1,1,single,False,False
+2171,lighting type,1.0,D,D,1,1,single,False,False
+2172,lighting type,0.0,A,D,1,1,single,False,False
+2173,lighting type,0.0,D,C,1,1,single,False,False
+2174,lighting type,0.0,D,C,1,1,single,False,False
+2175,lighting type,0.0,B,C,1,1,single,False,False
+2176,lighting type,0.0,D,A,1,1,single,False,False
+2177,lighting type,1.0,C,C,1,1,single,False,False
+2178,lighting type,0.0,D,B,1,1,single,False,False
+2179,lighting type,0.0,D,A,1,1,single,False,False
+2180,lighting type,0.0,A,D,1,1,single,False,False
+2181,lighting type,1.0,A,A,1,1,single,False,False
+2182,lighting type,1.0,C,C,1,1,single,False,False
+2183,lighting type,1.0,A,A,1,1,single,False,False
+2184,lighting type,1.0,B,B,1,1,single,False,False
+2185,lighting type,1.0,A,A,1,1,single,False,False
+2186,lighting type,0.0,B,D,1,1,single,False,False
+2187,lighting type,0.0,C,D,1,1,single,False,False
+2188,lighting type,0.0,B,C,1,1,single,False,False
+2189,lighting type,0.0,B,A,1,1,single,False,False
+2190,lighting type,0.0,C,B,1,1,single,False,False
+2191,lighting type,0.0,D,B,1,1,single,False,False
+2192,lighting type,0.0,A,C,1,1,single,False,False
+2193,lighting type,1.0,B,B,1,1,single,False,False
+2194,lighting type,0.0,B,A,1,1,single,False,False
+2195,lighting type,0.0,C,B,1,1,single,False,False
+2196,lighting type,0.0,B,D,1,1,single,False,False
+2197,lighting type,0.0,C,B,1,1,single,False,False
+2198,lighting type,0.0,A,C,1,1,single,False,False
+2199,lighting type,0.0,A,B,1,1,single,False,False
+2200,lighting type,0.0,B,A,1,1,single,False,False
+2201,lighting type,0.0,D,A,1,1,single,False,False
+2202,lighting type,0.0,B,D,1,1,single,False,False
+2203,lighting type,0.0,C,A,1,1,single,False,False
+2204,lighting type,1.0,D,D,1,1,single,False,False
+2205,lighting type,0.0,C,D,1,1,single,False,False
+2206,lighting type,0.0,D,A,1,1,single,False,False
+2207,lighting type,1.0,B,B,1,1,single,False,False
+2208,lighting type,0.0,C,A,1,1,single,False,False
+2209,lighting type,0.0,A,D,1,1,single,False,False
+2210,lighting type,0.0,A,B,1,1,single,False,False
+2211,lighting type,1.0,D,D,1,1,single,False,False
+2212,lighting type,1.0,C,C,1,1,single,False,False
+2213,lighting type,1.0,A,A,1,1,single,False,False
+2214,lighting type,0.0,B,A,1,1,single,False,False
+2215,lighting type,0.0,D,B,1,1,single,False,False
+2216,lighting type,1.0,A,A,1,1,single,False,False
+2217,lighting type,1.0,A,A,1,1,single,False,False
+2218,lighting type,0.0,B,A,1,1,single,False,False
+2219,lighting type,0.0,D,B,1,1,single,False,False
+2220,lighting type,1.0,A,A,1,1,single,False,False
+2221,lighting type,0.0,B,D,1,1,single,False,False
+2222,lighting type,0.0,D,B,1,1,single,False,False
+2223,lighting type,1.0,B,B,1,1,single,False,False
+2224,lighting type,0.0,D,C,1,1,single,False,False
+2225,lighting type,0.0,C,A,1,1,single,False,False
+2226,lighting type,0.0,B,C,1,1,single,False,False
+2227,lighting type,0.0,D,A,1,1,single,False,False
+2228,lighting type,1.0,C,C,1,1,single,False,False
+2229,lighting type,1.0,B,B,1,1,single,False,False
+2230,lighting type,1.0,B,B,1,3,combination,False,False
+2231,lighting type,1.0,D,D,1,2,combination,False,False
+2232,lighting type,1.0,A,A,1,1,single,False,False
+2233,lighting type,1.0,B,B,1,2,combination,False,False
+2234,lighting type,1.0,A,A,1,1,single,False,False
+2235,lighting type,1.0,C,C,1,1,single,False,False
+2236,lighting type,1.0,A,A,1,1,single,False,False
+2237,lighting type,1.0,C,C,1,2,combination,False,False
+2238,lighting type,0.0,D,C,1,1,single,False,False
+2239,lighting type,1.0,A,A,1,1,single,False,False
+2240,lighting type,1.0,C,C,1,2,combination,False,False
+2241,lighting type,1.0,D,D,1,2,combination,False,False
+2242,lighting type,1.0,B,B,1,1,single,False,False
+2243,lighting type,1.0,D,D,1,1,single,False,False
+2244,lighting type,1.0,C,C,1,2,combination,False,False
+2245,lighting type,1.0,D,D,1,1,single,False,False
+2246,lighting type,1.0,C,C,1,2,combination,False,False
+2247,lighting type,1.0,D,D,1,1,single,False,False
+2248,lighting type,1.0,A,A,1,1,single,False,False
+2249,lighting type,1.0,B,B,1,1,single,False,False
+2250,lighting type,1.0,C,C,1,2,combination,False,False
+2251,lighting type,0.0,A,C,1,2,combination,False,False
+2252,lighting type,1.0,C,C,1,1,single,False,False
+2253,lighting type,1.0,B,B,1,1,single,False,False
+2254,lighting type,1.0,A,A,1,2,combination,False,False
+2255,lighting type,1.0,D,D,1,1,single,False,False
+2256,lighting type,1.0,D,D,1,1,single,False,False
+2257,lighting type,1.0,D,D,1,1,single,False,False
+2258,lighting type,1.0,C,C,1,1,single,False,False
+2259,lighting type,0.0,D,A,1,1,single,False,False
+2260,lighting type,1.0,C,C,1,1,single,False,False
+2261,lighting type,1.0,A,A,1,1,single,False,False
+2262,lighting type,1.0,B,B,1,3,combination,False,False
+2263,lighting type,1.0,B,B,1,2,combination,False,False
+2264,lighting type,1.0,B,B,1,1,single,False,False
+2265,lighting type,0.0,A,C,1,1,single,False,False
+2266,lighting type,1.0,D,D,1,2,combination,False,False
+2267,lighting type,1.0,B,B,1,1,single,False,False
+2268,lighting type,1.0,B,B,1,1,single,False,False
+2269,lighting type,1.0,C,C,1,3,combination,False,False
+2270,lighting type,1.0,B,B,1,2,combination,False,False
+2271,lighting type,1.0,C,C,1,1,single,False,False
+2272,lighting type,1.0,C,C,1,1,single,False,False
+2273,lighting type,1.0,B,B,1,1,single,False,False
+2274,lighting type,1.0,B,B,1,2,combination,False,False
+2275,lighting type,1.0,B,B,1,2,combination,False,False
+2276,lighting type,1.0,C,C,1,3,combination,False,False
+2277,lighting type,1.0,B,B,1,2,combination,False,False
+2278,lighting type,1.0,C,C,1,3,combination,False,False
+2279,lighting type,1.0,C,C,1,1,single,False,False
+2280,lighting,1.0,A,A,1,3,combination,False,False
+2281,lighting,1.0,A,A,1,2,combination,False,False
+2282,lighting,1.0,B,B,1,1,single,False,False
+2283,lighting,0.0,C,D,1,3,combination,False,False
+2284,lighting,1.0,A,A,1,3,combination,False,False
+2285,lighting,1.0,D,D,1,3,combination,False,False
+2286,lighting,1.0,B,B,1,2,combination,False,False
+2287,lighting,1.0,C,C,1,2,combination,False,False
+2288,lighting,1.0,C,C,1,5,combination,False,False
+2289,lighting,1.0,B,B,1,3,combination,False,False
+2290,lighting,1.0,D,D,1,2,combination,False,False
+2291,lighting,1.0,D,D,1,2,combination,False,False
+2292,lighting,0.0,C,A,1,4,combination,False,False
+2293,lighting,0.0,D,B,1,2,combination,False,False
+2294,lighting,0.0,D,C,1,1,single,False,False
+2295,lighting,1.0,A,A,1,2,combination,False,False
+2296,lighting,1.0,A,A,1,2,combination,False,False
+2297,lighting,0.0,B,D,1,1,single,False,False
+2298,lighting,0.0,D,B,1,2,combination,False,False
+2299,lighting,1.0,A,A,1,1,single,False,False
+2300,lighting,1.0,C,C,1,1,single,False,False
+2301,lighting,1.0,A,A,1,2,combination,False,False
+2302,lighting,1.0,C,C,1,2,combination,False,False
+2303,lighting,0.0,A,C,1,1,single,False,False
+2304,lighting,0.0,B,C,1,3,combination,False,False
+2305,lighting,1.0,D,D,1,1,single,False,False
+2306,lighting,0.0,A,B,1,2,combination,False,False
+2307,lighting,0.0,D,C,1,1,single,False,False
+2308,lighting,1.0,B,B,1,1,single,False,False
+2309,lighting,1.0,B,B,1,2,combination,False,False
+2310,lighting,1.0,A,A,1,1,single,False,False
+2311,lighting,0.0,B,D,1,3,combination,False,False
+2312,lighting,1.0,A,A,1,3,combination,False,False
+2313,lighting,1.0,D,D,1,2,combination,False,False
+2314,lighting,0.0,C,B,1,1,single,False,False
+2315,lighting,0.0,B,C,1,2,combination,False,False
+2316,lighting,1.0,A,A,1,2,combination,False,False
+2317,lighting,1.0,B,B,1,1,single,False,False
+2318,lighting,0.0,B,D,1,2,combination,False,False
+2319,lighting,1.0,B,B,1,2,combination,False,False
+2320,lighting,1.0,D,D,1,2,combination,False,False
+2321,lighting,1.0,D,D,1,2,combination,False,False
+2322,lighting,0.0,C,B,1,1,single,False,False
+2323,lighting,1.0,B,B,1,2,combination,False,False
+2324,lighting,1.0,A,A,1,1,single,False,False
+2325,lighting,0.0,A,B,1,2,combination,False,False
+2326,lighting,1.0,B,B,1,1,single,False,False
+2327,lighting,1.0,A,A,1,3,combination,False,False
+2328,lighting,1.0,B,B,1,3,combination,False,False
+2329,lighting,0.0,C,B,1,4,combination,False,False
+2330,lighting,1.0,C,C,1,1,single,False,False
+2331,lighting,1.0,B,B,1,1,single,False,False
+2332,lighting,1.0,D,D,1,2,combination,False,False
+2333,lighting,1.0,B,B,1,1,single,False,False
+2334,lighting,0.0,B,A,1,2,combination,False,False
+2335,lighting,1.0,C,C,1,1,single,False,False
+2336,lighting,1.0,C,C,1,2,combination,False,False
+2337,lighting,1.0,A,A,1,1,single,False,False
+2338,lighting,0.0,D,C,1,3,combination,False,False
+2339,lighting,1.0,D,D,1,2,combination,False,False
+2340,lighting,0.0,D,A,1,4,combination,False,False
+2341,lighting,1.0,A,A,1,1,single,False,False
+2342,lighting,0.0,B,D,1,3,combination,False,False
+2343,lighting,1.0,B,B,1,2,combination,False,False
+2344,lighting,0.0,B,D,1,1,single,False,False
+2345,lighting,0.0,D,C,1,3,combination,False,False
+2346,lighting,0.0,A,B,1,3,combination,False,False
+2347,lighting,1.0,D,D,1,2,combination,False,False
+2348,lighting,0.0,D,B,1,2,combination,False,False
+2349,lighting,1.0,A,A,1,3,combination,False,False
+2350,lighting,1.0,C,C,1,2,combination,False,False
+2351,lighting,0.0,B,C,1,1,single,False,False
+2352,lighting,1.0,C,C,1,2,combination,False,False
+2353,lighting,1.0,A,A,1,1,single,False,False
+2354,lighting,1.0,A,A,1,1,single,False,False
+2355,lighting,1.0,D,D,1,2,combination,False,False
+2356,lighting,1.0,B,B,1,2,combination,False,False
+2357,lighting,1.0,C,C,1,1,single,False,False
+2358,lighting,0.0,B,D,1,2,combination,False,False
+2359,lighting,1.0,B,B,1,2,combination,False,False
+2360,lighting,1.0,C,C,1,2,combination,False,False
+2361,lighting,1.0,A,A,1,1,single,False,False
+2362,lighting,1.0,A,A,1,1,single,False,False
+2363,lighting,1.0,A,A,1,1,single,False,False
+2364,lighting,0.0,C,B,1,1,single,False,False
+2365,lighting,1.0,C,C,1,3,combination,False,False
+2366,lighting,0.0,A,C,1,1,single,False,False
+2367,lighting,1.0,B,B,1,1,single,False,False
+2368,lighting,1.0,B,B,1,2,combination,False,False
+2369,lighting,1.0,C,C,1,1,single,False,False
+2370,lighting,1.0,D,D,1,2,combination,False,False
+2371,lighting,1.0,C,C,1,2,combination,False,False
+2372,lighting,1.0,A,A,1,1,single,False,False
+2373,lighting,1.0,C,C,1,1,single,False,False
+2374,lighting,0.0,D,C,1,1,single,False,False
+2375,lighting,0.0,D,C,1,3,combination,False,False
+2376,lighting,0.0,C,A,1,2,combination,False,False
+2377,lighting,1.0,D,D,1,2,combination,False,False
+2378,lighting,1.0,D,D,1,2,combination,False,False
+2379,lighting,1.0,C,C,1,1,single,False,False
+2380,lighting,1.0,C,C,1,2,combination,False,False
+2381,lighting,1.0,D,D,1,1,single,False,False
+2382,lighting,0.0,B,A,1,1,single,False,False
+2383,lighting,1.0,C,C,1,3,combination,False,False
+2384,lighting,1.0,D,D,1,2,combination,False,False
+2385,lighting,1.0,B,B,1,2,combination,False,False
+2386,lighting,0.0,B,A,1,1,single,False,False
+2387,lighting,1.0,B,B,1,2,combination,False,False
+2388,lighting,1.0,C,C,1,1,single,False,False
+2389,lighting,0.0,A,B,1,3,combination,False,False
+2390,lighting,0.0,D,B,1,1,single,False,False
+2391,lighting,1.0,D,D,1,1,single,False,False
+2392,lighting,0.0,C,D,1,2,combination,False,False
+2393,lighting,1.0,B,B,1,2,combination,False,False
+2394,lighting,0.0,B,C,1,3,combination,False,False
+2395,lighting,0.0,C,B,1,2,combination,False,False
+2396,lighting,0.0,B,D,1,2,combination,False,False
+2397,lighting,1.0,A,A,1,3,combination,False,False
+2398,lighting,1.0,A,A,1,1,single,False,False
+2399,lighting,1.0,B,B,1,1,single,False,False
+2400,lighting,0.0,D,C,1,2,combination,False,False
+2401,lighting,0.0,A,B,1,1,single,False,False
+2402,lighting,1.0,C,C,1,1,single,False,False
+2403,lighting,1.0,C,C,1,2,combination,False,False
+2404,lighting,1.0,B,B,1,3,combination,False,False
+2405,lighting,1.0,D,D,1,2,combination,False,False
+2406,lighting,0.0,D,A,1,1,single,False,False
+2407,lighting,1.0,D,D,1,1,single,False,False
+2408,lighting,1.0,C,C,1,1,single,False,False
+2409,lighting,1.0,B,B,1,1,single,False,False
+2410,lighting,0.0,A,B,1,1,single,False,False
+2411,lighting,1.0,A,A,1,1,single,False,False
+2412,lighting,0.0,C,D,1,1,single,False,False
+2413,lighting,1.0,C,C,1,1,single,False,False
+2414,lighting,0.0,B,D,1,1,single,False,False
+2415,lighting,1.0,B,B,1,1,single,False,False
+2416,lighting,0.0,B,C,1,1,single,False,False
+2417,lighting,1.0,B,B,1,1,single,False,False
+2418,lighting,1.0,C,C,1,1,single,False,False
+2419,lighting,1.0,D,D,1,1,single,False,False
+2420,lighting,1.0,D,D,1,1,single,False,False
+2421,lighting,1.0,C,C,1,1,single,False,False
+2422,lighting,0.0,B,A,1,2,combination,False,False
+2423,lighting,1.0,D,D,1,1,single,False,False
+2424,lighting,1.0,B,B,1,1,single,False,False
+2425,lighting,1.0,C,C,1,1,single,False,False
+2426,lighting,1.0,B,B,1,2,combination,False,False
+2427,lighting,1.0,B,B,1,1,single,False,False
+2428,lighting,0.0,C,B,1,1,single,False,False
+2429,lighting,1.0,D,D,1,2,combination,False,False
+2430,lighting,1.0,D,D,1,2,combination,False,False
+2431,lighting,1.0,B,B,1,1,single,False,False
+2432,lighting,1.0,D,D,1,4,combination,False,False
+2433,lighting,0.0,A,D,1,1,single,False,False
+2434,lighting,1.0,D,D,1,1,single,False,False
+2435,lighting,0.0,B,A,1,2,combination,False,False
+2436,lighting,1.0,D,D,1,1,single,False,False
+2437,lighting,0.0,A,C,1,1,single,False,False
+2438,lighting,1.0,C,C,1,1,single,False,False
+2439,lighting,0.0,D,C,1,1,single,False,False
+2440,lighting,1.0,A,A,1,1,single,False,False
+2441,lighting,1.0,C,C,1,1,single,False,False
+2442,lighting,1.0,D,D,1,1,single,False,False
+2443,lighting,1.0,B,B,1,2,combination,False,False
+2444,lighting,1.0,C,C,1,1,single,False,False
+2445,lighting,1.0,C,C,1,2,combination,False,False
+2446,lighting,0.0,B,C,1,5,combination,False,False
+2447,lighting,1.0,A,A,1,1,single,False,False
+2448,lighting,0.0,B,C,1,1,single,False,False
+2449,lighting,0.0,D,B,1,1,single,False,False
+2450,lighting,1.0,C,C,1,1,single,False,False
+2451,lighting,1.0,A,A,1,2,combination,False,False
+2452,lighting,0.0,C,D,1,2,combination,False,False
+2453,lighting,1.0,D,D,1,1,single,False,False
+2454,lighting,1.0,B,B,1,1,single,False,False
+2455,lighting,1.0,D,D,1,1,single,False,False
+2456,lighting,0.0,B,C,1,1,single,False,False
+2457,lighting,0.0,D,A,1,1,single,False,False
+2458,lighting,0.0,D,C,1,1,single,False,False
+2459,lighting,1.0,A,A,1,1,single,False,False
+2460,lighting,1.0,A,A,1,1,single,False,False
+2461,lighting,1.0,D,D,1,2,combination,False,False
+2462,lighting,1.0,C,C,1,1,single,False,False
+2463,lighting,0.0,B,C,1,1,single,False,False
+2464,lighting,1.0,C,C,1,3,combination,False,False
+2465,lighting,1.0,A,A,1,2,combination,False,False
+2466,lighting,0.0,B,C,1,2,combination,False,False
+2467,lighting,0.0,C,A,1,1,single,False,False
+2468,lighting,1.0,D,D,1,1,single,False,False
+2469,lighting,1.0,D,D,1,1,single,False,False
+2470,lighting,0.0,A,C,1,1,single,False,False
+2471,lighting,0.0,D,B,1,1,single,False,False
+2472,lighting,1.0,B,B,1,4,combination,False,False
+2473,lighting,0.0,B,A,1,1,single,False,False
+2474,lighting,0.0,D,C,1,1,single,False,False
+2475,lighting,0.0,A,B,1,1,single,False,False
+2476,lighting,1.0,D,D,1,1,single,False,False
+2477,lighting,0.0,B,C,1,2,combination,False,False
+2478,lighting,0.0,A,B,1,1,single,False,False
+2479,lighting,1.0,A,A,1,1,single,False,False
+2480,lighting,1.0,D,D,1,1,single,False,False
+2481,lighting,0.0,A,C,1,1,single,False,False
+2482,lighting,1.0,C,C,1,1,single,False,False
+2483,lighting,0.0,B,C,1,3,combination,False,False
+2484,lighting,1.0,A,A,1,1,single,False,False
+2485,lighting,0.0,C,A,1,1,single,False,False
+2486,lighting,1.0,B,B,1,2,combination,False,False
+2487,lighting,1.0,C,C,1,2,combination,False,False
+2488,lighting,1.0,C,C,1,2,combination,False,False
+2489,lighting,1.0,A,A,1,2,combination,False,False
+2490,lighting,1.0,D,D,1,2,combination,False,False
+2491,lighting,1.0,A,A,1,1,single,False,False
+2492,lighting,1.0,C,C,1,1,single,False,False
+2493,lighting,1.0,D,D,1,2,combination,False,False
+2494,lighting,0.0,C,B,1,1,single,False,False
+2495,lighting,0.0,D,A,1,1,single,False,False
+2496,lighting,0.0,A,C,1,1,single,False,False
+2497,lighting,1.0,D,D,1,1,single,False,False
+2498,lighting,1.0,A,A,1,1,single,False,False
+2499,lighting,0.0,C,A,1,1,single,False,False
+2500,lighting,0.0,C,D,1,1,single,False,False
+2501,lighting,1.0,B,B,1,1,single,False,False
+2502,lighting,0.0,A,B,1,1,single,False,False
+2503,lighting,1.0,D,D,1,1,single,False,False
+2504,lighting,0.0,C,A,1,1,single,False,False
+2505,lighting,1.0,B,B,1,1,single,False,False
+2506,lighting,0.0,B,D,1,1,single,False,False
+2507,lighting,0.0,B,D,1,1,single,False,False
+2508,lighting,0.0,D,A,1,1,single,False,False
+2509,lighting,0.0,A,D,1,1,single,False,False
+2510,lighting,0.0,C,B,1,1,single,False,False
+2511,lighting,0.0,B,C,1,1,single,False,False
+2512,lighting,0.0,B,A,1,1,single,False,False
+2513,lighting,0.0,A,B,1,1,single,False,False
+2514,lighting,1.0,D,D,1,2,combination,False,False
+2515,lighting,0.0,D,B,1,1,single,False,False
+2516,lighting,1.0,B,B,1,1,single,False,False
+2517,lighting,1.0,D,D,1,1,single,False,False
+2518,lighting,0.0,D,A,1,1,single,False,False
+2519,lighting,0.0,C,D,1,1,single,False,False
+2520,lighting,0.0,B,C,1,1,single,False,False
+2521,lighting,0.0,C,B,1,1,single,False,False
+2522,lighting,0.0,C,B,1,1,single,False,False
+2523,lighting,0.0,B,D,1,1,single,False,False
+2524,lighting,0.0,A,B,1,2,combination,False,False
+2525,lighting,0.0,B,D,1,1,single,False,False
+2526,lighting,1.0,D,D,1,1,single,False,False
+2527,lighting,0.0,A,C,1,1,single,False,False
+2528,lighting,0.0,B,D,1,1,single,False,False
+2529,lighting,1.0,C,C,1,1,single,False,False
+2530,lighting,0.0,A,D,1,1,single,False,False
+2531,lighting,0.0,D,C,1,1,single,False,False
+2532,lighting,0.0,C,D,1,1,single,False,False
+2533,lighting,0.0,B,C,1,1,single,False,False
+2534,lighting,1.0,A,A,1,1,single,False,False
+2535,lighting,0.0,A,D,1,1,single,False,False
+2536,lighting,0.0,D,B,1,1,single,False,False
+2537,lighting,0.0,A,D,1,1,single,False,False
+2538,lighting,0.0,B,C,1,1,single,False,False
+2539,lighting,0.0,B,A,1,1,single,False,False
+2540,lighting,0.0,C,A,1,1,single,False,False
+2541,lighting,1.0,C,C,1,2,combination,False,False
+2542,lighting,1.0,B,B,1,1,single,False,False
+2543,lighting,0.0,A,C,1,1,single,False,False
+2544,lighting,0.0,A,B,1,2,combination,False,False
+2545,lighting,1.0,D,D,1,2,combination,False,False
+2546,lighting,0.0,A,C,1,1,single,False,False
+2547,lighting,0.0,C,D,1,1,single,False,False
+2548,lighting,0.0,A,B,1,1,single,False,False
+2549,lighting,0.0,C,A,1,1,single,False,False
+2550,lighting,1.0,C,C,1,1,single,False,False
+2551,lighting,1.0,B,B,1,1,single,False,False
+2552,lighting,0.0,C,D,1,1,single,False,False
+2553,lighting,1.0,C,C,1,1,single,False,False
+2554,lighting,0.0,C,A,1,1,single,False,False
+2555,lighting,1.0,D,D,1,1,single,False,False
+2556,lighting,0.0,D,A,1,1,single,False,False
+2557,lighting,0.0,A,D,1,1,single,False,False
+2558,lighting,0.0,C,B,1,1,single,False,False
+2559,lighting,0.0,A,D,1,1,single,False,False
+2560,lighting,0.0,A,D,1,1,single,False,False
+2561,lighting,0.0,D,B,1,1,single,False,False
+2562,lighting,0.0,C,B,1,1,single,False,False
+2563,lighting,0.0,C,A,1,1,single,False,False
+2564,lighting,1.0,A,A,1,1,single,False,False
+2565,lighting,0.0,A,D,1,1,single,False,False
+2566,lighting,1.0,A,A,1,1,single,False,False
+2567,lighting,0.0,A,C,1,1,single,False,False
+2568,lighting,0.0,A,B,1,1,single,False,False
+2569,lighting,0.0,C,D,1,1,single,False,False
+2570,lighting,1.0,D,D,1,1,single,False,False
+2571,lighting,1.0,A,A,1,1,single,False,False
+2572,lighting,1.0,B,B,1,1,single,False,False
+2573,lighting,1.0,A,A,1,2,combination,False,False
+2574,lighting,0.0,A,C,1,1,single,False,False
+2575,lighting,0.0,A,B,1,1,single,False,False
+2576,lighting,0.0,B,A,1,1,single,False,False
+2577,lighting,0.0,C,B,1,1,single,False,False
+2578,lighting,0.0,D,C,1,1,single,False,False
+2579,lighting,0.0,C,D,1,1,single,False,False
+2580,lighting,0.0,D,A,1,1,single,False,False
+2581,lighting,1.0,C,C,1,1,single,False,False
+2582,lighting,1.0,D,D,1,1,single,False,False
+2583,lighting,0.0,B,C,1,1,single,False,False
+2584,lighting,0.0,C,A,1,1,single,False,False
+2585,lighting,0.0,A,C,1,1,single,False,False
+2586,lighting,0.0,B,C,1,2,combination,False,False
+2587,lighting,1.0,D,D,1,1,single,False,False
+2588,lighting,0.0,A,C,1,1,single,False,False
+2589,lighting,0.0,B,C,1,1,single,False,False
+2590,lighting,0.0,D,A,1,1,single,False,False
+2591,lighting,0.0,B,A,1,1,single,False,False
+2592,lighting,0.0,B,D,1,1,single,False,False
+2593,lighting,1.0,A,A,1,1,single,False,False
+2594,lighting,0.0,D,B,1,1,single,False,False
+2595,lighting,1.0,D,D,1,1,single,False,False
+2596,lighting,1.0,D,D,1,1,single,False,False
+2597,lighting,0.0,A,C,1,1,single,False,False
+2598,lighting,1.0,D,D,1,1,single,False,False
+2599,lighting,0.0,A,B,1,1,single,False,False
+2600,lighting,1.0,C,C,1,1,single,False,False
+2601,lighting,0.0,A,B,1,1,single,False,False
+2602,lighting,0.0,D,A,1,1,single,False,False
+2603,lighting,0.0,B,D,1,1,single,False,False
+2604,lighting,0.0,D,A,1,1,single,False,False
+2605,lighting,0.0,C,D,1,1,single,False,False
+2606,lighting,0.0,B,A,1,1,single,False,False
+2607,lighting,0.0,C,A,1,1,single,False,False
+2608,lighting,1.0,D,D,1,1,single,False,False
+2609,lighting,0.0,C,B,1,1,single,False,False
+2610,lighting,1.0,A,A,1,1,single,False,False
+2611,lighting,1.0,B,B,1,1,single,False,False
+2612,lighting,0.0,B,D,1,1,single,False,False
+2613,lighting,1.0,D,D,1,1,single,False,False
+2614,lighting,0.0,B,C,1,1,single,False,False
+2615,lighting,1.0,A,A,1,1,single,False,False
+2616,lighting,0.0,A,C,1,1,single,False,False
+2617,lighting,1.0,C,C,1,1,single,False,False
+2618,lighting,1.0,B,B,1,1,single,False,False
+2619,lighting,1.0,A,A,1,1,single,False,False
+2620,lighting,0.0,D,C,1,1,single,False,False
+2621,lighting,0.0,D,A,1,1,single,False,False
+2622,lighting,1.0,C,C,1,1,single,False,False
+2623,lighting,1.0,B,B,1,1,single,False,False
+2624,lighting,1.0,B,B,1,1,single,False,False
+2625,lighting,0.0,C,A,1,1,single,False,False
+2626,lighting,0.0,A,C,1,1,single,False,False
+2627,lighting,0.0,B,D,1,1,single,False,False
+2628,lighting,0.0,B,A,1,1,single,False,False
+2629,lighting,1.0,D,D,1,1,single,False,False
+2630,composition,1.0,A,A,1,1,single,False,False
+2631,composition,1.0,A,A,1,1,single,False,False
+2632,composition,1.0,C,C,1,1,single,False,False
+2633,composition,0.0,D,C,1,1,single,False,False
+2634,composition,1.0,C,C,1,1,single,False,False
+2635,composition,1.0,C,C,1,1,single,False,False
+2636,composition,1.0,C,C,1,1,single,False,False
+2637,composition,1.0,D,D,1,1,single,False,False
+2638,composition,0.0,C,A,1,1,single,False,False
+2639,composition,1.0,C,C,1,1,single,False,False
+2640,composition,1.0,B,B,1,1,single,False,False
+2641,composition,1.0,C,C,1,1,single,False,False
+2642,composition,1.0,D,D,1,1,single,False,False
+2643,composition,0.0,C,D,1,1,single,False,False
+2644,composition,1.0,D,D,1,1,single,False,False
+2645,composition,0.0,D,A,1,1,single,False,False
+2646,composition,0.0,C,D,1,1,single,False,False
+2647,composition,1.0,D,D,1,1,single,False,False
+2648,composition,1.0,A,A,1,1,single,False,False
+2649,composition,1.0,A,A,1,1,single,False,False
+2650,composition,1.0,C,C,1,1,single,False,False
+2651,composition,1.0,D,D,1,1,single,False,False
+2652,composition,1.0,B,B,1,1,single,False,False
+2653,composition,0.0,C,B,1,1,single,False,False
+2654,composition,1.0,A,A,1,1,single,False,False
+2655,composition,1.0,C,C,1,1,single,False,False
+2656,composition,1.0,D,D,1,1,single,False,False
+2657,composition,1.0,A,A,1,1,single,False,False
+2658,composition,1.0,D,D,1,2,combination,False,False
+2659,composition,1.0,C,C,1,1,single,False,False
+2660,composition,0.0,A,C,1,1,single,False,False
+2661,composition,1.0,C,C,1,1,single,False,False
+2662,composition,1.0,D,D,1,1,single,False,False
+2663,composition,0.0,A,C,1,1,single,False,False
+2664,composition,0.0,D,C,1,1,single,False,False
+2665,composition,1.0,C,C,1,1,single,False,False
+2666,composition,1.0,B,B,1,1,single,False,False
+2667,composition,1.0,A,A,1,1,single,False,False
+2668,composition,0.0,A,D,1,1,single,False,False
+2669,composition,0.0,D,B,1,1,single,False,False
+2670,composition,0.0,A,C,1,1,single,False,False
+2671,composition,0.0,D,A,1,1,single,False,False
+2672,composition,1.0,D,D,1,1,single,False,False
+2673,composition,1.0,A,A,1,1,single,False,False
+2674,composition,1.0,C,C,1,1,single,False,False
+2675,composition,1.0,A,A,1,1,single,False,False
+2676,composition,1.0,D,D,1,1,single,False,False
+2677,composition,0.0,A,B,1,1,single,False,False
+2678,composition,1.0,B,B,1,1,single,False,False
+2679,composition,1.0,D,D,1,2,combination,False,False
+2680,composition,1.0,C,C,1,1,single,False,False
+2681,composition,0.0,C,D,1,1,single,False,False
+2682,composition,1.0,B,B,1,1,single,False,False
+2683,composition,1.0,C,C,1,1,single,False,False
+2684,composition,0.0,B,A,1,1,single,False,False
+2685,composition,1.0,D,D,1,1,single,False,False
+2686,composition,1.0,D,D,1,1,single,False,False
+2687,composition,1.0,C,C,1,1,single,False,False
+2688,composition,0.0,C,A,1,1,single,False,False
+2689,composition,1.0,B,B,1,2,combination,False,False
+2690,composition,0.0,B,C,1,1,single,False,False
+2691,composition,1.0,C,C,1,1,single,False,False
+2692,composition,0.0,A,C,1,1,single,False,False
+2693,composition,0.0,D,A,1,1,single,False,False
+2694,composition,1.0,C,C,1,1,single,False,False
+2695,composition,1.0,D,D,1,1,single,False,False
+2696,composition,0.0,C,D,1,1,single,False,False
+2697,composition,0.0,A,B,1,1,single,False,False
+2698,composition,0.0,C,A,1,1,single,False,False
+2699,composition,1.0,B,B,1,1,single,False,False
+2700,composition,1.0,C,C,1,1,single,False,False
+2701,composition,1.0,A,A,1,1,single,False,False
+2702,composition,0.0,C,D,1,1,single,False,False
+2703,composition,1.0,B,B,1,1,single,False,False
+2704,composition,0.0,C,A,1,1,single,False,False
+2705,composition,1.0,B,B,1,1,single,False,False
+2706,composition,0.0,D,C,1,1,single,False,False
+2707,composition,1.0,D,D,1,1,single,False,False
+2708,composition,1.0,A,A,1,1,single,False,False
+2709,composition,1.0,D,D,1,1,single,False,False
+2710,composition,1.0,D,D,1,1,single,False,False
+2711,composition,1.0,D,D,1,1,single,False,False
+2712,composition,1.0,B,B,1,1,single,False,False
+2713,composition,1.0,D,D,1,1,single,False,False
+2714,composition,1.0,D,D,1,2,combination,False,False
+2715,composition,0.0,A,B,1,1,single,False,False
+2716,composition,1.0,D,D,1,1,single,False,False
+2717,composition,1.0,B,B,1,1,single,False,False
+2718,composition,1.0,D,D,1,1,single,False,False
+2719,composition,1.0,D,D,1,1,single,False,False
+2720,composition,0.0,C,D,1,1,single,False,False
+2721,composition,1.0,B,B,1,1,single,False,False
+2722,composition,1.0,C,C,1,1,single,False,False
+2723,composition,1.0,A,A,1,1,single,False,False
+2724,composition,1.0,B,B,1,1,single,False,False
+2725,composition,1.0,B,B,1,1,single,False,False
+2726,composition,0.0,D,A,1,1,single,False,False
+2727,composition,0.0,D,A,1,1,single,False,False
+2728,composition,1.0,B,B,1,1,single,False,False
+2729,composition,0.0,B,C,1,1,single,False,False
+2730,composition,1.0,D,D,1,1,single,False,False
+2731,composition,1.0,D,D,1,1,single,False,False
+2732,composition,1.0,C,C,1,2,combination,False,False
+2733,composition,1.0,A,A,1,1,single,False,False
+2734,composition,1.0,D,D,1,1,single,False,False
+2735,composition,1.0,D,D,1,1,single,False,False
+2736,composition,1.0,A,A,1,1,single,False,False
+2737,composition,0.0,B,A,1,1,single,False,False
+2738,composition,0.0,A,D,1,1,single,False,False
+2739,composition,1.0,B,B,1,1,single,False,False
+2740,composition,0.0,D,A,1,1,single,False,False
+2741,composition,1.0,D,D,1,1,single,False,False
+2742,composition,0.0,B,D,1,1,single,False,False
+2743,composition,1.0,A,A,1,1,single,False,False
+2744,composition,1.0,C,C,1,2,combination,False,False
+2745,composition,1.0,A,A,1,1,single,False,False
+2746,composition,0.0,B,C,1,1,single,False,False
+2747,composition,1.0,C,C,1,2,combination,False,False
+2748,composition,0.0,D,B,1,1,single,False,False
+2749,composition,1.0,B,B,1,1,single,False,False
+2750,composition,1.0,D,D,1,1,single,False,False
+2751,composition,1.0,C,C,1,2,combination,False,False
+2752,composition,0.0,B,C,1,1,single,False,False
+2753,composition,0.0,C,B,1,1,single,False,False
+2754,composition,0.0,C,B,1,1,single,False,False
+2755,composition,1.0,B,B,1,2,combination,False,False
+2756,composition,1.0,A,A,1,2,combination,False,False
+2757,composition,0.0,A,B,1,1,single,False,False
+2758,composition,0.0,A,B,1,1,single,False,False
+2759,composition,1.0,B,B,1,1,single,False,False
+2760,composition,1.0,C,C,1,1,single,False,False
+2761,composition,1.0,B,B,1,1,single,False,False
+2762,composition,1.0,D,D,1,1,single,False,False
+2763,composition,1.0,B,B,1,1,single,False,False
+2764,composition,1.0,C,C,1,1,single,False,False
+2765,composition,0.0,B,A,1,1,single,False,False
+2766,composition,0.0,B,D,1,1,single,False,False
+2767,composition,1.0,B,B,1,1,single,False,False
+2768,composition,1.0,A,A,1,1,single,False,False
+2769,composition,1.0,C,C,1,1,single,False,False
+2770,composition,1.0,C,C,1,1,single,False,False
+2771,composition,0.0,B,C,1,1,single,False,False
+2772,composition,1.0,A,A,1,1,single,False,False
+2773,composition,0.0,A,D,1,1,single,False,False
+2774,composition,1.0,D,D,1,1,single,False,False
+2775,composition,1.0,D,D,1,1,single,False,False
+2776,composition,0.0,D,B,1,1,single,False,False
+2777,composition,0.0,D,B,1,1,single,False,False
+2778,composition,1.0,C,C,1,1,single,False,False
+2779,composition,0.0,B,C,1,1,single,False,False
+2780,composition,1.0,A,A,1,1,single,False,False
+2781,composition,0.0,D,B,1,1,single,False,False
+2782,composition,1.0,C,C,1,1,single,False,False
+2783,composition,0.0,D,A,1,1,single,False,False
+2784,composition,0.0,A,D,1,1,single,False,False
+2785,composition,1.0,B,B,1,1,single,False,False
+2786,composition,0.0,C,B,1,1,single,False,False
+2787,composition,1.0,A,A,1,1,single,False,False
+2788,composition,0.0,A,B,1,1,single,False,False
+2789,composition,1.0,D,D,1,1,single,False,False
+2790,composition,0.0,A,B,1,2,combination,False,False
+2791,composition,1.0,A,A,1,1,single,False,False
+2792,composition,1.0,B,B,1,1,single,False,False
+2793,composition,1.0,D,D,1,1,single,False,False
+2794,composition,0.0,C,A,1,1,single,False,False
+2795,composition,1.0,D,D,1,1,single,False,False
+2796,composition,1.0,D,D,1,2,combination,False,False
+2797,composition,0.0,A,B,1,2,combination,False,False
+2798,composition,0.0,B,A,1,1,single,False,False
+2799,composition,1.0,B,B,1,1,single,False,False
+2800,composition,1.0,C,C,1,1,single,False,False
+2801,composition,1.0,C,C,1,1,single,False,False
+2802,composition,1.0,D,D,1,1,single,False,False
+2803,composition,1.0,C,C,1,1,single,False,False
+2804,composition,0.0,D,B,1,1,single,False,False
+2805,composition,1.0,A,A,1,1,single,False,False
+2806,composition,1.0,A,A,1,1,single,False,False
+2807,composition,1.0,B,B,1,1,single,False,False
+2808,composition,0.0,D,A,1,1,single,False,False
+2809,composition,1.0,B,B,1,1,single,False,False
+2810,composition,1.0,D,D,1,1,single,False,False
+2811,composition,1.0,A,A,1,1,single,False,False
+2812,composition,1.0,B,B,1,1,single,False,False
+2813,composition,0.0,A,C,1,1,single,False,False
+2814,composition,1.0,C,C,1,1,single,False,False
+2815,composition,1.0,D,D,1,1,single,False,False
+2816,composition,1.0,A,A,1,1,single,False,False
+2817,composition,1.0,B,B,1,1,single,False,False
+2818,composition,0.0,B,A,1,1,single,False,False
+2819,composition,0.0,A,D,1,1,single,False,False
+2820,composition,1.0,A,A,1,1,single,False,False
+2821,composition,1.0,D,D,1,1,single,False,False
+2822,composition,1.0,C,C,1,1,single,False,False
+2823,composition,0.0,B,A,1,1,single,False,False
+2824,composition,0.0,C,D,1,1,single,False,False
+2825,composition,1.0,A,A,1,1,single,False,False
+2826,composition,1.0,C,C,1,1,single,False,False
+2827,composition,1.0,B,B,1,1,single,False,False
+2828,composition,0.0,A,B,1,1,single,False,False
+2829,composition,1.0,A,A,1,1,single,False,False
+2830,composition,1.0,D,D,1,1,single,False,False
+2831,composition,1.0,C,C,1,1,single,False,False
+2832,composition,1.0,B,B,1,2,combination,False,False
+2833,composition,1.0,A,A,1,1,single,False,False
+2834,composition,1.0,D,D,1,1,single,False,False
+2835,composition,0.0,B,D,1,1,single,False,False
+2836,composition,0.0,C,D,1,1,single,False,False
+2837,composition,1.0,A,A,1,1,single,False,False
+2838,composition,1.0,D,D,1,1,single,False,False
+2839,composition,1.0,B,B,1,1,single,False,False
+2840,composition,1.0,C,C,1,1,single,False,False
+2841,composition,1.0,C,C,1,1,single,False,False
+2842,composition,1.0,B,B,1,1,single,False,False
+2843,composition,1.0,A,A,1,1,single,False,False
+2844,composition,1.0,A,A,1,1,single,False,False
+2845,composition,1.0,B,B,1,2,combination,False,False
+2846,composition,1.0,A,A,1,1,single,False,False
+2847,composition,0.0,A,B,1,1,single,False,False
+2848,composition,1.0,D,D,1,1,single,False,False
+2849,composition,0.0,A,D,1,1,single,False,False
+2850,composition,1.0,C,C,1,1,single,False,False
+2851,composition,1.0,C,C,1,1,single,False,False
+2852,composition,1.0,D,D,1,1,single,False,False
+2853,composition,1.0,D,D,1,1,single,False,False
+2854,composition,1.0,D,D,1,1,single,False,False
+2855,composition,1.0,A,A,1,2,combination,False,False
+2856,composition,1.0,B,B,1,1,single,False,False
+2857,composition,1.0,B,B,1,1,single,False,False
+2858,composition,0.0,A,C,1,1,single,False,False
+2859,composition,1.0,A,A,1,1,single,False,False
+2860,composition,1.0,D,D,1,1,single,False,False
+2861,composition,1.0,B,B,1,1,single,False,False
+2862,composition,1.0,C,C,1,1,single,False,False
+2863,composition,1.0,D,D,1,1,single,False,False
+2864,composition,1.0,A,A,1,1,single,False,False
+2865,composition,1.0,D,D,1,1,single,False,False
+2866,composition,1.0,C,C,1,1,single,False,False
+2867,composition,1.0,B,B,1,1,single,False,False
+2868,composition,1.0,A,A,1,1,single,False,False
+2869,composition,1.0,C,C,1,2,combination,False,False
+2870,composition,1.0,C,C,1,1,single,False,False
+2871,composition,0.0,B,C,1,1,single,False,False
+2872,composition,0.0,B,C,1,1,single,False,False
+2873,composition,1.0,A,A,1,1,single,False,False
+2874,composition,1.0,D,D,1,1,single,False,False
+2875,composition,1.0,C,C,1,1,single,False,False
+2876,composition,1.0,A,A,1,1,single,False,False
+2877,composition,1.0,B,B,1,2,combination,False,False
+2878,composition,1.0,C,C,1,1,single,False,False
+2879,composition,1.0,D,D,1,1,single,False,False
+2880,composition,0.0,A,D,1,1,single,False,False
+2881,composition,0.0,B,A,1,1,single,False,False
+2882,composition,0.0,A,D,1,1,single,False,False
+2883,composition,0.0,A,B,1,1,single,False,False
+2884,composition,1.0,D,D,1,1,single,False,False
+2885,composition,1.0,D,D,1,1,single,False,False
+2886,composition,0.0,A,C,1,1,single,False,False
+2887,composition,1.0,A,A,1,1,single,False,False
+2888,composition,1.0,A,A,1,1,single,False,False
+2889,composition,1.0,B,B,1,1,single,False,False
+2890,composition,1.0,A,A,1,1,single,False,False
+2891,composition,0.0,C,D,1,2,combination,False,False
+2892,composition,1.0,B,B,1,1,single,False,False
+2893,composition,1.0,C,C,1,1,single,False,False
+2894,composition,1.0,B,B,1,1,single,False,False
+2895,composition,1.0,C,C,1,1,single,False,False
+2896,composition,0.0,D,A,1,1,single,False,False
+2897,composition,0.0,C,D,1,1,single,False,False
+2898,composition,1.0,D,D,1,1,single,False,False
+2899,composition,1.0,A,A,1,1,single,False,False
+2900,composition,1.0,D,D,1,1,single,False,False
+2901,composition,0.0,D,C,1,1,single,False,False
+2902,composition,1.0,A,A,1,1,single,False,False
+2903,composition,1.0,C,C,1,1,single,False,False
+2904,composition,1.0,C,C,1,1,single,False,False
+2905,composition,0.0,C,B,1,1,single,False,False
+2906,composition,1.0,A,A,1,1,single,False,False
+2907,composition,1.0,D,D,1,1,single,False,False
+2908,composition,1.0,D,D,1,1,single,False,False
+2909,composition,1.0,B,B,1,1,single,False,False
+2910,composition,1.0,A,A,1,1,single,False,False
+2911,composition,1.0,C,C,1,1,single,False,False
+2912,composition,0.0,D,A,1,1,single,False,False
+2913,composition,0.0,C,B,1,1,single,False,False
+2914,composition,0.0,D,C,1,1,single,False,False
+2915,composition,0.0,C,D,1,1,single,False,False
+2916,composition,0.0,D,A,1,1,single,False,False
+2917,composition,1.0,B,B,1,1,single,False,False
+2918,composition,0.0,D,A,1,1,single,False,False
+2919,composition,0.0,A,B,1,1,single,False,False
+2920,composition,0.0,B,A,1,1,single,False,False
+2921,composition,0.0,B,D,1,1,single,False,False
+2922,composition,0.0,B,D,1,1,single,False,False
+2923,composition,1.0,B,B,1,1,single,False,False
+2924,composition,0.0,D,C,1,1,single,False,False
+2925,composition,0.0,C,A,1,1,single,False,False
+2926,composition,0.0,D,C,1,1,single,False,False
+2927,composition,1.0,C,C,1,1,single,False,False
+2928,composition,1.0,D,D,1,1,single,False,False
+2929,composition,0.0,B,A,1,1,single,False,False
+2930,composition,1.0,A,A,1,1,single,False,False
+2931,composition,1.0,A,A,1,1,single,False,False
+2932,composition,0.0,B,D,1,1,single,False,False
+2933,composition,1.0,B,B,1,1,single,False,False
+2934,composition,1.0,A,A,1,1,single,False,False
+2935,composition,1.0,C,C,1,1,single,False,False
+2936,composition,0.0,A,B,1,2,combination,False,False
+2937,composition,1.0,D,D,1,1,single,False,False
+2938,composition,1.0,C,C,1,1,single,False,False
+2939,composition,1.0,B,B,1,1,single,False,False
+2940,composition,1.0,D,D,1,1,single,False,False
+2941,composition,1.0,A,A,1,1,single,False,False
+2942,composition,1.0,B,B,1,1,single,False,False
+2943,composition,1.0,B,B,1,1,single,False,False
+2944,composition,1.0,C,C,1,1,single,False,False
+2945,composition,1.0,B,B,1,1,single,False,False
+2946,composition,0.0,D,B,1,1,single,False,False
+2947,composition,0.0,C,B,1,1,single,False,False
+2948,composition,0.0,A,C,1,2,combination,False,False
+2949,composition,1.0,D,D,1,1,single,False,False
+2950,composition,0.0,B,D,1,1,single,False,False
+2951,composition,0.0,A,B,1,1,single,False,False
+2952,composition,1.0,C,C,1,1,single,False,False
+2953,composition,0.0,A,C,1,1,single,False,False
+2954,composition,1.0,D,D,1,1,single,False,False
+2955,composition,1.0,C,C,1,1,single,False,False
+2956,composition,1.0,A,A,1,1,single,False,False
+2957,composition,1.0,A,A,1,1,single,False,False
+2958,composition,1.0,D,D,1,1,single,False,False
+2959,composition,0.0,A,B,1,1,single,False,False
+2960,composition,0.0,B,A,1,1,single,False,False
+2961,composition,0.0,D,A,1,1,single,False,False
+2962,composition,0.0,A,D,1,1,single,False,False
+2963,composition,0.0,C,A,1,1,single,False,False
+2964,composition,0.0,A,C,1,1,single,False,False
+2965,composition,0.0,D,A,1,1,single,False,False
+2966,composition,0.0,B,C,1,1,single,False,False
+2967,composition,0.0,D,A,1,1,single,False,False
+2968,composition,1.0,A,A,1,1,single,False,False
+2969,composition,0.0,A,B,1,1,single,False,False
+2970,composition,1.0,D,D,1,1,single,False,False
+2971,composition,1.0,B,B,1,1,single,False,False
+2972,composition,1.0,B,B,1,1,single,False,False
+2973,composition,0.0,B,D,1,1,single,False,False
+2974,composition,0.0,D,C,1,1,single,False,False
+2975,composition,0.0,A,C,1,1,single,False,False
+2976,composition,1.0,B,B,1,1,single,False,False
+2977,composition,0.0,A,B,1,1,single,False,False
+2978,composition,0.0,A,B,1,1,single,False,False
+2979,composition,0.0,C,D,1,1,single,False,False
+2980,composition,0.0,D,A,1,1,single,False,False
+2981,composition,1.0,D,D,1,1,single,False,False
+2982,composition,0.0,D,C,1,1,single,False,False
+2983,composition,0.0,B,C,1,1,single,False,False
+2984,composition,0.0,A,B,1,1,single,False,False
+2985,composition,0.0,B,D,1,1,single,False,False
+2986,composition,0.0,D,B,1,1,single,False,False
+2987,composition,1.0,D,D,1,1,single,False,False
+2988,composition,0.0,B,D,1,1,single,False,False
+2989,composition,0.0,C,D,1,1,single,False,False
+2990,composition,1.0,A,A,1,1,single,False,False
+2991,composition,0.0,D,A,1,1,single,False,False
+2992,composition,0.0,D,C,1,1,single,False,False
+2993,composition,0.0,A,C,1,1,single,False,False
+2994,composition,1.0,B,B,1,1,single,False,False
+2995,composition,1.0,C,C,1,1,single,False,False
+2996,composition,0.0,A,D,1,1,single,False,False
+2997,composition,0.0,A,B,1,1,single,False,False
+2998,composition,0.0,A,C,1,1,single,False,False
+2999,composition,0.0,C,D,1,1,single,False,False
+3000,composition,1.0,D,D,1,1,single,False,False
+3001,composition,0.0,A,D,1,1,single,False,False
+3002,composition,0.0,B,A,1,1,single,False,False
+3003,composition,1.0,C,C,1,1,single,False,False
+3004,composition,0.0,D,C,1,1,single,False,False
+3005,composition,0.0,B,D,1,1,single,False,False
+3006,composition,0.0,D,B,1,1,single,False,False
+3007,composition,0.0,B,A,1,1,single,False,False
+3008,composition,0.0,C,B,1,1,single,False,False
+3009,composition,0.0,C,B,1,1,single,False,False
+3010,composition,1.0,B,B,1,1,single,False,False
+3011,composition,0.0,C,A,1,1,single,False,False
+3012,composition,0.0,B,C,1,1,single,False,False
+3013,composition,0.0,A,B,1,1,single,False,False
+3014,composition,0.0,D,B,1,1,single,False,False
+3015,composition,0.0,D,A,1,1,single,False,False
+3016,composition,0.0,A,C,1,1,single,False,False
+3017,composition,0.0,A,D,1,1,single,False,False
+3018,composition,0.0,A,C,1,1,single,False,False
+3019,composition,0.0,D,B,1,1,single,False,False
+3020,composition,1.0,C,C,1,1,single,False,False
+3021,composition,0.0,B,A,1,1,single,False,False
+3022,composition,0.0,C,B,1,1,single,False,False
+3023,composition,0.0,B,D,1,1,single,False,False
+3024,composition,0.0,D,A,1,1,single,False,False
+3025,composition,1.0,B,B,1,1,single,False,False
+3026,composition,0.0,D,C,1,1,single,False,False
+3027,composition,0.0,D,B,1,1,single,False,False
+3028,composition,1.0,C,C,1,1,single,False,False
+3029,composition,1.0,B,B,1,1,single,False,False
+3030,composition,1.0,A,A,1,1,single,False,False
+3031,composition,0.0,C,A,1,1,single,False,False
+3032,composition,0.0,D,B,1,1,single,False,False
+3033,composition,0.0,C,B,1,1,single,False,False
+3034,composition,0.0,B,C,1,1,single,False,False
+3035,composition,1.0,D,D,1,1,single,False,False
+3036,composition,1.0,C,C,1,1,single,False,False
+3037,composition,1.0,B,B,1,1,single,False,False
+3038,composition,1.0,C,C,1,1,single,False,False
+3039,composition,0.0,D,C,1,1,single,False,False
+3040,composition,0.0,A,D,1,1,single,False,False
+3041,composition,0.0,D,A,1,1,single,False,False
+3042,composition,0.0,D,B,1,1,single,False,False
+3043,composition,0.0,B,C,1,1,single,False,False
+3044,composition,0.0,B,D,1,1,single,False,False
+3045,composition,0.0,D,A,1,1,single,False,False
+3046,composition,0.0,D,B,1,1,single,False,False
+3047,composition,0.0,C,B,1,1,single,False,False
+3048,composition,0.0,A,C,1,1,single,False,False
+3049,composition,1.0,C,C,1,1,single,False,False
+3050,composition,0.0,C,B,1,1,single,False,False
+3051,composition,0.0,B,C,1,1,single,False,False
+3052,composition,0.0,C,B,1,1,single,False,False
+3053,composition,0.0,C,D,1,1,single,False,False
+3054,composition,1.0,D,D,1,1,single,False,False
+3055,composition,0.0,D,C,1,1,single,False,False
+3056,composition,0.0,B,A,1,1,single,False,False
+3057,composition,0.0,A,C,1,1,single,False,False
+3058,composition,0.0,C,A,1,1,single,False,False
+3059,composition,0.0,D,A,1,1,single,False,False
+3060,composition,0.0,A,D,1,1,single,False,False
+3061,composition,0.0,D,B,1,1,single,False,False
+3062,composition,0.0,A,D,1,1,single,False,False
+3063,composition,1.0,C,C,1,1,single,False,False
+3064,composition,0.0,C,B,1,1,single,False,False
+3065,composition,0.0,D,B,1,1,single,False,False
+3066,composition,0.0,A,D,1,1,single,False,False
+3067,composition,0.0,D,A,1,1,single,False,False
+3068,composition,0.0,D,A,1,1,single,False,False
+3069,composition,0.0,C,A,1,1,single,False,False
+3070,composition,0.0,D,B,1,1,single,False,False
+3071,composition,0.0,C,A,1,1,single,False,False
+3072,composition,0.0,D,C,1,1,single,False,False
+3073,composition,0.0,D,C,1,1,single,False,False
+3074,composition,0.0,B,A,1,1,single,False,False
+3075,composition,0.0,B,D,1,1,single,False,False
+3076,composition,0.0,A,D,1,1,single,False,False
+3077,composition,0.0,A,D,1,1,single,False,False
+3078,composition,0.0,D,B,1,1,single,False,False
+3079,composition,0.0,D,B,1,1,single,False,False
+3080,composition,0.0,B,A,1,1,single,False,False
+3081,composition,0.0,D,A,1,1,single,False,False
+3082,composition,0.0,B,D,1,1,single,False,False
+3083,composition,0.0,D,B,1,1,single,False,False
+3084,composition,0.0,B,A,1,1,single,False,False
+3085,composition,0.0,A,D,1,1,single,False,False
+3086,composition,0.0,C,B,1,1,single,False,False
+3087,composition,0.0,B,D,1,1,single,False,False
+3088,composition,0.0,C,B,1,1,single,False,False
+3089,composition,0.0,D,A,1,1,single,False,False
+3090,composition,0.0,A,B,1,1,single,False,False
+3091,composition,0.0,C,B,1,1,single,False,False
+3092,composition,0.0,A,B,1,1,single,False,False
+3093,composition,0.0,B,D,1,1,single,False,False
+3094,composition,0.0,D,A,1,1,single,False,False
+3095,composition,0.0,D,C,1,1,single,False,False
+3096,composition,0.0,A,B,1,1,single,False,False
+3097,composition,0.0,C,D,1,1,single,False,False
+3098,composition,0.0,D,C,1,1,single,False,False
+3099,composition,0.0,B,D,1,1,single,False,False
+3100,composition,1.0,C,C,1,1,single,False,False
+3101,composition,0.0,D,C,1,1,single,False,False
+3102,composition,1.0,D,D,1,1,single,False,False
+3103,composition,0.0,D,B,1,1,single,False,False
+3104,composition,1.0,B,B,1,1,single,False,False
+3105,composition,1.0,C,C,1,1,single,False,False
+3106,composition,1.0,B,B,1,1,single,False,False
+3107,composition,0.0,A,B,1,1,single,False,False
+3108,composition,1.0,A,A,1,1,single,False,False
+3109,camera movement,0.0,C,D,1,1,single,False,False
+3110,camera movement,0.0,C,B,1,2,combination,False,False
+3111,camera movement,1.0,D,D,1,1,single,False,False
+3112,camera movement,1.0,D,D,1,1,single,False,False
+3113,camera movement,0.0,B,D,1,1,single,False,False
+3114,camera movement,0.0,A,C,1,1,single,False,False
+3115,camera movement,0.0,C,A,1,1,single,False,False
+3116,camera movement,0.0,B,D,1,1,single,False,False
+3117,camera movement,1.0,B,B,1,1,single,False,False
+3118,camera movement,1.0,B,B,1,2,combination,False,False
+3119,camera movement,1.0,A,A,1,1,single,False,False
+3120,camera movement,0.0,C,D,1,1,single,False,False
+3121,camera movement,0.0,D,B,1,1,single,False,False
+3122,camera movement,1.0,D,D,1,1,single,False,False
+3123,camera movement,1.0,C,C,1,1,single,False,False
+3124,camera movement,0.0,A,D,1,1,single,False,False
+3125,camera movement,1.0,D,D,1,1,single,False,False
+3126,camera movement,0.0,D,A,1,1,single,False,True
+3127,camera movement,1.0,D,D,1,1,single,False,False
+3128,camera movement,0.0,C,D,1,1,single,False,False
+3129,camera movement,1.0,D,D,1,1,single,False,False
+3130,camera movement,0.0,A,D,1,1,single,False,False
+3131,camera movement,0.0,D,B,1,1,single,False,False
+3132,camera movement,0.0,D,B,1,1,single,False,True
+3133,camera movement,0.0,A,D,1,1,single,False,False
+3134,camera movement,1.0,C,C,1,2,combination,False,False
+3135,camera movement,0.0,C,D,1,1,single,False,False
+3136,camera movement,0.0,B,A,1,1,single,False,False
+3137,camera movement,0.0,A,C,1,1,single,False,False
+3138,camera movement,0.0,C,B,1,1,single,False,False
+3139,camera movement,1.0,A,A,1,1,single,False,False
+3140,camera movement,0.0,A,B,1,1,single,False,False
+3141,camera movement,0.0,D,C,1,1,single,False,False
+3142,camera movement,1.0,D,D,1,1,single,False,False
+3143,camera movement,1.0,B,B,1,2,combination,False,False
+3144,camera movement,0.0,B,C,1,1,single,False,False
+3145,camera movement,1.0,D,D,1,1,single,False,False
+3146,camera movement,1.0,C,C,1,1,single,False,False
+3147,camera movement,0.0,D,B,1,1,single,False,False
+3148,camera movement,0.0,D,A,1,1,single,False,False
+3149,camera movement,0.0,C,A,1,1,single,False,False
+3150,camera movement,0.0,D,A,1,2,combination,False,False
+3151,camera movement,1.0,B,B,1,1,single,False,False
+3152,camera movement,0.0,C,D,1,1,single,False,False
+3153,camera movement,1.0,C,C,1,1,single,False,False
+3154,camera movement,1.0,D,D,1,1,single,False,False
+3155,camera movement,1.0,A,A,1,1,single,False,False
+3156,camera movement,0.0,D,C,1,1,single,False,False
+3157,camera movement,0.0,D,B,1,2,combination,False,False
+3158,camera movement,0.0,C,B,1,1,single,False,False
+3159,camera movement,0.0,B,A,1,2,combination,False,False
+3160,camera movement,1.0,C,C,1,2,combination,False,False
+3161,camera movement,0.0,A,C,1,1,single,False,False
+3162,camera movement,1.0,D,D,1,1,single,False,False
+3163,camera movement,0.0,A,C,1,1,single,False,False
+3164,camera movement,1.0,B,B,1,2,combination,False,False
+3165,camera movement,1.0,B,B,1,1,single,False,False
+3166,camera movement,0.0,D,B,1,1,single,False,False
+3167,camera movement,1.0,D,D,1,1,single,False,False
+3168,camera movement,0.0,C,B,1,1,single,False,False
+3169,camera movement,0.0,C,A,1,1,single,False,False
+3170,camera movement,1.0,C,C,1,1,single,False,False
+3171,camera movement,1.0,B,B,1,1,single,False,False
+3172,camera movement,1.0,C,C,1,1,single,False,False
+3173,camera movement,0.0,A,C,1,1,single,False,False
+3174,camera movement,0.0,D,A,1,1,single,False,False
+3175,camera movement,0.0,B,C,1,1,single,False,False
+3176,camera movement,0.0,D,A,1,1,single,False,False
+3177,camera movement,0.0,C,D,1,1,single,False,False
+3178,camera movement,1.0,B,B,1,1,single,False,False
+3179,camera movement,0.0,C,D,1,1,single,False,False
+3180,camera movement,0.0,C,A,1,1,single,False,False
+3181,camera movement,0.0,A,B,1,1,single,False,False
+3182,camera movement,0.0,A,D,1,1,single,False,False
+3183,camera movement,0.0,B,A,1,1,single,False,False
+3184,camera movement,1.0,D,D,1,2,combination,False,False
+3185,camera movement,1.0,D,D,1,1,single,False,False
+3186,camera movement,1.0,A,A,1,1,single,False,False
+3187,camera movement,0.0,A,D,1,1,single,False,False
+3188,camera movement,0.0,A,C,1,1,single,False,False
+3189,camera movement,0.0,D,B,1,1,single,False,False
+3190,camera movement,1.0,B,B,1,1,single,False,False
+3191,camera movement,1.0,C,C,1,1,single,False,False
+3192,camera movement,0.0,A,B,1,1,single,False,False
+3193,camera movement,0.0,D,B,1,1,single,False,False
+3194,camera movement,1.0,C,C,1,1,single,False,False
+3195,camera movement,1.0,C,C,1,2,combination,False,False
+3196,camera movement,0.5,A,A,2,2,combination,False,False
+3197,camera movement,1.0,C,C,1,1,single,False,False
+3198,camera movement,0.0,C,A,1,1,single,False,False
+3199,camera movement,0.0,D,A,1,2,combination,False,False
+3200,camera movement,1.0,C,C,1,1,single,False,False
+3201,camera movement,0.0,D,B,1,2,combination,False,False
+3202,camera movement,1.0,B,B,1,2,combination,False,False
+3203,camera movement,1.0,A,A,1,2,combination,False,False
+3204,camera movement,1.0,D,D,1,1,single,False,False
+3205,camera movement,1.0,B,B,1,1,single,False,False
+3206,camera movement,0.0,C,D,1,3,combination,False,False
+3207,camera movement,0.0,D,C,1,1,single,False,False
+3208,camera movement,1.0,D,D,1,1,single,False,False
+3209,camera movement,1.0,A,A,1,1,single,False,False
+3210,camera movement,0.0,A,B,1,1,single,False,False
+3211,camera movement,0.0,C,A,1,1,single,False,False
+3212,camera movement,0.0,A,B,1,1,single,False,False
+3213,camera movement,1.0,A,A,1,1,single,False,False
+3214,camera movement,1.0,C,C,1,1,single,False,False
+3215,camera movement,0.0,D,C,1,1,single,False,False
+3216,camera movement,0.0,A,D,1,1,single,False,False
+3217,camera movement,1.0,D,D,1,1,single,False,False
+3218,camera movement,0.0,D,B,1,1,single,False,False
+3219,camera movement,0.0,D,A,1,1,single,False,False
+3220,camera movement,0.0,C,D,1,1,single,False,False
+3221,camera movement,0.0,D,C,1,1,single,False,False
+3222,camera movement,0.0,B,A,1,1,single,False,False
+3223,camera movement,1.0,D,D,1,1,single,False,False
+3224,camera movement,0.0,A,C,1,1,single,False,False
+3225,camera movement,0.0,A,B,1,1,single,False,False
+3226,camera movement,1.0,C,C,1,1,single,False,False
+3227,camera movement,1.0,C,C,1,1,single,False,False
+3228,camera movement,1.0,B,B,1,1,single,False,False
+3229,camera movement,1.0,B,B,1,1,single,False,False
+3230,camera movement,1.0,C,C,1,1,single,False,False
+3231,camera movement,1.0,C,C,1,1,single,False,False
+3232,camera movement,0.0,A,B,1,2,combination,False,False
+3233,camera movement,0.0,C,A,1,1,single,False,False
+3234,camera movement,0.0,A,C,1,1,single,False,False
+3235,camera movement,0.0,D,C,1,1,single,False,False
+3236,camera movement,1.0,C,C,1,1,single,False,False
+3237,camera movement,1.0,D,D,1,1,single,False,False
+3238,camera movement,0.0,C,A,1,1,single,False,False
+3239,camera movement,1.0,D,D,1,1,single,False,False
+3240,camera movement,1.0,B,B,1,1,single,False,False
+3241,camera movement,1.0,C,C,1,1,single,False,False
+3242,camera movement,1.0,D,D,1,1,single,False,False
+3243,camera movement,1.0,C,C,1,1,single,False,False
+3244,camera movement,1.0,C,C,1,1,single,False,False
+3245,camera movement,1.0,A,A,1,1,single,False,False
+3246,camera movement,1.0,B,B,1,1,single,False,False
+3247,camera movement,1.0,A,A,1,1,single,False,False
+3248,camera movement,1.0,C,C,1,1,single,False,False
+3249,camera movement,0.0,B,C,1,1,single,False,False
+3250,camera movement,0.0,B,D,1,1,single,False,False
+3251,camera movement,1.0,A,A,1,1,single,False,False
+3252,camera movement,1.0,B,B,1,1,single,False,False
+3253,camera movement,0.0,A,B,1,1,single,False,False
+3254,camera movement,0.0,C,A,1,1,single,False,False
+3255,camera movement,1.0,B,B,1,2,combination,False,False
+3256,camera movement,1.0,A,A,1,1,single,False,False
+3257,camera movement,0.0,A,D,1,2,combination,False,False
+3258,camera movement,0.0,A,D,1,1,single,False,False
+3259,camera movement,0.0,C,A,1,2,combination,False,False
+3260,camera movement,0.0,C,B,1,1,single,False,False
+3261,camera movement,1.0,C,C,1,1,single,False,False
+3262,camera movement,0.0,A,D,1,1,single,False,False
+3263,camera movement,1.0,D,D,1,1,single,False,False
+3264,camera movement,1.0,A,A,1,1,single,False,False
+3265,camera movement,1.0,A,A,1,1,single,False,False
+3266,camera movement,0.0,A,C,1,1,single,False,False
+3267,camera movement,1.0,D,D,1,1,single,False,False
+3268,camera movement,0.0,B,C,1,1,single,False,False
+3269,camera movement,0.0,A,D,1,0,combination,True,True
+3270,camera movement,0.0,C,D,1,1,single,False,False
+3271,camera movement,0.0,C,B,1,1,single,False,False
+3272,camera movement,0.0,D,A,1,1,single,False,False
+3273,camera movement,0.0,A,B,1,1,single,False,False
+3274,camera movement,0.0,B,D,1,0,combination,True,True
+3275,camera movement,0.0,A,C,1,1,single,False,False
+3276,camera movement,1.0,A,A,1,1,single,False,False
+3277,camera movement,1.0,C,C,1,1,single,False,False
+3278,camera movement,1.0,D,D,1,1,single,False,False
+3279,camera movement,0.0,A,D,1,1,single,False,False
+3280,camera movement,0.0,A,C,1,2,combination,False,False
+3281,camera movement,0.0,A,B,1,1,single,False,False
+3282,camera movement,0.0,A,D,1,2,combination,False,False
+3283,camera movement,1.0,B,B,1,1,single,False,False
+3284,camera movement,0.0,D,B,1,2,combination,False,False
+3285,camera movement,1.0,D,D,1,1,single,False,False
+3286,camera movement,1.0,C,C,1,1,single,False,False
+3287,camera movement,0.0,B,D,1,1,single,False,False
+3288,camera movement,0.0,B,C,1,1,single,False,False
+3289,camera movement,1.0,B,B,1,1,single,False,False
+3290,camera movement,0.0,D,A,1,1,single,False,False
+3291,camera movement,0.0,D,A,1,1,single,False,False
+3292,camera movement,1.0,D,D,1,1,single,False,False
+3293,camera movement,0.0,B,A,1,1,single,False,False
+3294,camera movement,0.0,C,B,1,1,single,False,False
+3295,camera movement,1.0,C,C,1,1,single,False,False
+3296,camera movement,1.0,D,D,1,1,single,False,False
+3297,camera movement,0.0,B,D,1,1,single,False,False
+3298,camera movement,0.0,A,C,1,1,single,False,False
+3299,camera movement,0.0,A,D,1,1,single,False,False
+3300,camera movement,0.0,A,C,1,1,single,False,False
+3301,camera movement,0.0,A,C,1,1,single,False,False
+3302,camera movement,1.0,C,C,1,1,single,False,False
+3303,camera movement,0.0,D,B,1,1,single,False,False
+3304,camera movement,0.0,B,D,1,1,single,False,False
+3305,camera movement,0.0,D,C,1,1,single,False,False
+3306,camera movement,1.0,D,D,1,1,single,False,False
+3307,camera movement,0.0,D,B,1,1,single,False,False
+3308,camera movement,1.0,A,A,1,1,single,False,False
+3309,camera movement,0.0,B,D,1,1,single,False,False
+3310,camera movement,1.0,B,B,1,1,single,False,False
+3311,camera movement,0.0,D,C,1,1,single,False,False
+3312,camera movement,1.0,D,D,1,1,single,False,False
+3313,camera movement,0.0,A,C,1,1,single,False,False
+3314,camera movement,1.0,C,C,1,1,single,False,False
+3315,camera movement,0.0,B,A,1,1,single,False,False
+3316,camera movement,0.0,B,A,1,0,combination,True,True
+3317,camera movement,0.0,C,B,1,1,single,False,False
+3318,camera movement,0.0,B,A,1,1,single,False,True
+3319,camera movement,0.0,D,B,1,1,single,False,False
+3320,camera movement,0.0,B,C,1,1,single,False,False
+3321,camera movement,1.0,A,A,1,1,single,False,False
+3322,camera movement,0.0,B,A,1,1,single,False,False
+3323,camera movement,0.0,D,B,1,1,single,False,False
+3324,camera movement,1.0,C,C,1,1,single,False,False
+3325,camera movement,1.0,C,C,1,1,single,False,False
+3326,camera movement,1.0,C,C,1,1,single,False,False
+3327,camera movement,0.0,C,D,1,2,combination,False,False
+3328,camera movement,1.0,D,D,1,2,combination,False,False
+3329,camera movement,1.0,C,C,1,1,single,False,False
+3330,camera movement,0.0,B,C,1,1,single,False,False
+3331,camera movement,0.0,C,D,1,1,single,False,False
+3332,camera movement,0.0,C,D,1,1,single,False,False
+3333,camera movement,1.0,D,D,1,1,single,False,False
+3334,camera movement,1.0,A,A,1,1,single,False,False
+3335,camera movement,1.0,D,D,1,1,single,False,False
+3336,camera movement,1.0,C,C,1,1,single,False,False
+3337,camera movement,0.0,C,B,1,2,combination,False,False
+3338,camera movement,0.0,B,C,1,1,single,False,False
+3339,camera movement,1.0,A,A,1,1,single,False,False
+3340,camera movement,0.0,B,A,1,2,combination,False,False
+3341,camera movement,1.0,D,D,1,2,combination,False,False
+3342,camera movement,1.0,C,C,1,1,single,False,False
+3343,camera movement,1.0,A,A,1,2,combination,False,False
+3344,camera movement,1.0,A,A,1,1,single,False,True
+3345,camera movement,0.0,C,A,1,1,single,False,False
+3346,camera movement,0.0,B,A,1,1,single,False,False
+3347,camera movement,1.0,C,C,1,2,combination,False,False
+3348,camera movement,1.0,D,D,1,1,single,False,False
+3349,camera movement,1.0,B,B,1,1,single,False,False
+3350,camera movement,0.0,A,D,1,0,combination,True,True
+3351,camera movement,0.0,B,C,1,1,single,False,False
+3352,camera movement,0.0,D,C,1,1,single,False,False
+3353,camera movement,1.0,D,D,1,2,combination,False,False
+3354,camera movement,1.0,B,B,1,1,single,False,False
+3355,camera movement,0.0,C,D,1,2,combination,False,False
+3356,camera movement,0.0,A,B,1,1,single,False,False
+3357,camera movement,1.0,D,D,1,1,single,False,False
+3358,camera movement,0.0,B,D,1,1,single,False,False
+3359,camera movement,0.0,D,A,1,1,single,False,False
+3360,camera movement,0.0,A,C,1,1,single,False,False
+3361,camera movement,1.0,D,D,1,1,single,False,False
+3362,camera movement,0.0,A,D,1,1,single,False,False
+3363,camera movement,0.0,A,D,1,1,single,False,False
+3364,camera movement,0.0,A,B,1,1,single,False,False
+3365,camera movement,0.0,C,D,1,1,single,False,False
+3366,camera movement,1.0,C,C,1,1,single,False,False
+3367,camera movement,0.0,B,C,1,2,combination,False,False
+3368,camera movement,1.0,B,B,1,1,single,False,False
+3369,camera movement,0.0,C,A,1,1,single,False,False
+3370,camera movement,0.0,D,B,1,1,single,False,False
+3371,camera movement,1.0,D,D,1,1,single,False,False
+3372,camera movement,0.0,A,C,1,1,single,False,False
+3373,camera movement,1.0,D,D,1,1,single,False,False
+3374,camera movement,1.0,A,A,1,1,single,False,False
+3375,camera movement,1.0,B,B,1,1,single,False,False
+3376,camera movement,1.0,C,C,1,1,single,False,False
+3377,camera movement,0.0,D,A,1,1,single,False,False
+3378,camera movement,0.0,B,D,1,1,single,False,False
+3379,camera movement,0.0,C,D,1,2,combination,False,False
+3380,camera movement,1.0,A,A,1,1,single,False,False
+3381,camera movement,1.0,A,A,1,3,combination,False,False
+3382,camera movement,1.0,C,C,1,1,single,False,False
+3383,camera movement,0.0,D,B,1,2,combination,False,False
+3384,camera movement,0.0,B,D,1,1,single,False,False
+3385,camera movement,0.0,A,B,1,1,single,False,False
+3386,camera movement,1.0,B,B,1,3,combination,False,False
+3387,camera movement,0.0,A,B,1,1,single,False,True
+3388,camera movement,0.0,A,B,1,1,single,False,False
+3389,camera movement,1.0,B,B,1,1,single,False,False
+3390,camera movement,0.0,C,D,1,1,single,False,False
+3391,camera movement,1.0,D,D,1,1,single,False,False
+3392,camera movement,1.0,B,B,1,1,single,False,False
+3393,camera movement,1.0,C,C,1,1,single,False,False
+3394,camera movement,1.0,D,D,1,1,single,False,False
+3395,camera movement,1.0,D,D,1,1,single,False,False
+3396,camera movement,1.0,C,C,1,1,single,False,False
+3397,camera movement,1.0,C,C,1,1,single,False,False
+3398,camera movement,0.0,A,D,1,2,combination,False,False
+3399,camera movement,1.0,A,A,1,1,single,False,False
+3400,camera movement,0.0,D,B,1,2,combination,False,False
+3401,camera movement,1.0,A,A,1,1,single,False,False
+3402,camera movement,1.0,C,C,1,1,single,False,False
+3403,camera movement,0.0,D,B,1,1,single,False,False
+3404,camera movement,0.0,A,B,1,1,single,False,False
+3405,camera movement,1.0,D,D,1,1,single,False,False
+3406,camera movement,0.0,C,B,1,2,combination,False,False
+3407,camera movement,1.0,D,D,1,1,single,False,False
+3408,camera movement,0.0,D,B,1,1,single,False,False
+3409,camera movement,0.0,D,A,1,1,single,False,False
+3410,camera movement,1.0,A,A,1,1,single,False,False
+3411,camera movement,0.0,B,A,1,1,single,False,False
+3412,camera movement,0.0,C,A,1,2,combination,False,False
+3413,camera movement,0.0,D,A,1,1,single,False,False
+3414,camera movement,1.0,B,B,1,1,single,False,False
+3415,camera movement,0.0,A,B,1,1,single,False,False
+3416,camera movement,0.0,B,A,1,1,single,False,False
+3417,camera movement,0.0,A,C,1,1,single,False,False
+3418,camera movement,1.0,C,C,1,1,single,False,False
+3419,camera movement,1.0,B,B,1,2,combination,False,False
+3420,camera movement,0.0,C,B,1,1,single,False,False
+3421,camera movement,0.0,C,A,1,1,single,False,False
+3422,camera movement,1.0,B,B,1,1,single,False,False
+3423,camera movement,1.0,D,D,1,1,single,False,False
+3424,camera movement,0.0,A,B,1,1,single,False,False
+3425,camera movement,0.0,B,C,1,1,single,False,False
+3426,camera movement,1.0,D,D,1,2,combination,False,False
+3427,camera movement,0.0,B,A,1,1,single,False,False
+3428,camera movement,1.0,A,A,1,1,single,False,False
+3429,camera movement,0.0,A,D,1,1,single,False,False
+3430,camera movement,1.0,D,D,1,1,single,False,False
+3431,camera movement,0.0,C,A,1,1,single,False,False
+3432,camera movement,1.0,A,A,1,1,single,False,False
+3433,camera movement,1.0,B,B,1,1,single,False,False
+3434,camera movement,1.0,D,D,1,1,single,False,False
+3435,camera movement,1.0,A,A,1,1,single,False,False
+3436,camera movement,0.0,B,D,1,1,single,False,False
+3437,camera movement,1.0,A,A,1,1,single,False,False
+3438,camera movement,0.0,D,C,1,1,single,False,False
+3439,camera movement,1.0,C,C,1,1,single,False,False
+3440,camera movement,1.0,C,C,1,1,single,False,False
+3441,camera movement,1.0,A,A,1,1,single,False,False
+3442,camera movement,1.0,A,A,1,1,single,False,False
+3443,camera movement,1.0,B,B,1,1,single,False,False
+3444,camera movement,0.0,C,A,1,1,single,False,False
+3445,camera movement,1.0,C,C,1,1,single,False,False
+3446,camera movement,0.0,B,C,1,1,single,False,False
+3447,camera movement,0.0,A,B,1,2,combination,False,False
+3448,camera movement,0.0,B,C,1,1,single,False,False
+3449,camera movement,0.0,A,B,1,2,combination,False,False
+3450,camera movement,1.0,C,C,1,1,single,False,False
+3451,camera movement,0.0,B,D,1,1,single,False,False
+3452,camera movement,1.0,A,A,1,1,single,False,False
+3453,camera movement,0.0,D,C,1,1,single,False,False
+3454,camera movement,0.0,A,C,1,1,single,False,False
+3455,camera movement,0.0,D,B,1,1,single,False,False
+3456,camera movement,1.0,C,C,1,1,single,False,False
+3457,camera movement,0.0,B,A,1,1,single,False,False
+3458,camera movement,1.0,C,C,1,1,single,False,False
+3459,camera movement,0.0,B,C,1,1,single,False,False
+3460,camera movement,1.0,A,A,1,1,single,False,False
+3461,camera movement,0.0,B,A,1,1,single,False,False
+3462,camera movement,0.0,C,B,1,1,single,False,False
+3463,camera movement,1.0,A,A,1,2,combination,False,False
+3464,camera movement,1.0,B,B,1,1,single,False,False
+3465,camera movement,0.0,D,B,1,1,single,False,False
+3466,camera movement,0.0,C,A,1,1,single,False,False
+3467,camera movement,0.0,A,B,1,1,single,False,False
+3468,camera movement,0.0,A,C,1,1,single,False,False
+3469,camera movement,0.0,B,C,1,1,single,False,False
+3470,camera movement,1.0,D,D,1,1,single,False,False
+3471,camera movement,0.0,B,D,1,1,single,False,False
+3472,camera movement,0.0,B,C,1,1,single,False,False
+3473,camera movement,1.0,D,D,1,1,single,False,False
+3474,camera movement,0.0,B,D,1,1,single,False,False
+3475,camera movement,0.0,C,B,1,2,combination,False,False
+3476,camera movement,1.0,C,C,1,1,single,False,False
+3477,camera movement,1.0,D,D,1,1,single,False,False
+3478,camera movement,1.0,D,D,1,1,single,False,False
+3479,camera movement,0.0,A,C,1,1,single,False,False
+3480,camera movement,1.0,C,C,1,1,single,False,False
+3481,camera movement,0.0,C,B,1,1,single,False,False
+3482,camera movement,1.0,B,B,1,1,single,False,False
+3483,camera movement,1.0,C,C,1,1,single,False,False
+3484,camera movement,0.0,B,C,1,2,combination,False,False
+3485,camera movement,1.0,A,A,1,1,single,False,False
+3486,camera movement,0.0,C,B,1,1,single,False,False
+3487,camera movement,0.0,D,B,1,2,combination,False,False
+3488,camera movement,1.0,D,D,1,1,single,False,False
+3489,camera movement,1.0,A,A,1,1,single,False,False
+3490,camera movement,1.0,B,B,1,1,single,False,False
+3491,camera movement,0.0,A,D,1,2,combination,False,False
+3492,camera movement,1.0,D,D,1,1,single,False,False
+3493,camera movement,0.0,D,A,1,1,single,False,False
+3494,camera movement,1.0,C,C,1,2,combination,False,False
+3495,camera movement,0.0,B,C,1,0,combination,True,True
+3496,camera movement,0.0,A,B,1,1,single,False,False
+3497,camera movement,1.0,C,C,1,1,single,False,False
+3498,camera movement,1.0,C,C,1,1,single,False,False
+3499,camera movement,1.0,D,D,1,1,single,False,False
+3500,camera movement,0.0,C,B,1,1,single,False,False
+3501,camera movement,1.0,A,A,1,3,combination,False,False
+3502,camera movement,1.0,D,D,1,1,single,False,False
+3503,camera movement,1.0,C,C,1,1,single,False,False
+3504,camera movement,1.0,A,A,1,1,single,False,False
+3505,camera movement,0.0,D,B,1,1,single,False,False
+3506,camera movement,1.0,A,A,1,1,single,False,False
+3507,camera movement,1.0,B,B,1,1,single,False,False
+3508,camera movement,1.0,C,C,1,1,single,False,False
+3509,camera movement,0.0,D,B,1,2,combination,False,False
+3510,camera movement,1.0,B,B,1,2,combination,False,False
+3511,camera movement,1.0,D,D,1,1,single,False,False
+3512,camera movement,0.0,D,C,1,1,single,False,False
+3513,camera movement,0.0,C,A,1,1,single,False,False
+3514,camera movement,0.0,B,D,1,1,single,False,False
+3515,camera movement,1.0,C,C,1,2,combination,False,False
+3516,camera movement,0.0,C,D,1,1,single,False,False
+3517,camera movement,0.0,A,B,1,1,single,False,False
+3518,camera movement,0.0,C,A,1,1,single,False,False
+3519,camera movement,0.0,D,B,1,1,single,False,False
+3520,camera movement,0.0,B,C,1,2,combination,False,False
+3521,camera movement,1.0,A,A,1,1,single,False,False
+3522,camera movement,1.0,D,D,1,1,single,False,False
+3523,camera movement,1.0,D,D,1,1,single,False,False
+3524,camera movement,1.0,C,C,1,1,single,False,False
+3525,camera movement,0.0,B,D,1,1,single,False,False
+3526,camera movement,0.0,B,D,1,1,single,False,False
+3527,camera movement,1.0,B,B,1,1,single,False,False
+3528,camera movement,1.0,C,C,1,1,single,False,False
+3529,camera movement,0.0,A,B,1,1,single,False,False
+3530,camera movement,0.0,B,C,1,2,combination,False,False
+3531,camera movement,1.0,D,D,1,1,single,False,False
+3532,camera movement,0.0,C,A,1,1,single,False,False
+3533,camera movement,1.0,B,B,1,2,combination,False,False
+3534,camera movement,0.0,B,A,1,2,combination,False,False
+3535,camera movement,1.0,A,A,1,1,single,False,False
+3536,camera movement,1.0,C,C,1,1,single,False,False
+3537,camera movement,1.0,D,D,1,1,single,False,False
+3538,camera movement,0.0,A,C,1,1,single,False,False
+3539,camera movement,1.0,B,B,1,2,combination,False,False
+3540,camera movement,0.0,B,A,1,1,single,False,False
+3541,camera movement,0.0,D,B,1,1,single,False,False
+3542,camera movement,0.0,D,A,1,1,single,False,False
+3543,camera movement,0.0,A,D,1,1,single,False,False
+3544,camera movement,0.0,A,B,1,1,single,False,False
+3545,camera movement,0.0,A,D,1,2,combination,False,False
+3546,camera movement,0.0,A,C,1,1,single,False,False
+3547,camera movement,1.0,C,C,1,1,single,False,False
+3548,camera movement,0.0,B,C,1,2,combination,False,False
+3549,camera movement,0.0,B,D,1,1,single,False,False
+3550,camera movement,0.0,B,C,1,2,combination,False,False
+3551,camera movement,1.0,A,A,1,1,single,False,False
+3552,camera movement,0.0,A,C,1,1,single,False,False
+3553,camera movement,0.0,D,B,1,1,single,False,False
+3554,camera movement,1.0,C,C,1,2,combination,False,False
+3555,camera movement,1.0,C,C,1,2,combination,False,False
+3556,camera movement,0.0,D,B,1,1,single,False,False
+3557,camera movement,1.0,C,C,1,1,single,False,False
+3558,camera movement,1.0,A,A,1,3,combination,False,False
+3559,camera movement,0.0,A,B,1,1,single,False,False
+3560,camera movement,0.0,A,C,1,1,single,False,False
+3561,camera movement,0.0,C,B,1,2,combination,False,False
+3562,camera movement,1.0,B,B,1,1,single,False,False
+3563,camera movement,0.0,C,A,1,1,single,False,False
+3564,camera movement,0.0,B,A,1,1,single,False,False
+3565,camera movement,0.0,A,D,1,1,single,False,False
+3566,camera movement,0.0,B,A,1,1,single,False,False
+3567,camera movement,0.0,C,D,1,0,combination,True,True
+3568,camera movement,0.0,C,A,1,1,single,False,False
+3569,camera movement,1.0,A,A,1,1,single,False,False
+3570,camera movement,0.0,D,B,1,2,combination,False,False
+3571,camera movement,1.0,B,B,1,1,single,False,False
+3572,camera movement,0.0,D,A,1,1,single,False,False

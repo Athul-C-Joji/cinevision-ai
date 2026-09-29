@@ -280,3 +280,64 @@ Counted directly from `data/processed/movement_splits.csv` (columns: `filename`,
 - The val split is only 19 source videos and the test split only 20. Movement metrics are therefore noisy, and many of the 21 classes have single-digit support.
 - This backs up sections 12 and 14: tuning thresholds on 183 clips from 19 videos is fragile, which is part of why the tuned thresholds collapsed to 0.05–0.15.
 - For the report: state these counts alongside any movement result, and describe the movement model's numbers as indicative, not definitive.
+
+---
+
+## 16. Held-out evaluation on ShotBench (Week 3)
+
+### 16.1 What was evaluated
+- Benchmark: `Vchitect/ShotBench`, `test.tsv`, 3,572 multiple-choice questions, always 4 options (A-D), random guessing about 25%.
+- 3,108 image questions (3,049 unique image files) covering the 7 static dimensions, and 464 video questions covering camera movement only.
+- Models: the final Module 1 artifacts, unchanged. Static: frozen CLIP + 7 linear heads (`checkpoints/best_model.pt`). Movement: LSTM (`checkpoints/movement_lstm.pt`).
+- No files failed to load (0 of 3,513).
+
+### 16.2 How answers were scored (design choices)
+- Each of the 4 options gets a score from the model's probabilities, and the highest score is the answer. No thresholds are used, so the val-tuned thresholds from section 11 do not affect these numbers.
+- **Combination options** (e.g. "Aerial, Overhead") are scored as the AVERAGE of the model's probabilities for the tags inside the option. This is my own design choice, not something taken from the ShotBench paper.
+- One wording difference is mapped: ShotBench says "Single" where my Shot Framing vocabulary says "Clean single".
+- Movement options are free text, so they are parsed with the existing `src/data/movement_label_encoding.py` parser. This parser ignores the order of movements ("Firstly Pan left, then Tilt up" and the reverse give the same tags).
+- An option with no matchable tags gets the lowest score and can never win. Ties give fractional credit.
+- Code: `src/training/eval_shotbench.py`. Data download: `download_shotbench.py`. Existing modules were not modified.
+- Outputs in `reports/`: `shotbench_results.csv`, `shotbench_single_vs_combo.csv`, `shotbench_predictions.csv`, `shotbench_summary.json`.
+
+### 16.3 Results (full run, 3,572 questions)
+
+| Category | Questions | Accuracy |
+|---|---|---|
+| Shot size | 485 | 0.7711 |
+| Shot framing | 445 | 0.7416 |
+| Camera angle | 455 | 0.6549 |
+| Lighting type | 405 | 0.5926 |
+| Composition | 479 | 0.5324 |
+| Lighting | 350 | 0.5286 |
+| Lens size | 489 | 0.5072 |
+| Camera movement | 464 | 0.4580 |
+
+- **Average across the 8 categories (macro): 0.5983. Average over all questions (micro): 0.5998.**
+- Image questions only (7 static categories): 0.6210.
+- For reference, the published baselines recorded in section 3: GPT-4o 59.3%, ShotVL-7B 70.1%.
+- Camera movement, lens size and lighting are the lowest, matching the "known-hard dimensions" note in section 9.
+- Single-tag vs combination correct answers, by category (accuracy on single / on combination):
+  camera angle 0.6618 (n=414) / 0.5854 (n=41); camera movement 0.4704 (n=389) / 0.3933 (n=75); composition 0.5218 (n=458) / 0.7619 (n=21); lens size 0.4979 (n=478) / 0.9091 (n=11); lighting 0.4667 (n=240) / 0.6636 (n=110); lighting type 0.5333 (n=330) / 0.8533 (n=75); shot framing 0.7366 (n=391) / 0.7778 (n=54); shot size 0.7660 (n=470) / 0.9333 (n=15).
+  Several combination groups are very small, so these are not reliable comparisons.
+- Camera movement: 11 questions had a "Dolly zoom" option that my movement vocabulary has no class for; in 6 of them it was the correct answer, so those 6 could not be answered correctly. 1 movement question ended in a tie.
+
+### 16.4 Leakage / overlap checks
+- Filename check: 0 of 3,513 ShotBench files exist in `data/raw/images` (proves only that filenames differ; ShotBench lists no film names).
+- Image similarity check (`src/training/check_shotbench_overlap.py`): frozen CLIP fingerprints, nearest ShotQA image (all 57,285 jpg/jpeg/png files searched) for each of the 3,049 ShotBench images. Median nearest similarity 0.8715; 685 images at or above 0.90, 39 at or above 0.95, 11 at or above 0.98, highest 0.9934.
+- Accuracy on image questions by similarity group: below 0.85 = 0.6025 (n=893); 0.85-0.90 = 0.6290 (n=1,515); 0.90-0.95 = 0.6288 (n=660); 0.95 and above = 0.6000 (n=40). Accuracy does not rise for the most similar images, so there is no sign that near-duplicate frames inflate the score. The similarity cut-offs are arbitrary starting points.
+- The two most similar pairs were opened and inspected by eye: similar-looking shots, not the same frame. The other very-close pairs were not inspected.
+- 836 ShotQA images were unreadable in this script, versus 824 in `reports/broken_images.csv` (section 10). The 12 difference is unexplained and does not affect the conclusion.
+
+### 16.5 Caveats (must be stated with the results)
+- This check cannot rule out that ShotBench uses other frames from films in ShotQA (same film, different scene). Such overlap could give a small boost to every question equally, which the similarity groups would not reveal. Not tested.
+- Movement videos were not covered by the similarity check.
+- The comparison to published baselines is approximate. The scoring methods differ (published baselines answer from the question text; this model scores each option from tag probabilities). The gap to GPT-4o (about 0.5 points) is within rough sampling noise (about +/-1 point on the overall average, a rough binomial estimate), so the honest wording is "comparable to", not "better than".
+- ShotVL-7B is a fully fine-tuned vision-language model, while this model is a frozen CLIP with about 26.7k trainable head parameters (static) and a small LSTM (movement). The 10-point gap to ShotVL-7B is unsurprising.
+- Combination options are scored by averaging tag probabilities (a design choice). The movement parser ignores movement order.
+- A 20-question-per-category smoke test earlier read 0.75 average; this was small-sample noise, and only the full-run numbers above are recorded.
+
+### 16.6 Talking points
+- Verified the result instead of taking a high-looking number at face value: a suspiciously good 20-question smoke test was followed by the full run and a leakage check.
+- The overlap check found and fixed a bug in my own script (it originally searched `.jpg` files only and missed 420 images).
+- Frozen CLIP + linear heads reach roughly GPT-4o-level on this benchmark, at a fraction of the cost, with a documented gap to a fully fine-tuned model.

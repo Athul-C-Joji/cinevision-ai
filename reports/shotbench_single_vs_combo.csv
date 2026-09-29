@@ -1,0 +1,17 @@
+category,answer_type,n_questions,accuracy
+camera angle,combination,41,0.5854
+camera angle,single,414,0.6618
+camera movement,combination,75,0.3933
+camera movement,single,389,0.4704
+composition,combination,21,0.7619
+composition,single,458,0.5218
+lens size,combination,11,0.9091
+lens size,single,478,0.4979
+lighting,combination,110,0.6636
+lighting,single,240,0.4667
+lighting type,combination,75,0.8533
+lighting type,single,330,0.5333
+shot framing,combination,54,0.7778
+shot framing,single,391,0.7366
+shot size,combination,15,0.9333
+shot size,single,470,0.766
