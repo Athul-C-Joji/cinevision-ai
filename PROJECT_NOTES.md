@@ -341,3 +341,30 @@ Counted directly from `data/processed/movement_splits.csv` (columns: `filename`,
 - Verified the result instead of taking a high-looking number at face value: a suspiciously good 20-question smoke test was followed by the full run and a leakage check.
 - The overlap check found and fixed a bug in my own script (it originally searched `.jpg` files only and missed 420 images).
 - Frozen CLIP + linear heads reach roughly GPT-4o-level on this benchmark, at a fraction of the cost, with a documented gap to a fully fine-tuned model.
+
+
+---
+
+## 17. Streamlit demo app and pinned requirements (Week 3)
+
+### 17.1 What the app does
+- `app/streamlit_app.py`: upload a video, click "Analyze video", and get a shot-by-shot breakdown. Each shot shows a thumbnail of the frame the static classifier saw, the 6 static labels plus composition, the top-2 movement guesses, and start/end timecodes. The full text breakdown can be downloaded as a `.txt` file.
+- Run from the project root: `python -m streamlit run app\streamlit_app.py` (opens at `http://localhost:8501`).
+- Confirmed working by the author on local runs. (Add here which test videos were used, if worth recording.)
+
+### 17.2 How it is built
+- Uses the same building blocks as `analyze_video()` in `src/inference/video_analyzer.py` (segment_video, decode_all_frames, classify_static, classify_movement), in the same order, and `format_shot_description()` from `script_generator.py` for the text layout. It does not call `analyze_video()` directly, so that it can keep a per-shot thumbnail and load the models once (cached with `st.cache_resource`).
+- **Maintenance note:** this duplicates a small amount of pipeline logic. If `analyze_video()` changes, `app/streamlit_app.py` needs the same change.
+- No existing modules in `src/` were modified. Uploaded videos are written to a temporary folder and deleted after analysis, not saved in the project.
+
+### 17.3 Known limits (also shown in the app's sidebar)
+- Both models were trained only on ShotQA (professional film frames), so other footage (stock clips, phone video) is out of domain, and predictions can look repetitive or wrong (see section 13).
+- Movement shows the top 2 ranked guesses, not confident detections, and the two can contradict each other (see the movement threshold finding in section 13).
+- The whole video is treated as one scene ("Scene 1"); there is no scene grouping.
+- Videos over 1,200 frames are refused because every frame is decoded into memory. **The 1,200 figure is a cautious guess, not a measured limit.**
+- The sidebar quotes the ShotBench results from section 16: 59.83% average across the 8 categories, camera movement weakest at 45.8%.
+
+### 17.4 Pinned requirements
+- `requirements.txt` now pins every package to the version installed in the working local venv (Python 3.11), for example torch 2.11.0, torchvision 0.26.0, transformers 5.14.1, streamlit 1.60.0, scenedetect 0.7.1.
+- torch and torchvision are pinned without the `+cu128` build tag, because that tag only exists on PyTorch's own download server and breaks a plain `pip install` elsewhere. The file header explains how to install the CUDA build. `torchaudio` was left out (unused).
+- Not yet tested: installing from this file on a clean machine or on Kaggle.
