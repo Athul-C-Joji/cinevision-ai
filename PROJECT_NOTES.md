@@ -458,3 +458,11 @@ Counted directly from `data/processed/movement_splits.csv` (columns: `filename`,
 - Val is small and the best epoch was picked on it, so these numbers are optimistic and noisy (best epoch varied between 2 and 30). The test split has not been used for this experiment.
 - The currently deployed `movement_lstm.pt` was not re-measured on this footing, so these runs are not shown to beat it. The earlier 0.194 was a last-epoch value from a different setup and is not comparable.
 - The "about 50% top-1" remark in section 14 came from 4 clips and should not be quoted.
+
+
+### 20.5 Deployed model measured on the same footing (`src/training/eval_deployed_movement.py`)
+- Scores `checkpoints/movement_lstm.pt` (the model the app loads) on the val split, using the cached val embeddings and the same metric code as `train_movement_cached.py`. The head weights are loaded strictly. Only val was used; test is untouched.
+- Sanity check: macro AP 0.1942 equals the last-epoch value recorded in section 12, so the model was loaded correctly.
+- Val results (183 clips): deployed top-1 0.301, top-2 0.470, macro AP 0.1942. For comparison on the same split: no-model prior 0.317 / 0.410 / 0.1137; new `embed` heads (mean of 3 seeds, best epoch picked on val) about 0.304 / 0.455 / 0.223.
+- Reading: the new recipe is not shown to beat the deployed model. Its higher AP comes with best-epoch selection on val, while the deployed model's number is a plain last-epoch value, and the deployed model's top-2 is slightly higher. Decision: keep `movement_lstm.pt`.
+- All three top-1 values are close to always answering "Push in". The deployed model's top-2 is about 11 clips of 183 above the prior, which I would describe as weak signal, not shown to be significant.
