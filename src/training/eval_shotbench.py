@@ -17,6 +17,14 @@ How it scores (same idea as the published baselines, no thresholds):
     option gets score -1 (it can never win). We count how often this
     happens so it can be reported honestly.
 
+Which static model is scored: the one chosen in video_analyzer.py
+(environment variable CINEVISION_STATIC, default "mlp"; "linear" is the
+original model). Output file names depend on it so results never overwrite
+each other:
+  linear -> shotbench_results.csv, shotbench_predictions.csv, ...  (as before)
+  mlp    -> shotbench_results_mlp.csv, shotbench_predictions_mlp.csv, ...
+  with --limit, "_smoke" is added so a smoke test never overwrites real results.
+
 Usage:
     python -m src.training.eval_shotbench --limit 20     (quick smoke test)
     python -m src.training.eval_shotbench                (full run)
@@ -41,6 +49,8 @@ from src.inference.video_analyzer import (
     load_movement_model,
     decode_all_frames,
     N_MOVEMENT_FRAMES,
+    STATIC_VARIANT,
+    STATIC_CHECKPOINT,
 )
 from src.models.static_classifier import ClipPreprocess, DEFAULT_CLIP_CHECKPOINT
 
@@ -68,6 +78,15 @@ ALIASES = {
 
 NO_MATCH_SCORE = -1.0
 BATCH_SIZE = 32
+
+
+def output_suffix(limit):
+    """linear keeps the original file names; other variants get a suffix;
+    smoke tests (--limit) never share names with real runs."""
+    suffix = "" if STATIC_VARIANT == "linear" else f"_{STATIC_VARIANT}"
+    if limit:
+        suffix += "_smoke"
+    return suffix
 
 
 # ---------------------------------------------------------------- parsing
@@ -187,6 +206,7 @@ def main():
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Device: {device}")
+    print(f"Static model variant: {STATIC_VARIANT} ({STATIC_CHECKPOINT.name})")
 
     df = pd.read_csv(SHOTBENCH_DIR / "test.tsv", sep="\t")
     df["category_norm"] = df["category"].astype(str).str.strip().str.lower().str.replace("_", " ")
@@ -289,7 +309,14 @@ def main():
 
     # ---- summaries
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    res.to_csv(REPORTS_DIR / "shotbench_predictions.csv", index=False)
+    suffix = output_suffix(args.limit)
+    names = {
+        "predictions": f"shotbench_predictions{suffix}.csv",
+        "results": f"shotbench_results{suffix}.csv",
+        "split": f"shotbench_single_vs_combo{suffix}.csv",
+        "summary": f"shotbench_summary{suffix}.json",
+    }
+    res.to_csv(REPORTS_DIR / names["predictions"], index=False)
 
     per_cat = res.groupby("category").agg(
         n_questions=("correct_credit", "size"),
@@ -307,9 +334,11 @@ def main():
     macro = float(per_cat["accuracy"].mean())
     micro = float(res["correct_credit"].mean())
 
-    per_cat.to_csv(REPORTS_DIR / "shotbench_results.csv", index=False)
-    split.to_csv(REPORTS_DIR / "shotbench_single_vs_combo.csv", index=False)
+    per_cat.to_csv(REPORTS_DIR / names["results"], index=False)
+    split.to_csv(REPORTS_DIR / names["split"], index=False)
     summary = {
+        "static_variant": STATIC_VARIANT,
+        "static_checkpoint": STATIC_CHECKPOINT.name,
         "limit_per_category": args.limit,
         "n_questions_scored": int(len(res)),
         "macro_average_accuracy_across_categories": round(macro, 4),
@@ -318,14 +347,15 @@ def main():
         "questions_skipped_missing_file": skipped_no_file,
         "random_baseline_approx": 0.25,
     }
-    with open(REPORTS_DIR / "shotbench_summary.json", "w") as f:
+    with open(REPORTS_DIR / names["summary"], "w") as f:
         json.dump(summary, f, indent=2)
 
     print("\n=== Accuracy per category ===")
     print(per_cat.to_string(index=False))
     print("\n=== Single-tag vs combination correct answers ===")
     print(split.to_string(index=False))
-    print(f"\nAverage across categories (macro): {macro:.4f}")
+    print(f"\nStatic model variant: {STATIC_VARIANT}")
+    print(f"Average across categories (macro): {macro:.4f}")
     print(f"Average over all questions (micro): {micro:.4f}")
     print(f"Questions skipped (file failed): {skipped_no_file}")
     print("Random guessing is about 0.25")
@@ -338,8 +368,7 @@ def main():
         for token, n in counter.most_common(15):
             print(f"   {n:4d} x {token!r}")
 
-    print("\nSaved to reports/: shotbench_results.csv, shotbench_single_vs_combo.csv, "
-          "shotbench_predictions.csv, shotbench_summary.json")
+    print("\nSaved to reports/: " + ", ".join(names.values()))
     if args.limit:
         print("\nNOTE: this was a smoke test (--limit). Do NOT record these numbers.")
 

@@ -1,0 +1,11 @@
+{
+  "static_variant": "mlp",
+  "static_checkpoint": "best_model_mlp.pt",
+  "limit_per_category": null,
+  "n_questions_scored": 3572,
+  "macro_average_accuracy_across_categories": 0.6176,
+  "micro_average_accuracy_all_questions": 0.6188,
+  "files_failed_to_load": 0,
+  "questions_skipped_missing_file": 0,
+  "random_baseline_approx": 0.25
+}

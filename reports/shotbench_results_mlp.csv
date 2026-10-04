@@ -1,0 +1,9 @@
+category,n_questions,accuracy,n_ties,n_answer_unmatched,n_any_unmatched
+camera angle,455,0.6725,0,0,0
+camera movement,464,0.458,1,6,11
+composition,479,0.5428,0,0,0
+lens size,489,0.5215,0,0,0
+lighting,350,0.5743,0,0,0
+lighting type,405,0.6,0,0,0
+shot framing,445,0.7303,0,0,0
+shot size,485,0.8412,0,0,0
