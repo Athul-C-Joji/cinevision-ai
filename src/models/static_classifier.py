@@ -1,23 +1,32 @@
 """
-src/models/static_classifier.py — Frozen CLIP + 7 multi-label heads
+src/models/static_classifier.py - Frozen CLIP + 7 multi-label heads
 
 Architecture (matches PROJECT_NOTES.md section 2):
     Image -> CLIP ViT (FROZEN, no gradients) -> pooled image embedding
-           -> 7 independent linear heads (one per static dimension)
+           -> 7 independent heads (one per static dimension)
            -> each head outputs per-class logits (sigmoid applied at
               inference / BCEWithLogitsLoss during training, per the
               multi-label decision in section 2b)
 
-CLIP itself is never trained here -- only the 7 head layers have
+Head types:
+    "linear" (default): one nn.Linear per dimension. This is the original
+        model; state-dict keys are heads.<dimension>.weight / .bias.
+    "mlp": Linear -> ReLU -> Dropout -> Linear per dimension (hidden size
+        and dropout are arguments). State-dict keys are
+        heads.<dimension>.0.* and heads.<dimension>.3.*. Same layout as
+        StaticHeads in src/training/static_cached_common.py.
+
+CLIP itself is never trained here -- only the head layers have
 trainable parameters. This is what makes this feasible on a 4GB GTX 1650:
-you're only backpropagating through a handful of small linear layers,
+you're only backpropagating through a handful of small layers,
 not the full CLIP model.
 
 Usage:
     from src.models.static_classifier import StaticShotClassifier
     from src.data.label_encoding import CLASS_VOCAB
 
-    model = StaticShotClassifier(CLASS_VOCAB)
+    model = StaticShotClassifier(CLASS_VOCAB)                    # linear heads
+    model = StaticShotClassifier(CLASS_VOCAB, head_type="mlp")   # MLP heads
     model.to("cuda")
 
     # transform to preprocess images before feeding the model:
@@ -33,11 +42,11 @@ import torch.nn as nn
 from transformers import CLIPModel, CLIPImageProcessor
 
 # Base CLIP checkpoint. ViT-B/32 is the smallest common CLIP vision
-# transformer -- good starting point for a 4GB GPU. Swap to
-# "openai/clip-vit-base-patch16" or "-large-patch14" later if you have
-# headroom and want higher accuracy (bigger CLIP embedding = more
-# signal for the heads, at the cost of more VRAM + slower forward pass).
+# transformer -- good starting point for a 4GB GPU. (Tested later on the
+# cached embeddings: ViT-B/16 and ViT-L/14 were not better than B/32 with
+# the same head recipe, see PROJECT_NOTES.md.)
 DEFAULT_CLIP_CHECKPOINT = "openai/clip-vit-base-patch32"
+
 
 class ClipPreprocess:
     """
@@ -52,14 +61,38 @@ class ClipPreprocess:
         result = self.processor(images=pil_image, return_tensors="pt")
         return result["pixel_values"].squeeze(0)  # (3, H, W)
 
+
+def make_head(in_dim, n_classes, head_type="linear", hidden=512, dropout=0.2):
+    """Builds one head. "linear" is a single nn.Linear (the original model)."""
+    if head_type == "linear":
+        return nn.Linear(in_dim, n_classes)
+    if head_type == "mlp":
+        return nn.Sequential(
+            nn.Linear(in_dim, hidden),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden, n_classes),
+        )
+    raise ValueError(f"head_type must be 'linear' or 'mlp', got {head_type!r}")
+
+
 class StaticShotClassifier(nn.Module):
-    def __init__(self, class_vocab: dict, clip_checkpoint: str = DEFAULT_CLIP_CHECKPOINT):
+    def __init__(
+        self,
+        class_vocab: dict,
+        clip_checkpoint: str = DEFAULT_CLIP_CHECKPOINT,
+        head_type: str = "linear",
+        hidden: int = 512,
+        dropout: float = 0.2,
+    ):
         """
         Args:
             class_vocab: CLASS_VOCAB dict from label_encoding.py --
                 {"Frame Size": [...7 classes...], "Lens Size": [...], ...}
                 Determines how many output units each head has.
             clip_checkpoint: HuggingFace model id for the frozen CLIP backbone.
+            head_type: "linear" (default, original model) or "mlp".
+            hidden, dropout: only used when head_type == "mlp".
         """
         super().__init__()
         self.dimensions = list(class_vocab.keys())
@@ -72,16 +105,19 @@ class StaticShotClassifier(nn.Module):
 
         embed_dim = self.clip.config.projection_dim  # e.g. 512 for ViT-B/32
 
-        # --- One linear head per dimension ---
+        # --- One head per dimension ---
         # Using OrderedDict + ModuleDict so heads are addressable by name
         # (matches the dict keys the Dataset class already returns).
         self.heads = nn.ModuleDict(OrderedDict(
-            (dim, nn.Linear(embed_dim, len(classes)))
+            (dim, make_head(embed_dim, len(classes), head_type, hidden, dropout))
             for dim, classes in class_vocab.items()
         ))
 
-        # Store checkpoint name for reference / logging
+        # Store settings for reference / logging
         self.clip_checkpoint = clip_checkpoint
+        self.head_type = head_type
+        self.hidden = hidden
+        self.dropout = dropout
 
     def get_preprocess(self):
         """
@@ -139,18 +175,21 @@ if __name__ == "__main__":
     # Smoke test -- run with: python -m src.models.static_classifier
     from src.data.label_encoding import CLASS_VOCAB
 
-    print("Loading model (downloads CLIP weights on first run)...")
-    model = StaticShotClassifier(CLASS_VOCAB)
+    for head_type in ("linear", "mlp"):
+        print(f"\n=== head_type = {head_type} ===")
+        print("Loading model (downloads CLIP weights on first run)...")
+        model = StaticShotClassifier(CLASS_VOCAB, head_type=head_type)
+        model.eval()
 
-    n_trainable = sum(p.numel() for p in model.trainable_parameters())
-    n_frozen = sum(p.numel() for p in model.clip.parameters())
-    print(f"Trainable params (heads only): {n_trainable:,}")
-    print(f"Frozen params (CLIP backbone): {n_frozen:,}")
+        n_trainable = sum(p.numel() for p in model.trainable_parameters())
+        n_frozen = sum(p.numel() for p in model.clip.parameters())
+        print(f"Trainable params (heads only): {n_trainable:,}")
+        print(f"Frozen params (CLIP backbone): {n_frozen:,}")
 
-    # Fake batch of 2 images, correct CLIP input size (224x224 for ViT-B/32)
-    dummy_input = torch.randn(2, 3, 224, 224)
-    outputs = model(dummy_input)
+        # Fake batch of 2 images, correct CLIP input size (224x224 for ViT-B/32)
+        dummy_input = torch.randn(2, 3, 224, 224)
+        outputs = model(dummy_input)
 
-    print("\nOutput shapes per dimension:")
-    for dim, logits in outputs.items():
-        print(f"  {dim}: {tuple(logits.shape)}")
+        print("Output shapes per dimension:")
+        for dim, logits in outputs.items():
+            print(f"  {dim}: {tuple(logits.shape)}")

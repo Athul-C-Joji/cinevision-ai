@@ -5,12 +5,22 @@ Video Analyzer (Module 1 inference wrapper). Given a video:
      representative (middle) frame
   3. For each shot, runs the movement LSTM classifier on 16 uniformly
      sampled frames from within that shot
-Produces a per-shot dict of predicted labels — the raw material Module 2
+Produces a per-shot dict of predicted labels - the raw material Module 2
 (Script Generator) will format into a shot-by-shot breakdown.
+
+Static model variants (frozen CLIP ViT-B/32 + 7 heads):
+  "mlp"    (default) small MLP heads: checkpoints/best_model_mlp.pt,
+           reports/best_thresholds_mlp.json
+  "linear" the original linear heads: checkpoints/best_model.pt,
+           reports/best_thresholds.json
+Choose with the environment variable CINEVISION_STATIC, for example
+(PowerShell):  $env:CINEVISION_STATIC = "linear"
+and undo with: Remove-Item Env:CINEVISION_STATIC
 """
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 import cv2
@@ -29,8 +39,24 @@ from src.data.label_encoding import CLASS_VOCAB
 from src.data.movement_label_encoding import MOVEMENT_CLASS_VOCAB
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-STATIC_CHECKPOINT = PROJECT_ROOT / "checkpoints" / "best_model.pt"
-STATIC_THRESHOLDS = PROJECT_ROOT / "reports" / "best_thresholds.json"
+
+_STATIC_FILES = {
+    "linear": (
+        PROJECT_ROOT / "checkpoints" / "best_model.pt",
+        PROJECT_ROOT / "reports" / "best_thresholds.json",
+    ),
+    "mlp": (
+        PROJECT_ROOT / "checkpoints" / "best_model_mlp.pt",
+        PROJECT_ROOT / "reports" / "best_thresholds_mlp.json",
+    ),
+}
+STATIC_VARIANT = os.environ.get("CINEVISION_STATIC", "mlp").strip().lower()
+if STATIC_VARIANT not in _STATIC_FILES:
+    raise ValueError(
+        f"CINEVISION_STATIC must be 'mlp' or 'linear', got {STATIC_VARIANT!r}"
+    )
+STATIC_CHECKPOINT, STATIC_THRESHOLDS = _STATIC_FILES[STATIC_VARIANT]
+
 MOVEMENT_CHECKPOINT = PROJECT_ROOT / "checkpoints" / "movement_lstm.pt"
 MOVEMENT_THRESHOLDS = PROJECT_ROOT / "reports" / "movement_best_thresholds.json"
 
@@ -39,11 +65,44 @@ MOVEMENT_CLASS_NAMES = list(MOVEMENT_CLASS_VOCAB)
 
 
 def load_static_model(device):
-    model = StaticShotClassifier(class_vocab=CLASS_VOCAB)
+    """
+    Loads the static classifier for the active variant (see STATIC_VARIANT).
+    Understands both checkpoint formats:
+      - original: full model state dict under "model_state_dict" (linear heads)
+      - exported MLP: heads only under "heads_state_dict" plus head settings
+    """
+    for path in (STATIC_CHECKPOINT, STATIC_THRESHOLDS):
+        if not path.exists():
+            raise FileNotFoundError(
+                f"{path} not found (static variant '{STATIC_VARIANT}'). "
+                "For the MLP files run: python -m src.training.export_static_mlp"
+            )
+
     ckpt = torch.load(STATIC_CHECKPOINT, map_location=device)
-    model.load_state_dict(ckpt["model_state_dict"])
+    if "heads_state_dict" in ckpt:
+        clip_ckpt = ckpt["clip_checkpoint"]
+        if clip_ckpt != DEFAULT_CLIP_CHECKPOINT:
+            raise ValueError(
+                f"Checkpoint was trained on {clip_ckpt}, but the preprocessing "
+                f"here assumes {DEFAULT_CLIP_CHECKPOINT}."
+            )
+        model = StaticShotClassifier(
+            CLASS_VOCAB,
+            clip_checkpoint=clip_ckpt,
+            head_type=ckpt["head_type"],
+            hidden=int(ckpt["hidden"]),
+            dropout=float(ckpt["dropout"]),
+        )
+        model.heads.load_state_dict(ckpt["heads_state_dict"])  # strict
+        kind = f"{ckpt['head_type']} heads"
+    else:
+        model = StaticShotClassifier(class_vocab=CLASS_VOCAB)
+        model.load_state_dict(ckpt["model_state_dict"])
+        kind = "linear heads (original model)"
+
     model.to(device)
     model.eval()
+    print(f"Static model: variant '{STATIC_VARIANT}' ({kind}) from {STATIC_CHECKPOINT.name}")
     return model
 
 
@@ -144,7 +203,7 @@ def analyze_video(video_path, device=None):
         start_f = shot["start_frame"]
         end_f = min(shot["end_frame"], len(all_frames))
         if end_f <= start_f:
-            print(f"  Skipping shot {shot['shot_index']} — invalid frame range")
+            print(f"  Skipping shot {shot['shot_index']} - invalid frame range")
             continue
 
         mid_idx = (start_f + end_f) // 2
