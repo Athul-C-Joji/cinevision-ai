@@ -408,3 +408,53 @@ Counted directly from `data/processed/movement_splits.csv` (columns: `filename`,
 - Checked directly with `CLASS_VOCAB`: Camera Angle has 5 classes (Aerial, Dutch angle, High angle, Low angle, Overhead), so there is **no eye-level or neutral class**. Lighting has 10 classes (Backlight, Edge light, Hard light, High contrast, Low contrast, Side light, Silhouette, Soft light, Top light, Underlight), with no "natural light". This is why "Eye level" and "Natural light" were dropped by the validator in the sample run.
 - Hypothesis (not tested): because the prompt asks for one label per dimension and every allowed angle is a marked angle, the planner is pushed toward "High angle" for ordinary shots. A possible fix, untried, is to let the prompt return an empty list when no label fits.
 - Possible consequence for Module 1 (hypothesis, not measured): `classify_static` falls back to the top-1 class when no class crosses its threshold, so every shot gets some Camera Angle label and can never be reported as eye-level. Worth stating as a limitation of the label vocabulary in the write-up.
+
+
+---
+
+## 19. Streamlit app: Script Planner tab (Week 4)
+
+### 19.1 What changed
+- `app/streamlit_app.py` now has two tabs: **Video Analyzer** (the earlier code, unchanged in behaviour) and **Script Planner** (new). Committed as `67ce57e2`.
+- The Script Planner tab calls `plan_script()` and `format_plan()` from `src/script_planner/planner.py`. Nothing in `src/` was modified.
+- Inputs: an uploaded `.txt` script or pasted text, max scenes (default 4, up to 8, one API request per scene), max shots per scene, and the Gemini model name (defaults to the planner's own default).
+- Output: scene-by-scene suggested shots with labels, any labels dropped by the vocabulary check, and `.txt` / `.json` downloads.
+- The planner is imported inside the tab, so a planner problem (for example a missing package) does not break the Video Analyzer tab.
+- `GEMINI_API_KEY` is read from `.env` (gitignored). The key is not shown in the app.
+
+### 19.2 What was tested
+- I ran the app locally and both tabs worked. No planner output or timings were recorded from this test, so this section makes no claim about the quality of the plans.
+
+### 19.3 Limits (also shown in the app)
+- Same as section 18: LLM-generated, not trained, not evaluated, varies between runs, scenes planned independently, script text sent to Google, spelling-only label check, no eye-level class in the Camera Angle vocabulary.
+- The app duplicates a little pipeline logic from `analyze_video()` (see section 17.2), so changes to `analyze_video()` need the same change in the app.
+
+---
+
+## 20. Movement model: cached-embedding experiment and prior baseline (Week 4)
+
+### 20.1 What was done
+- `src/training/cache_movement_embeddings.py` runs frozen CLIP once over all clips and saves the 16x512 frame embeddings to `data/processed/movement_embeddings.pt` (gitignored). Shapes matched the section 15 clip counts: train (711, 16, 512), val (183, 16, 512), test (144, 16, 512).
+- `src/training/train_movement_cached.py` trains the same kind of LSTM head on the cached embeddings, keeps the best epoch by val macro AP, and reports macro AP, top-1 and top-2 hit rate (how often the top-1 / at least one of the top-2 predicted classes is a true label). It never overwrites `checkpoints/movement_lstm.pt`; saved heads are not loadable by the current inference code.
+- Hypothesis tested: frame-to-frame change in the embeddings carries camera-motion information. Three input modes: `embed` (as before), `diff` (differences only), `embed_diff` (both). 30 epochs, batch 32, 3 seeds each.
+
+### 20.2 Results (val split, 183 clips from 19 videos; best epoch chosen on val)
+
+| Mode | Seed 1 / 2 / 3 val macro AP | Top-1 hit (1/2/3) | Top-2 hit (1/2/3) |
+|---|---|---|---|
+| embed | 0.2282 / 0.2145 / 0.2277 | 0.295 / 0.317 / 0.301 | 0.448 / 0.464 / 0.454 |
+| diff | 0.1451 / 0.1424 / 0.1717 | 0.240 / 0.317 / 0.317 | 0.372 / 0.443 / 0.410 |
+| embed_diff | 0.2073 / 0.1892 / 0.2169 | 0.317 / 0.322 / 0.268 | 0.399 / 0.486 / 0.437 |
+
+- Means over seeds (my arithmetic): macro AP embed 0.223, diff 0.153, embed_diff 0.204.
+- Result: neither `diff` nor `embed_diff` beat plain `embed`. The frame-difference idea did not help here. Possible reason (hypothesis, not tested): the limit is the small training set (711 clips, 21 classes), not the input type.
+
+### 20.3 No-model prior baseline (`src/training/movement_prior_baseline.py`)
+- Ranks classes by how common they are in train and gives every val clip the same answer. Most common train classes: Push in 0.290, Tilt up 0.159, Pan left 0.149, Pan right 0.139, Static shot 0.134.
+- Val: top-1 0.317, top-2 0.410, macro AP 0.1137 (15 classes with val support).
+- Reading: the trained head's top-1 (about 0.30) is not better than always answering "Push in". Its top-2 (about 0.455) is slightly higher (about 8 clips of 183, not shown to be significant), and its macro AP (about 0.22, best epoch picked on val) is about double the prior's, which is the clearest sign of some learned signal.
+
+### 20.4 Caveats
+- Val is small and the best epoch was picked on it, so these numbers are optimistic and noisy (best epoch varied between 2 and 30). The test split has not been used for this experiment.
+- The currently deployed `movement_lstm.pt` was not re-measured on this footing, so these runs are not shown to beat it. The earlier 0.194 was a last-epoch value from a different setup and is not comparable.
+- The "about 50% top-1" remark in section 14 came from 4 clips and should not be quoted.
