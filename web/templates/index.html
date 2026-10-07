@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CineVision AI - Script Planner</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body data-total="{{ n_shots }}">
+  <div class="aurora aurora-a"></div>
+  <div class="aurora aurora-b"></div>
+  <div class="flare" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <span class="brand">CineVision AI</span>
+    <span class="hud-scene" id="hud-scene">Script Planner</span>
+    <span class="hud-shot" id="hud-shot">{{ n_shots }} shots</span>
+    <div class="progress"><i id="progress-bar"></i></div>
+  </nav>
+
+  <main class="page">
+    <header class="hero">
+      <div class="hero-inner iris">
+        <p class="eyebrow">CineVision AI &middot; Script Planner</p>
+        <h1 data-split>Plan every shot.</h1>
+        <p class="sub">
+          Suggested shots for every scene, each with a real reference frame and
+          a camera-movement clip from the dataset.
+        </p>
+        <div class="stats">
+          <div class="stat"><span class="stat-num" data-count="{{ plan.scenes_planned }}">{{ plan.scenes_planned }}</span><span class="stat-label">scenes</span></div>
+          <div class="stat"><span class="stat-num" data-count="{{ n_shots }}">{{ n_shots }}</span><span class="stat-label">shots</span></div>
+        </div>
+      </div>
+    </header>
+
+    {% set ns = namespace(n=0) %}
+    {% for scene in scenes %}
+    {% set scene_i = loop.index %}
+    <section class="scene">
+      <div class="scene-head rf">
+        <p class="scene-eyebrow">Scene {{ scene_i }}</p>
+        <h2 class="scene-title">{{ scene.heading }}</h2>
+      </div>
+
+      {% for shot in scene.shots %}
+      {% set ns.n = ns.n + 1 %}
+      <article class="shot glass" data-scene="{{ scene_i }}" data-heading="{{ scene.heading }}" data-n="{{ ns.n }}">
+        <div class="shot-text rf">
+          <p class="shot-number">Shot {{ shot.number }}</p>
+          <p class="shot-desc">{{ shot.description }}</p>
+          <div class="chips">
+            {% for dim, value in shot.chips %}
+            <span class="chip"><b>{{ dim }}</b> {{ value }}</span>
+            {% endfor %}
+          </div>
+          {% if shot.purpose %}
+          <p class="shot-purpose">{{ shot.purpose }}</p>
+          {% endif %}
+        </div>
+
+        <div class="shot-media">
+          <figure class="media-box">
+            {% if shot.image %}
+            <div class="frame rf">
+              <img src="{{ shot.image_url }}" alt="Reference frame" loading="lazy">
+              <span class="af"></span>
+            </div>
+            <figcaption>
+              Reference frame from {{ shot.image.title }} ({{ shot.image.year }}).
+              Tags match exactly on {{ shot.image.exact_dims }} of {{ shot.image.n_dims }} dimensions.
+            </figcaption>
+            {% else %}
+            <figcaption>No reference frame found for these labels.</figcaption>
+            {% endif %}
+          </figure>
+
+          <figure class="media-box">
+            {% if shot.clip %}
+            <div class="frame rf">
+              <video src="{{ shot.clip_url }}" controls muted loop playsinline preload="metadata"></video>
+              <span class="af"></span>
+            </div>
+            <figcaption>
+              Reference clip, labeled in the dataset as: {{ shot.clip.tags }}.
+              {{ shot.clip.n_candidates }} clips in the dataset have this movement.
+            </figcaption>
+            {% else %}
+            <figcaption>No reference clip for this movement.</figcaption>
+            {% endif %}
+          </figure>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+    {% endfor %}
+
+    <details class="glass about">
+      <summary>How this plan was made</summary>
+      <ul>
+        <li>The shot suggestions come from an LLM (model: {{ plan.model }}). This is prompting, not a trained model, and it has not been evaluated. Results differ from run to run.</li>
+        <li>Labels are only checked for spelling against the label vocabulary.</li>
+        <li>The reference frames and clips are real examples from the ShotQA dataset, picked by plain tag matching on the suggested camera labels. They show the camera style, not the story.</li>
+        <li>ShotQA is non-commercial (cc-by-nc-nd-4.0): use these locally only.</li>
+      </ul>
+    </details>
+
+    <footer class="foot">
+      CineVision AI &middot; reference frames and clips from ShotQA (cc-by-nc-nd-4.0), local use only.
+    </footer>
+  </main>
+</body>
+</html>
