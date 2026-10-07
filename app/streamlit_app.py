@@ -4,7 +4,8 @@ app/streamlit_app.py
 CineVision AI demo with three tabs:
   1. Video Analyzer: upload a video, get a shot-by-shot breakdown with a
      summary, a shot timeline, a filmstrip and label-distribution charts.
-  2. Script Planner: paste or upload a script, get suggested shots per scene.
+  2. Script Planner: paste or upload a script, get suggested shots per scene,
+     each with a real reference frame and movement clip from ShotQA.
   3. Model results: ShotBench results next to published baselines.
 
 The Video Analyzer tab uses the same building blocks as
@@ -19,6 +20,9 @@ ones analyze_video chooses (the middle frame and 16 evenly spaced frames).
 
 The Script Planner tab calls plan_script() and format_plan() from
 src/script_planner/planner.py. It needs GEMINI_API_KEY in the .env file.
+The reference frames and clips come from src/script_planner/retrieval.py
+(plain tag matching on the ShotQA labels, not a model). ShotQA is
+cc-by-nc-nd-4.0, so these images and clips are for local, non-commercial use.
 
 Run from the project root:
     python -m streamlit run app\\streamlit_app.py
@@ -71,6 +75,8 @@ MAX_FRAMES = 6000
 THUMB_SIZE = 480
 
 MOVEMENT_OPTION = "Movement (top 2 guesses)"
+
+SAMPLE_PLAN_PATH = PROJECT_ROOT / "data" / "scripts" / "sample_script_plan.json"
 
 # Colors for the shot timeline (one color per label, in order of appearance).
 TIMELINE_PALETTE = [
@@ -498,21 +504,73 @@ def render_analyzer_tab():
 
 
 # ================================================================ planner
+@st.cache_resource(show_spinner="Loading the reference index (first time only)...")
+def get_reference_index():
+    # Imported here so a problem with retrieval cannot break the other tabs.
+    from src.script_planner.retrieval import ReferenceIndex
+    return ReferenceIndex()
+
+
+def show_shot_references(ref):
+    """Shows the reference image and clip for one suggested shot."""
+    col_img, col_clip = st.columns(2)
+
+    with col_img:
+        img = ref.get("image") if ref else None
+        if img:
+            st.image(img["path"], width=360)
+            st.caption(
+                f"Reference frame from \u201c{img['title']}\u201d ({img['year']}). "
+                f"Its dataset tags match the suggestion exactly on "
+                f"{img['exact_dims']} of {img['n_dims']} dimensions."
+            )
+        else:
+            st.caption("No reference frame found for this combination of labels.")
+
+    with col_clip:
+        clip = ref.get("clip") if ref else None
+        if clip:
+            try:
+                st.video(Path(clip["path"]).read_bytes(), format="video/mp4")
+                st.caption(
+                    f"Reference clip, labeled in the dataset as: {clip['tags']}. "
+                    f"({clip['n_candidates']} clips in the dataset have this movement.)"
+                )
+            except Exception as e:
+                st.caption(f"Could not load the reference clip: {e}")
+        else:
+            st.caption("No reference clip for this movement.")
+
+
 def show_plan(res):
     plan = res["plan"]
     st.subheader(f"Suggested shot plan: {res['name']}")
     st.caption(
-        f"Model: {plan['model']}. Planned {plan['scenes_planned']} of "
-        f"{plan['scenes_in_script']} scene(s). "
-        f"Tokens used: {plan['usage']['input']} in, {plan['usage']['output']} out."
+        f"{plan['scenes_planned']} of {plan['scenes_in_script']} scene(s) planned."
     )
+
+    # Find the references once per plan, and keep them with the plan.
+    if "refs" not in res:
+        try:
+            from src.script_planner.retrieval import find_references
+            res["refs"] = find_references(plan, get_reference_index())
+        except Exception as e:
+            res["refs"] = None
+            res["refs_error"] = str(e)
+    refs = res.get("refs")
+    if res.get("refs_error"):
+        st.warning(f"Reference frames and clips are unavailable: {res['refs_error']}")
+
+    # Planner warnings and dropped labels are collected here and shown in the
+    # collapsed "How this plan was made" box below, not in the main view.
+    notes = []
 
     for n, scene in enumerate(plan["scenes"], start=1):
         st.divider()
         st.markdown(f"### Scene {n}: {scene['heading']}")
         for w in scene["warnings"]:
-            st.warning(w)
-        for shot in scene["shots"]:
+            notes.append(f"Scene {n}: {w}")
+        for j, shot in enumerate(scene["shots"]):
             st.markdown(f"**Shot {shot['shot_number']}:** {shot['description']}")
             for dim, vals in shot["labels"].items():
                 if vals:
@@ -520,12 +578,34 @@ def show_plan(res):
             if shot["purpose"]:
                 st.caption(f"Why: {shot['purpose']}")
             if shot["invalid_labels"]:
-                st.caption(
-                    "Dropped (not in the label vocabulary): "
-                    + "; ".join(shot["invalid_labels"])
+                notes.append(
+                    f"Scene {n}, shot {shot['shot_number']}: dropped (not in the "
+                    "label vocabulary): " + "; ".join(shot["invalid_labels"])
                 )
+            if refs:
+                try:
+                    show_shot_references(refs[n - 1][j])
+                except (IndexError, KeyError):
+                    pass
 
     st.divider()
+    with st.expander("How this plan was made", expanded=False):
+        st.markdown(
+            f"- The shot suggestions come from an LLM (model: {plan['model']}, "
+            f"{plan['usage']['input']} tokens in, {plan['usage']['output']} out). "
+            "This is prompting, not a trained model, and it has not been evaluated. "
+            "Results differ from run to run, and each scene is planned on its own.\n"
+            "- Labels are only checked for spelling against the label vocabulary.\n"
+            "- The reference frames and clips are real examples from the ShotQA "
+            "dataset, picked by plain tag matching on the suggested camera labels. "
+            "They show the camera style, not your story.\n"
+            "- ShotQA is non-commercial (cc-by-nc-nd-4.0): use these locally only."
+        )
+        if notes:
+            st.markdown("**Notes from the planner:**")
+            for note in notes:
+                st.markdown(f"- {note}")
+
     stem = Path(res["name"]).stem
     col_a, col_b = st.columns(2)
     with col_a:
@@ -560,14 +640,23 @@ def render_planner_tab():
 
     st.write(
         "Paste a script or upload a .txt file, and get suggested shots for each "
-        "scene, using the same labels as the Video Analyzer."
+        "scene, using the same labels as the Video Analyzer, with a real "
+        "reference frame and clip from the dataset for each suggestion."
     )
-    st.info(
-        "This is LLM-generated (Gemini free tier), not a trained model, and it "
-        "has not been evaluated. Results differ from run to run. Scenes are "
-        "planned one at a time, so the model does not see the other scenes. "
-        "Your script text is sent to Google, so use only non-sensitive scripts."
-    )
+
+    # Shows a plan that was saved earlier. No API call, no quota used.
+    if SAMPLE_PLAN_PATH.exists():
+        if st.button("Load saved sample plan (no API call)", key="load_sample_plan"):
+            try:
+                with open(SAMPLE_PLAN_PATH, encoding="utf-8") as f:
+                    saved_plan = json.load(f)
+                st.session_state["plan"] = {
+                    "name": "sample_script.txt",
+                    "plan": saved_plan,
+                    "text": format_plan(saved_plan, "sample_script.txt"),
+                }
+            except Exception as e:
+                st.error(f"Could not load the saved plan: {e}")
 
     uploaded_script = st.file_uploader("Upload a script (.txt)", type=["txt"], key="script_file")
     pasted = st.text_area(
@@ -605,6 +694,7 @@ def render_planner_tab():
             f"Found {n_scenes} scene(s). Will plan the first {min(n_scenes, int(max_scenes))}."
         )
 
+    st.caption("\u201cPlan shots\u201d sends the script text to the Gemini API.")
     if st.button("Plan shots", type="primary", key="plan_button"):
         if not script_text.strip():
             st.error("Please upload or paste a script first.")
@@ -652,7 +742,7 @@ def render_results_tab():
     st.markdown("#### CineVision (MLP head) by category")
     st.bar_chart(df[["CineVision (MLP head)"]].drop(index="Average (8 categories)"))
 
-    with st.expander("How to read this (please read)", expanded=True):
+    with st.expander("How to read this", expanded=False):
         st.markdown(
             "- The current static model (frozen CLIP ViT-B/32 + MLP head) averages "
             "61.76% over the 8 categories. It is **comparable to** GPT-4o's published "
@@ -681,26 +771,29 @@ with st.sidebar:
         "frozen CLIP ViT-B/32 + 7 small trained heads (MLP head by default).\n\n"
         "**Movement:** a small LSTM over 16 frames per shot.\n\n"
         "**Shot cuts:** PySceneDetect.\n\n"
-        "**Script Planner:** prompts the Gemini API. It is not a trained model."
+        "**Script Planner:** prompts the Gemini API. It is not a trained model. "
+        "Its reference frames and clips come from plain tag matching on the "
+        "ShotQA labels, not from a model."
     )
-    st.header("Please read: limits")
-    st.markdown(
-        "- Both models were trained only on ShotQA (professional film frames). "
-        "Other footage, like stock clips or phone video, is out of domain, and "
-        "predictions may look repetitive or wrong.\n"
-        "- On the ShotBench benchmark (3,572 questions, 8 categories) the current "
-        "static model averaged 61.76%, and camera movement was the weakest at 45.8%. "
-        "This is comparable to GPT-4o's published 59.3% average, but the scoring "
-        "methods differ. See the Model results tab.\n"
-        "- Movement shows the model's top 2 ranked guesses, not confident detections. "
-        "The two can even contradict each other.\n"
-        "- The video is not split into scenes: all shots go under \"Scene 1\".\n"
-        f"- Videos over {MAX_FRAMES} frames are refused, because analysis time grows "
-        "with video length.\n"
-        "- The Script Planner has no accuracy number. Its labels are only checked "
-        "for spelling against the vocabulary. The Camera Angle vocabulary has no "
-        "eye-level class."
-    )
+    with st.expander("Limits of this demo", expanded=False):
+        st.markdown(
+            "- Both models were trained only on ShotQA (professional film frames). "
+            "Other footage, like stock clips or phone video, is out of domain, and "
+            "predictions may look repetitive or wrong.\n"
+            "- On the ShotBench benchmark (3,572 questions, 8 categories) the current "
+            "static model averaged 61.76%, and camera movement was the weakest at 45.8%. "
+            "This is comparable to GPT-4o's published 59.3% average, but the scoring "
+            "methods differ. See the Model results tab.\n"
+            "- Movement shows the model's top 2 ranked guesses, not confident detections. "
+            "The two can even contradict each other.\n"
+            "- The video is not split into scenes: all shots go under \"Scene 1\".\n"
+            f"- Videos over {MAX_FRAMES} frames are refused, because analysis time grows "
+            "with video length.\n"
+            "- The Script Planner has no accuracy number. Its labels are only checked "
+            "for spelling against the vocabulary. The Camera Angle vocabulary has no "
+            "eye-level class.\n"
+            "- Script Planner reference frames match camera labels only, not story content."
+        )
 
 # --------------------------------------------------------------------- main
 st.title("🎬 CineVision AI")
